@@ -25,7 +25,7 @@ label start:
 
     "Funziona davvero!"
 
-    e "Hai creato un nuovo gioco Ren'Py."
+    e "Hai creato un nuovo gioco Ren'Py. Cazzarola che figata."
 
     e "Quando aggiungerai una storia, immagini e musica, potrai distribuirlo nel mondo!"
 
