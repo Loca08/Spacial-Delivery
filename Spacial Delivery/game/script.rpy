@@ -354,7 +354,7 @@ label Scelta_19:
     show seccato bingus
     b "Please don't screw up."
     hide seccato bingus
-    "Walks away"
+    "'Walks away'"
 
     y "Finally, the stupid survey its over, I hope I don't get fired on day one as my last job."
 
@@ -367,18 +367,18 @@ label Scelta_20:
     scene bg camion with dissolve
     y "I think this one is the right truk, I wonder where is this collegue bingus told me about."
 
-    "Door opens and slam close"
+    "'Door opens and slam shut'"
     show happy bingus
     y "Bingus what are you doing here?"
 
     P "Gleep gloop"
-    "Hands over strange tablet"
+    "'Hands over strange tablet'"
 
     y "You want me to take it?"
 
     P "Zorp"
     
-    "Tablets lighs up, illuminating the cabin"
+    "'Tablets turns on'"
     P "Very good friend, now you can hear me right?"
 
     y "Yes but you were talking to me fine like 5 minutes ago, whats the use of this strange machine."
@@ -405,7 +405,7 @@ label Scelta_20:
     hide confused bingus
     show normal bingus
 
-    "Turns on the truck"
+    "'Turns on the truck'"
     y "Ok now what?"
 
     B "Well now you have to choose where to go first I have a couple of addess to go trough so choose."
@@ -438,14 +438,14 @@ label adino:
     y "Woah the space is so beautiful."
     hide normal bingus
     show happy bingus
-    B "I know right, this is the best part of the job."
+    B "I know right!"
 
     B "Every day is full of possibilities."
 
     y "Really? I only thought we were just some delivery guys for a massive coporation."
     hide happy bingus
     show normal bingus
-    B "Thas only a part of the job, I think its the journey the best part."
+    B "That's only a small fraction of the job, the journey is the best part I must say."
 
     B "Once I had to follow a comet in order to arrive to a very far far away planet in a different distict just outside of the Milky Way."
     hide normal bingus
@@ -484,16 +484,67 @@ label adino:
             jump adino_2
 
 label adino_2:
-    y "Well, on a second thought I think its better if i leave the package here."
+    y "Well, on a second thought I think its better if I leave the package here."
 
-    y "Just wanna tke all precautions since the package is very heavy I guess its also fragile."
+    y "Just wanna take all precautions since the package is very heavy I guess its also fragile."
     show normal bingus
     B "Good, make sure to place it with the label facing the top."
 
-    y "Done, let's go Jr!"
+    y "Ok everything setted correctly, let's go Jr!"
     hide normal bingus 
     show happy bingus
     B "So were are we going now captain?"
     $ adinolfo +=1
     hide happy bingus
     jump addresses
+
+label adino_1:
+    "Knocks on the door."
+    scene bg aportaopen
+    "Door opens."
+    show bonk cat
+    a "Well, hello there! Looks like someone's got a big packawge for me."
+    "'Winks playfully'"
+    a "I've been waiting for this one."
+
+    y "Yeah... sure, so if you can sign here on my clipboard its all yours."
+    hide bonk cat
+    show normal cat
+    a "Hope to see ya soon sweetie."
+    "'Hands over a big tip'"
+    y "Thanks, have a good one sir."
+    hide normal cat
+    scene bg aporta with dissolve
+    with Pause(1)
+
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, he gave me a big tip also."
+
+    hide normal bingus
+    show happy bingus
+    B "Thats very nice."
+
+    B "So were are we going now captain?"
+
+    $ adinolfo +=1
+    hide happy bingus
+    jump addresses
+
+label dayend:
+    show normal bingus
+    y "Back to the base Jr, that was our last delivery for the day."
+    hide normal bingus
+    show happy bingus
+    B "Cool we were fatser than the programmed schedule, wanna grab something to eat in the cafeteria when we arrive im starving."
+
+    y "I don't think its a good idea since thay told me I was prohibited to go in for some reason."
+    hide happy bingus 
+    show normal bingus
+    B "Nah its just my brother, he says this to all new recruits. You are gonna be fine trust me."
+
+    y "Well if you say so."
+    hide happy bingus
+    jump week2
