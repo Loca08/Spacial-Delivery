@@ -87,12 +87,17 @@ label Scelta_2:
 
     hide confused bingus
     show normal bingus
+    
     b "Anyways im gonna check yes in the box."
+    hide normal bingus
     jump Scelta_1
 
 label Scelta_1:
-    b "Very good."
+    hide normal bingus
     show happy bingus
+
+    b "Very good."
+
     b "First question, how good of a team player are you?"
     hide happy bingus
     menu:
@@ -164,7 +169,7 @@ label Scelta_6:
     b "I was going to select none regardless."
     hide normal bingus
     show happy bingus
-    b "Aren't you having fun? Here at 'Spedisco Nu Paccheeto' every day is fun as your last!"
+    b "♪ Aren't you having fun? Here at 'Spedisco Nu Paccheeto' every day is fun as your last! ♪"
     hide happy bingus
     show seccato bingus
     b "Ugh.. this stupid gingle is still stuck in my mind, but you will get over it eventually."
@@ -503,14 +508,15 @@ label adino_1:
     scene bg aportaopen
     "Door opens."
     show bonk cat
-    a "Well, hello there! Looks like someone's got a big packawge for me."
+    a "Well, hello there! Looks like someone's got a big packawge for me. ~"
+
+    a "If it's too heavy I could give you a hand. ~"
     "'Winks playfully'"
-    a "I've been waiting for this one."
 
     y "Yeah... sure, so if you can sign here on my clipboard its all yours."
     hide bonk cat
     show normal cat
-    a "Hope to see ya soon sweetie."
+    a "Hope to see ya soon sweetie. ~"
     "'Hands over a big tip'"
     y "Thanks, have a good one sir."
     hide normal cat
@@ -548,3 +554,277 @@ label dayend:
     y "Well if you say so."
     hide happy bingus
     jump week2
+
+label seneca:
+    scene bg space with dissolve
+    show normal bingus
+
+    y "Hey Jr, can I ask you something?"
+
+    B "Sure [povname], what's on your mind?"
+
+    y "Is your brother always like that with the newcommers?"
+    hide normal bingus
+    show confused bingus
+    B "Like what?"
+
+    y "You know, rude and very sassy to say the least."
+    hide confused bingus
+    show happy bingus
+    B "Oh, its normal. He is just very serious about this job that's all hehe."
+
+    y "You sure?"
+
+    B "100%"
+    hide happy bingus 
+    show normal bingus
+    B "Oh look! The next destination, you should keep an eye on the path so we don't deliver to the wrong house hehe."
+
+    y "Sure..."
+    hide normal bingus
+    scene bg senecaplanet with dissolve
+    with Pause(2)
+    scene bg sviale with dissolve
+    with Pause(1)
+
+    y "Are you sure we are at the correct house?"
+    show normal bingus
+    B "Yup"
+
+    y "This dude's house sure look like a museum."
+
+    B "I know, I know now deliver the package if you don't mind."
+    hide normal bingus
+    scene bg sporta with dissolve
+    with Pause(1)
+    menu:
+        "Knock on the door.":
+            jump seneca_1
+        "Leave the package and go back to the truck.":
+            jump seneca_2
+
+label seneca_2:
+    y "I fell the pressure of someone waiting, he feels very annoyed."
+
+    y "I really don't wanna face a possibly angry costumer."
+    "'Places the pakage next to the door.'"
+
+    y "Good, now I make sure to place it with the label facing the top."
+
+    y "Ok everything setted correctly, let's go Jr!"
+    
+    show happy bingus
+    B "So were are we going now captain?"
+    $ seneca +=1
+    hide happy bingus
+    jump addresses
+
+label seneca_1:
+    "Knocks on the door."
+    scene bg sportaopen
+    "Door opens."
+    show normal sene
+    s "'Cogito ergo sum' aka it doesen't matter how hard you doubt everything, the existence of the thinking I will remain a truth."
+
+    s "One of my favoure passages from Cartesius."
+
+    y "Well I am more of a 'Live like there is no tomorrow guy' hehe."
+    hide normal sene 
+    show confused sene
+    s "Strange filosophy from a guys who is delivering a package late."
+
+    s "After all 'Errare Humanum est' im I wrong ?"
+    hide confused sene
+    show normal sene
+    y "Sorry for that sir, so if you can sign here on the clipboard i'll go."
+
+    s "Be careful out there, the universe it's not a place for those with a weack mind."
+
+    y "Good day sir."
+    
+    scene bg sporta with dissolve
+    with Pause(1)
+
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good I think."
+
+    hide normal bingus
+    show happy bingus
+    B "Better than nothing."
+
+    B "So were are we going now captain?"
+
+    $ seneca +=1
+    hide happy bingus
+    jump addresses 
+
+label quasar:
+    scene bg space with dissolve
+    show happy bignus
+    
+    B "♪ We are going on a trip on this big hecking ship. Flying trough the sky! Jr and [povname] ♪"
+
+    y "Hey little bud I didn't know you can sing too."
+    hide happy bingus
+    show normal bingus
+
+    B "Gnarpies are very sociable creatures, singing it's one of the many way our species interacts with each others."
+
+    y "That's explain why you brother was so upset about the gingle."
+    hide normal bingus
+    show feared bingus
+    B "Yeah we don't talk about that."
+
+    B "The less we think about it, the higher the chances of forgetting it."
+    hide feared bingus
+    show normal bingus
+    y "Yeah you are right."
+
+    B "........."
+
+    y "............"
+
+    B "........."
+
+    y "............"
+
+    B "Trun right to that asteroid, the next house will be on the left."
+
+    scene bg quasarplanet with dissolve
+    with Pause(2)
+    scene bg qviale with dissolve
+    with Pause(1)
+
+    y "Damn, this place smells horrible or is the package im holding?"
+
+    y "Either way better be quick."
+
+    scene bg qporta with dissolve
+    with Pause(1)
+    menu:
+        "Knock on the door.":
+            jump quasar_1
+        "Leave the package and go back to the truck.":
+            jump quasar_2
+
+label quasar_2:
+    y "Label facing up and im out of here."
+
+    'Jumps back to the truck.'
+
+    show happy bingus
+    B "So were are we going now captain?"
+
+    $ quasar +=1
+    hide happy bingus
+    jump addresses
+
+label quasar_1:
+    y "Please answer quick."
+
+    scene bg qporta with dissolve
+    with Pause(1)
+
+    q "Hello?"
+
+    y "Hi, here is you package and here is were you need to sign so I can leave."
+    scene bg qportaopen with dissolve
+    with Pause(1)
+    "A stiky jellous hand reaches out of the door leaving a drop on the place to sign."
+
+    y "Yeah, that should count, I hope."
+
+    scene bg sporta with dissolve
+    with Pause(1)
+    y "Have a nice day!"
+
+    "Runs back to the truck"
+
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Im gonna tell you after we leave, I can't stand the smell of this place."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses
+
+label wanda:
+    show normal bingus
+    y "Hey Jr, I found some freeze-dried sushi in the back do you think it tastes better in space?"
+    hide normal bingus 
+    show feared bingus
+    B "Is that even a quesion?"
+
+    y "Im always open making new experience, pass me the water so I can tase this bad boy."
+
+    B "Im gonna get a papaer bag from the utility box in the bag, just in case."
+
+    y "Nah, im gonna be fine trust me."
+
+    scene bg wandaplanet with dissolve
+    with Pause(2)
+    scene bg wviale with dissolve
+    with Pause(1)
+
+    y "I was so wrong..."
+
+    y "Never i'll eat freeze-dried shushi again."
+
+    y "The location is defenitly not helping."
+    scene bg wporta with dissolve
+    with Pause(1)
+    menu:
+        "Knock on the door.":
+            jump wanda_1
+        "Leave the package and go back to the truck.":
+            jump wanda_2
+
+label wanda_2:
+    y "Label facing up and im out of here."
+
+    'Runs back to the truck.'
+
+    show happy bingus
+    B "So were are we going now captain?"
+
+    $ wanda +=1
+    hide happy bingus
+    jump addresses
+
+label wanda_1:
+    scene bg wporta with dissolve
+    with Pause(1)
+    scene bg wportaopen with dissolve
+    with Pause(1)
+    show cami secc 
+    w "Hi"
+
+    y "Uhm hi."
+    "'Stares respectfullty'"
+    w "I think what you are holding is mine."
+    hide cami secc
+    show cami normal
+    y "Ehm, yes just sign here on my clipboard."
+
+    y "Perfect have a nice day."
+    hide cami normal
+    "'Closes door'"
+    scene bg wporta with dissolve
+    with Pause(1)
+
+    y "Well I tried."
+
+    scene bg camion
+    show normal bingus
+    B "So you feel good now?"
+
+    y "Kinda, lets go."
+
+    $ wanda +=1
+    hide normal bingus
+    jump addresses    
