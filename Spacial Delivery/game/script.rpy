@@ -34,6 +34,7 @@ default seneca = 0
 default quasar = 0
 default adinolfo = 0
 
+
 # Il gioco comincia qui.R
 # Inzia la scena post cutscene con bingus che ti fa il colloqui.
 label splashscreen:
@@ -73,7 +74,7 @@ label start:
     b "The names is Bingus, I would like my name not to be confused ok?"
     hide angry bingus
     show normal bingus
-    b "Before that I have to ask you a couple of question for an optional survery so we can improve the service and how we appoach new future recruits."
+    b "Before that I have to ask you a couple of question for an optional survey so we can improve the service and how we approach new future recruits."
     menu:
         "I guess so":
             jump Scelta_1
@@ -131,7 +132,7 @@ label Scelta_4:
 
 label Scelta_3:
     show happy bingus
-    b "Wonderful! We are having so much fun, I cant wait to finish this very ''entertaining'' task before my lunch breack!"
+    b "Wonderful! We are having so much fun, I cant wait to finish this very ''entertaining'' task before my lunch break!"
     jump Scelta_0
 
 label Scelta_0:
@@ -140,11 +141,11 @@ label Scelta_0:
     b "Whoa the next one must be one of the newer ones, first time ever seeing it here."
     hide confused bingus
     show normal bingus
-    b "Soo next question, are you sextually active by any chanche?"
+    b "Soo next question, are you sexually active by any chance?"
     menu:
         "Yes, why you ask?":
             jump Scelta_6
-        "None of your buissness!":
+        "None of your business!":
             jump Scelta_7
         "No, can we change the subject? Like for real for real?":
             jump Scelta_8
@@ -172,7 +173,7 @@ label Scelta_6:
     b "♪ Aren't you having fun? Here at 'Spedisco Nu Paccheeto' every day is fun as your last! ♪"
     hide happy bingus
     show seccato bingus
-    b "Ugh.. this stupid gingle is still stuck in my mind, but you will get over it eventually."
+    b "Ugh.. this stupid jingle is still stuck in my mind, but you will get over it eventually."
     hide seccato bingus
     show normal bingus
     b " Next question, do you prefer peach or lemon tea?"
@@ -188,12 +189,12 @@ label Scelta_11:
     show angry bingus
     b "Well if you can see the importance of this question im not gonna elaborate further."
 
-    y "If you say so... everybody knows hot tea from the vening machine in the gas station is the best."
+    y "If you say so... everybody knows hot tea from the vending machine in the gas station is the best."
     hide angry bingus
     show seccato bingus
     b "Ugh... what a zorping loser."
 
-    y "Exuse me? I what did you said to me?"
+    y "Excuse me? I what did you said to me?"
     hide seccato bingus
     show normal bingus
     b "Ehm... nothing I was just.. clearing my voice and thats hehe."
@@ -206,7 +207,7 @@ label Scelta_11:
 label Scelta_10:
     
     show seccato bingus
-    b "Well if you like drinking battery acid I guess its definetly a choice."
+    b "Well if you like drinking battery acid I guess its definitely a choice."
 
     y "Excuse me?"
     hide seccato bingus
@@ -222,7 +223,7 @@ label Scelta_9:
     show seccato bingus
     b "Don't ask me, im just doing my job."
     
-    b "'Wispering to himself' Just 23 years to retirement I can do it, oh my Zulone this headake is killing me."
+    b "'Whispering to himself' Just 23 years to retirement I can do it, oh my Zulone this headache is killing me."
     hide seccato bingus
     show normal bingus
     jump Scelta_12
@@ -240,14 +241,14 @@ label Scelta_12:
 label Scelta_15:
     
     show seccato bingus
-    b "Ugh... two tablets of Zanaz are not gonna be enough fot this level of pain."
+    b "Ugh... two tablets of Zanaz are not gonna be enough for this level of pain."
 
     b "You don't have many friends am I right?"
 
-    y "Sorry I was just tryna to lights up the conversation."
+    y "Sorry I was just trying to lights up the conversation."
     hide seccato bingus
     show normal bingus 
-    b "I think you could do a better job simply by closing yout mouth, ok?"
+    b "I think you could do a better job simply by closing your mouth, ok?"
 
     y "Yes sir."
     jump Scelta_16
@@ -258,7 +259,7 @@ label Scelta_14:
 
     b "Was this some kind of human joke because it didn't make me laugh."
 
-    y "Ok I get it, like you could have told me your funny bone was missing jeeze."
+    y "Ok I get it, like you could have told me your funny bone was missing jeez."
     hide confused bingus
     show normal bingus
     b "All my 230 bones are perfectly fine, you just aren't funny."
@@ -296,11 +297,11 @@ label Scelta_16:
     
     d "I hope for you its not well as the last one who crashed 2 of our trucks inside the cafeteria, over."
     
-    b "Yes sir, I din't forgot about the drivers licence, over."
+    b "Yes sir, I din't forgot about the drivers license, over."
 
     "Bingus looks at you with a glacial stare"
     
-    b "You do have a driving licence am I right human?"
+    b "You do have a driving license am I right human?"
     menu:
         "Of course I know how to drive.":
             jump Scelta_17
@@ -321,7 +322,7 @@ label Scelta_18:
 label Scelta_17:
     hide feared bingus
     show happy bingus at left
-    b "Finally you said somehing smart and useful for once!"
+    b "Finally you said something smart and useful for once!"
 
     b " Still do not get near the cafeteria capisc?"
 
@@ -335,16 +336,16 @@ label Scelta_19:
     show feared bingus at left
     d "Supervisor Bingus do you hear me? Over."
 
-    b "yes boss, the candate has a drivers licence, over."
+    b "yes boss, the candidate has a drivers license, over."
     hide normal boss
     show happy boss at right
 
-    d "Perfect,I just finished signing the new recruit documents. The human is officaly part of the 'Spedisco Nu Paccheeto' family. over."
+    d "Perfect,I just finished signing the new recruit documents. The human is officially part of the 'Spedisco Nu Paccheeto' family. over."
     hide feared bingus
     show seccato bingus at left
     b "Hurray... im soo happy to hear that."
     
-    d "Good, if you please can you direct the human to the Launching pad, so it can sart the shift, over."
+    d "Good, if you please can you direct the human to the Launching pad, so it can sTart the shift, over."
 
     b "Sure thing boss, it'll be a pleasure for me. Over and out."
     hide happy boss
@@ -352,9 +353,9 @@ label Scelta_19:
     show normal bingus
     b "You heard the boss, go to the Launching pad, follow the corridor and take the second door to the right."
 
-    b "And remember do NOT enter or follow me into the cafeteria, now if you escuse me I have a tuna sadwich to eat."
+    b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
 
-    b "Oh, I almost forgot your truck its gonna be the first one on the left, my collegue will be waiting for you in the vehicle."
+    b "Oh, I almost forgot your truck its gonna be the first one on the left, my colleague will be waiting for you in the vehicle."
     hide normal bingus
     show seccato bingus
     b "Please don't screw up."
@@ -370,7 +371,7 @@ label Scelta_19:
 
 label Scelta_20:
     scene bg camion with dissolve
-    y "I think this one is the right truk, I wonder where is this collegue bingus told me about."
+    y "I think this one is the right truk, I wonder where is this colleague bingus told me about."
 
     "'Door opens and slam shut'"
     show happy bingus
@@ -391,7 +392,7 @@ label Scelta_20:
     show normal bingus
     P "Well its an itergalatic translator with over 5 gazillion language known in the universe."
 
-    P "I still don't know how to speack properly the human dialect so Boss gave it to me just in case."
+    P "I still don't know how to speak properly the human dialect so Boss gave it to me just in case."
 
     B "Oh by the way i am not Bingus but his little brother Bingus Jr and im going to be your partner."
 
@@ -402,25 +403,25 @@ label Scelta_20:
     y "Sure, ehm where is the keyhole?"
     hide normal bingus 
     show confused bingus
-    B "Inside the steering weel, have you ever drove one of this truks before [povname]?"
+    B "Inside the steering wheel, have you ever drove one of this truk before?"
 
     y "Yes, of course I have many hours driving trucks, even bigger than this one."
 
-    y "This must be a new model I didn't had the chance tro try before ahah."
+    y "This must be a new model I didn't had the chance to try before ahah."
     hide confused bingus
     show normal bingus
 
     "'Turns on the truck'"
     y "Ok now what?"
 
-    B "Well now you have to choose where to go first I have a couple of addess to go trough so choose."
+    B "Well now you have to choose where to go first I have a couple of address to go trough so choose."
  
     y "I get to choose?"
     hide normal bingus
     show happy bingus
-    B "Yes silly, I usually pick a random address so I knewer know what my nect destination will be, wanna try?"
+    B "Yes silly, I usually pick a random address so I never know what my next destination will be, wanna try?"
 
-    y "I'd rather not, what are the addesses Jr?"
+    y "I'd rather not, what are the addresses Jr?"
 
     B " Sure thing lets see..."
     hide happy bingus
@@ -436,6 +437,8 @@ label addresses:
             jump quasar
         "420 Hooters 6th Avenue Mars Mr 6996 " if adinolfo ==0:
             jump adino
+        "Go back to base." if wanda ==1 and seneca ==1 and quasar ==1 and adinolfo ==1:
+            jump ACT2
 
 label adino:
     scene bg space with dissolve
@@ -447,12 +450,12 @@ label adino:
 
     B "Every day is full of possibilities."
 
-    y "Really? I only thought we were just some delivery guys for a massive coporation."
+    y "Really? I only thought we were just some delivery guys for a massive corporation."
     hide happy bingus
     show normal bingus
     B "That's only a small fraction of the job, the journey is the best part I must say."
 
-    B "Once I had to follow a comet in order to arrive to a very far far away planet in a different distict just outside of the Milky Way."
+    B "Once I had to follow a comet in order to arrive to a very far far away planet in a different district just outside of the Milky Way."
     hide normal bingus
     show happy bingus
     B "Best experience of my life, and you did you had similar experience ehm... can you remind me your name?"
@@ -472,7 +475,7 @@ label adino:
 
     y "This dude must have tons of money, like look how rich and well kept is this patch of garden."
 
-    y "Heck he got grass on Mars thats more impressive than every thing elese!"
+    y "Heck he got grass on Mars thats more impressive than every thing else!"
     show normal bingus
     B "You are right but remember to be professional."
 
@@ -495,7 +498,7 @@ label adino_2:
     show normal bingus
     B "Good, make sure to place it with the label facing the top."
 
-    y "Ok everything setted correctly, let's go Jr!"
+    y "Ok everything set correctly, let's go Jr!"
     hide normal bingus 
     show happy bingus
     B "So were are we going now captain?"
@@ -544,9 +547,9 @@ label dayend:
     y "Back to the base Jr, that was our last delivery for the day."
     hide normal bingus
     show happy bingus
-    B "Cool we were fatser than the programmed schedule, wanna grab something to eat in the cafeteria when we arrive im starving."
+    B "Cool we were faster than the programmed schedule, wanna grab something to eat in the cafeteria when we arrive im starving."
 
-    y "I don't think its a good idea since thay told me I was prohibited to go in for some reason."
+    y "I don't think its a good idea since they told me I was prohibited to go in for some reason."
     hide happy bingus 
     show normal bingus
     B "Nah its just my brother, he says this to all new recruits. You are gonna be fine trust me."
@@ -563,7 +566,7 @@ label seneca:
 
     B "Sure [povname], what's on your mind?"
 
-    y "Is your brother always like that with the newcommers?"
+    y "Is your brother always like that with the newcomers?"
     hide normal bingus
     show confused bingus
     B "Like what?"
@@ -575,7 +578,8 @@ label seneca:
 
     y "You sure?"
 
-    B "100%"
+    B " Totally, trust me."
+    
     hide happy bingus 
     show normal bingus
     B "Oh look! The next destination, you should keep an eye on the path so we don't deliver to the wrong house hehe."
@@ -607,11 +611,11 @@ label seneca_2:
     y "I fell the pressure of someone waiting, he feels very annoyed."
 
     y "I really don't wanna face a possibly angry costumer."
-    "'Places the pakage next to the door.'"
+    "'Places the package next to the door.'"
 
     y "Good, now I make sure to place it with the label facing the top."
 
-    y "Ok everything setted correctly, let's go Jr!"
+    y "Ok everything set correctly, let's go Jr!"
     
     show happy bingus
     B "So were are we going now captain?"
@@ -623,22 +627,22 @@ label seneca_1:
     "Knocks on the door."
     scene bg sportaopen
     "Door opens."
-    show normal sene
-    s "'Cogito ergo sum' aka it doesen't matter how hard you doubt everything, the existence of the thinking I will remain a truth."
+    show sene 1
+    s "'Cogito ergo sum' aka it doesn't matter how hard you doubt everything, the existence of the thinking ego will remain a truth."
 
-    s "One of my favoure passages from Cartesius."
+    s "One of my favorite passages."
 
     y "Well I am more of a 'Live like there is no tomorrow guy' hehe."
-    hide normal sene 
-    show confused sene
-    s "Strange filosophy from a guys who is delivering a package late."
+    hide sene 1 
+    show sene 3
+    s "Strange philosophy from a guys who is delivering a package late."
 
     s "After all 'Errare Humanum est' im I wrong ?"
-    hide confused sene
-    show normal sene
+    hide sene 3
+    show sene 1
     y "Sorry for that sir, so if you can sign here on the clipboard i'll go."
 
-    s "Be careful out there, the universe it's not a place for those with a weack mind."
+    s "Be careful out there, the universe it's not a place for those with a weak mind."
 
     y "Good day sir."
     
@@ -663,9 +667,9 @@ label seneca_1:
 
 label quasar:
     scene bg space with dissolve
-    show happy bignus
+    show happy bingus
     
-    B "♪ We are going on a trip on this big hecking ship. Flying trough the sky! Jr and [povname] ♪"
+    B "♪ We are going on a trip on this big mail ship. Flying trough the sky! Jr and [povname] ♪"
 
     y "Hey little bud I didn't know you can sing too."
     hide happy bingus
@@ -673,7 +677,7 @@ label quasar:
 
     B "Gnarpies are very sociable creatures, singing it's one of the many way our species interacts with each others."
 
-    y "That's explain why you brother was so upset about the gingle."
+    y "That's explain why you brother was so upset about the jingle."
     hide normal bingus
     show feared bingus
     B "Yeah we don't talk about that."
@@ -691,7 +695,7 @@ label quasar:
 
     y "............"
 
-    B "Trun right to that asteroid, the next house will be on the left."
+    B "Turn right to that asteroid, the next house will be on the left."
 
     scene bg quasarplanet with dissolve
     with Pause(2)
@@ -728,20 +732,34 @@ label quasar_1:
     scene bg qporta with dissolve
     with Pause(1)
 
-    q "Hello?"
+    q "One second, im coming."
 
     y "Hi, here is you package and here is were you need to sign so I can leave."
     scene bg qportaopen with dissolve
     with Pause(1)
-    "A stiky jellous hand reaches out of the door leaving a drop on the place to sign."
+    "'A sticky gelatinous hand reaches out of the door leaving a drop on the place to sign.'"
 
     y "Yeah, that should count, I hope."
 
+    q "Thanks..."
+
+    "You hear the voice whispering behind the door."
+    q "(wait a second is this delivery guy a human!?!?!?)"
+
+    q "(a real human being, knocked on my door!)"
+
+    q "(to delivering me a package!?!?!?)"
+
+    q "(ok quiet now take the parcel, thank you and say goodbye quietly)"
+
+    q "TTTTT...TT...THANK YOU........HAVE GOOD DAY!!"
     scene bg sporta with dissolve
     with Pause(1)
-    y "Have a nice day!"
+    "'Slams door'"
 
-    "Runs back to the truck"
+    y "Have a nice day you too I guess..."
+
+    "'Runs back to the truck'"
 
     scene bg camion
     show normal bingus
@@ -758,11 +776,11 @@ label wanda:
     y "Hey Jr, I found some freeze-dried sushi in the back do you think it tastes better in space?"
     hide normal bingus 
     show feared bingus
-    B "Is that even a quesion?"
+    B "Is that even a question?"
 
-    y "Im always open making new experience, pass me the water so I can tase this bad boy."
+    y "Im always open making new experience, pass me the water so I can taste this bad boy."
 
-    B "Im gonna get a papaer bag from the utility box in the bag, just in case."
+    B "Im gonna get a paper bag from the utility box in the bag, just in case."
 
     y "Nah, im gonna be fine trust me."
 
@@ -773,9 +791,9 @@ label wanda:
 
     y "I was so wrong..."
 
-    y "Never i'll eat freeze-dried shushi again."
+    y "Never i'll eat freeze-dried sushi again."
 
-    y "The location is defenitly not helping."
+    y "The location is definitely not helping."
     scene bg wporta with dissolve
     with Pause(1)
     menu:
@@ -805,7 +823,7 @@ label wanda_1:
     w "Hi"
 
     y "Uhm hi."
-    "'Stares respectfullty'"
+    "'Stares respectfully'"
     w "I think what you are holding is mine."
     hide cami secc
     show cami normal
@@ -827,4 +845,1089 @@ label wanda_1:
 
     $ wanda +=1
     hide normal bingus
-    jump addresses    
+    jump addresses
+
+label ACT2:
+    scene bg space
+    show normal bingus
+    "Static noises coming from the radio"
+    B "Boss is calling."
+    "Answers radio"
+    hide normal bingus
+    show normal bingus at left
+    show normal boss at right 
+    d "Bingus Jr do you hear me? Over."
+
+    B "Yes Boss, over."
+
+    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    hide normal bingus
+    show happy bingus at left 
+    B "Really? Over."
+
+    d "Yes, someone didn't load all the packages on your truck and since you are too far away it's better to end your shift early but just this time ok? Don't get comfy, over."
+    hide happy bingus
+    show normal bingus at left
+    B "Thanks sir, see ya tomorrow, over and out."
+    
+    hide normal boss
+    show normal bingus
+    y "Let's a go! First day and we get to end early."
+    hide normal bingus
+    show happy bingus
+    B "Nice, wanna go get a drink on the way back? I know a place near the moon thats it's the end of the world."
+
+    y "Sure, im kinda low on money tho..."   
+    hide happy bingus
+    show normal bingus
+    B "Oh don't worry it's on me this time, next one is on you."
+    hide normal bingus 
+    show happy  bingus
+    B "Now stop talking and let's get the party started!" 
+    scene black with slowdissolve
+    with Pause(1)
+
+    show text "Bingus Jr and [povname] spent some great time together that evening." with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "They became good friend since then..." with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "[povname] still owes Jr some money. " with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+
+    show text "One week later" with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    $ wanda -= 1
+    $ seneca -= 1
+    $ quasar -= 1
+    $ adinolfo -= 1
+    scene bg camion
+    y "I think im starting to get used to this routine."
+    show happy bingus
+    B "Good morning [povname]"
+    
+    y "Morning Jr, how we doing today?"
+
+    B "Very good, I had my big coffee this morning and im ready to go."
+
+    y "Love the spirit, were are we going today partner?"
+    hide happy bingus
+    show normal bingus
+    B "Let's see..."
+
+    B "Oh I think you'll recognize them."
+    hide normal bingus
+    jump addresses2
+
+label addresses2:
+    menu:
+        "77 Domina Ave Neptune Np 44756" if wanda ==0:
+            jump wando
+        "03 Sapience Rd SW Saturn St 5689" if seneca ==0:
+            jump seneco
+        "404 Remsemen Street Jupiter Jp 3912" if quasar ==0:
+            jump quasaro
+        "420 Hooters 6th Avenue Mars Mr 6996 " if adinolfo ==0:
+            jump adina
+        "Go back to base." if wanda >=1 and seneca >=1 and quasar >=1 and adinolfo >=1:
+            jump ACT3
+
+label quasaro:
+    scene bg space
+    show happy bingus
+    B "♪ Cruising on down main street You're relaxed and feeling good Next thing that you know you're seeing Bingus in the neighborhood! ♪"
+
+    y "♪ Surfing on a sound wave Swinging through the stars Take a left at your intestine Take your second right past Mars ♪"
+    hide happy bingus
+    show normal bingus
+    B "You are getting good, one note was right this time."
+
+    y "Thanks Jr, but I decide to stay humble."
+
+    B "Ok mr, now turn right at the next asteroid if you please."
+    hide normal bingus
+    scene bg quasarplanet with dissolve
+    with Pause(2)
+    scene bg qviale with dissolve
+    with Pause(1)
+
+    y "This place smells terrible like last time."
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Knocks on the door'"
+    scene bg qportaopen with dissolve
+    with Pause(1)
+    show qua embara
+    q "Oh! y..you are the same courier from last week."
+
+    q "B...but surely you..forgot about me hehehe..."
+    hide qua embara
+    menu:
+        "Of course I remember you.":
+            jump q1 
+        "Sorry I don't remember you.":
+            jump q2 
+
+label q2:
+    show qua sad 
+    q "............."
+
+    q "It's ok, maybe I overacted my fault."
+
+    q "Im so dumb, I'll take the parcel and leave..."
+    hide qua sad 
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Slams door'"
+
+    q "Stupid, why did I opened my mouth, I am so embarrassed right now!"
+
+    y "Have a nice day I guess..."
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "I think I said something wrong, better not think about it much."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses2
+
+label q1:
+    show qua happy
+    q "... whoa you remember (he remembers me im so exited right now!!!?!?)"
+
+    y "Yeah, is everything ok?"
+
+    q "YES, I mean yes everything is ok"
+    hide qua happy
+    show qua normal
+
+    q "I have a question are you really a human? Like from Earth?"
+
+    y "Yup im a real human."
+    
+    q "Wow, I never seen one of your species from this close."
+
+    q "I thought you were more hairy and did't wore clothes tho..."
+
+    y "I would like you to see going around naked with how cold the space is."
+    hide qua normal
+    show qua sad
+    q "Im sorry, I didn't mean it to sound rude I was just curious."
+
+    y "Oh nono, I was just joking I wasn't angry."
+    hide qua sad
+    show qua happy
+    q "Oh, thanks the stars! For a second I thought I screw up everything hehe."
+
+    y "By the way, those that you where referring to were monkeys."
+    hide qua happy
+    show qua normal
+    q "Monkeys, never heard of them from my researches...oh! Im so rude I didn't introduced myself im Quasar "
+
+    y "Nice yo meet you Quasar, my name is [povname]."
+    
+    Q "[povname] you say, a very peculiar name. Hey I have some takeaway inside, wanna share it with me?"
+    hide qua normal
+    menu:
+        "Sure why not.":
+            jump q3 
+        "Sorry I have to go now.":
+            jump q4
+
+label q4:
+    hide qua happy
+    show qua sad
+    Q "Oh don't worry, I hope to see you soon."
+
+    hide qua sad 
+    show qua normal
+    y "Have a nice day Quasar"
+
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+    Q "The human said my name yippee!!"
+
+    y "What a strange individual.."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very interesting individual I have to say."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses2
+
+label q3:
+    show qua normal
+    Q "Please enter and have a seat [povname]"
+    hide qua normal
+    scene bg qsalotto
+    with Pause(1)
+    
+    "'The strange odor in the air fill you lungs'"
+    show qua embara
+    Q "Yeah sorry for the mess, I moved out from my parents house in order to find a job and hadn't much time to tide up the place hehe.."
+
+    Q "This is the best place I could afford with my savings while I wait for someone to respond at my countless e-mails with my CV."
+    hide qua embara
+    show qua normal
+    Q "I don't usually have visitors, I can't remember the last time someone entered in this house except me."
+    hide qua normal
+    show qua sad
+    Q "I don't have many friends, or friends at all hehe..."
+    hide qua sad 
+    show qua normal
+    Q "But hey, thats enough talking about me how about you?"
+
+    y "Nothing much, just a delivery man trying to get to the end of the month."
+
+    Q "Very interesting... listen I have some question to ask you and so little time..."
+    "'Alarm plays somewhere in the house.'"
+    hide qua normal
+    show qua embara
+    Q "Oh no! My noodles! I have to go, please have a seat I'll be be in a minute."
+    hide qua embara
+    "'Runs away in a hurry'"
+
+    y "I hope the food didn't burn up, damn this place is really a mess... like I am a messy person that always forget to to the laundry and stuff but this is on a next level."
+
+    y "It looks like some houses I'll see on 'Home and Grass Tv'"
+
+    y "Yuck I stepped on something moist..."
+
+    Q "Don't worry [povname] everything is going alright here."
+    "'Sounds of flames erupting in the distance'"
+
+    Q "Everything is alright, give me like five minutes max ok?"
+
+    y "That wasn't very promising "
+
+    y "Ugh the moist thing is all over my show, maybe I can find some tissue around somewhere, preferable one that is not used..."
+    menu :
+        "Look around the house.":
+            jump q5 
+        "Stay where you are and wait.":
+            jump q6 
+
+label q5_2:
+    scene bg qsalotto with quickfade
+    y "Maybe that was the real bath-room, should I go back and take a deeper look?"
+    jump q6
+
+label q6:
+    y "Nah its better if I stay in the living-room, don't wanna risk stepping on something worse..."
+    "'Your eyes lands on one of the many screen in the room'"
+
+    y "This one is showing a strange planet, lets see... it's called Sblumbo."
+
+    y "I guess this is where Quasar comes from, this explain the slimy looks."
+    show qua normal
+    Q "Hey im back, soo about the food... there is a possibility that is charred beyond saving..."
+
+    y "Oh, don't worry I wasn't that hungry. (And looking at the room... im not even sure if anything coming from this house could be edible.)"
+
+    Q "Im so sorry, im failure and I've ruined your appetite..."
+
+    y "No don't be so hard on yourself, you tried at least."
+
+    Q "'Tried', like its three months that im trying to find a job here..."
+    "'Grabs phone with the picture of the planet'"
+    hide qua normal 
+    show qua sad
+    Q "I've worked so hard on my home planet in order to save up enough to finally leave and be on my own while exploring the vastness of the great cosmos."
+
+    Q "Sometimes I wonder if I made a good decision coming here..."
+
+    Q "I miss Sblumbo, but now its too late to go back home."
+
+    Q "This house, it's just like me... a big pile of trash."
+
+    y "No don't say it! You have to keep up your spirit, if not for those back on Sblumbo do it for you."
+
+    y "Listen I too was broke as heck a week ago but I took the risk working for this company and it tuned out to be one of the best decision I made in the last 2 month."
+
+    y "What I am trying to say is, life is hard you have to be harder got it?"
+    hide qua sad
+    show qua embara
+    with Pause(2)
+    hide qua embara
+    show qua normal
+
+    Q "Nobody before told me something like that. You human, I mean [povname] are really something else."
+    "'Phone starts ringing'"
+
+    y "Sorry it's my colleague."
+
+    B "Hey [povname], where are you it's 10 min im waiting!"
+
+    y "Yeah sorry, I was talking with the customer and I lost track of time."
+
+    B "Well move then! The boss can see our movements and sure know when we are not in track got it?"
+
+    y "Crystal clear Jr."
+    "'Closes the call'" 
+
+    y "Sorry Quasar I think i have to go now."
+    hide qua normal
+    show qua sad
+    Q "It's ok if you leave I won't take more of your time... it was fun knowing you."
+    menu:
+        "Stay for a few more minutes.":
+            jump q7
+        "Leave.":
+            jump q8
+
+label q8:
+    hide qua sad
+    show qua sad
+    Q "Oh don't worry, I hope to see you soon."
+
+    hide qua sad 
+    show qua normal
+    y "Have a nice day Quasar"
+
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+    Q "I made a friend yippee!!"
+
+    y "What a strange individual.."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very interesting individual I have to say."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses2  
+
+label q7:
+    y "Don't worry Jr I'll be back soon."
+    "'Winks at Quasar and closes the call.'"
+    hide qua sad 
+    show qua embara
+
+    y "So you told me before you had many things to ask me."
+    hide qua embara
+    show qua happy
+    Q "I'll start immediately!"
+    hide qua happy
+    show qua normal
+    Q "First follow me, I need to show you something."
+    scene bg qdoio with quickfade
+    hide qua normal 
+    show qua happy
+    Q "Ok prepare yourself, ready? Ok take a look."
+    hide qua happy
+    scene bg qspecial with quickfade
+    with Pause(2)
+    show qua happy
+    Q "So, what do you think?"
+
+    y "It's very...unique I must say."
+
+    Q "I know! I am so, SOO intrigued by your culture and traditions."
+    hide qua happy
+    show qua normal
+    Q "I once received in the mail a Journal called Dipiù and it was a game changer for me."
+
+    Q "I saw all the things you humans saw on daily basis."
+
+    y "(I've never seen so much gossip magazine in my life)"
+
+    y "Well, let's say its not only spice and drama we know back there but it's pretty close hehe."
+
+    Q "I kinds envy you humans, despite all your flaws you always try to came out on top of every obstacles life gives you without fear."
+    hide qua normal
+    show qua sad
+    Q "My people don't have that kind of reputation."
+
+    Q "We for most of the galaxy are just a bunch of parasites that fucks up everything in our way."
+
+    Q "Sometimes I feel like a worthless Amoeboid like the one from some old  video-games from centuries ago."
+    
+    y "You are so much more than a Amoeboid trust me Quasar."
+    hide qua sad
+    show qua embara
+
+    Q "That was very sweet I must say...thanks."
+    hide qua embara
+    show qua happy
+    Q "I think now it's time to, I've wasted enough of your time already."
+
+    y "I'ts not a big deal I enjoy you company Quasar."
+    hide qua happy
+    menu:
+        "Exchange phone numbers.":
+            jump q9 
+        "Give Quasar a handshake.":
+            jump q10
+
+label q10:
+    show qua normal
+    Q "It was fun knowing you."
+
+    y "It was a pleasure to meet you. Have a great day Quasar and  see you soon."
+
+    y "Remember here at 'Spedisco Nu Paccheeto' we always give our best for the costumer."
+
+    Q "You are so silly, see you soon and don't forget about me ok?"
+
+    y "I will not, goodbye."
+    hide qua normal
+    scene bg qporta with slowdissolve
+    with Pause(2)
+    "'Door closes'"
+    Q "I made a friend, yippee!!"
+
+    y "What a strange individual.."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very interesting individual I have to say."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses2
+
+label q9:
+    show qua embara
+    Q "Oh..(The human enjoys my company I am soo happy I could explode right now!)."
+
+    y "It was a pleasure to meet you. Hey why don't we exchange phone numbers so we can keep in touch if its ok for you."
+    hide qua embara
+    show qua happy
+    Q "YES 'clears troat' yes I would like to."
+    "'You exchanges numbers'"
+    Q "You are special [povname], I hope you soon and don't forget about me ok?"
+
+    y "I will not, now i have to go back work or Jr will kill me if you don't mind hehe."
+
+    Q "Goodbye."
+    hide qua happy
+    scene bg qporta with slowdissolve
+    with Pause(2)
+    "'Door closes'"
+    Q "I made a friend, yippee!!"
+
+    y "What a strange individual.."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very interesting individual I have to say."
+
+    $ quasar +=2
+    hide normal bingus
+    jump addresses2
+
+label q5:
+    scene bg qdoio with quickfade
+    y "Everywhere I go I see piles and piles of trash."
+
+    y "I can't even walk straight!"
+
+    y "Maybe behind this door there is a bathroom where I can clean myself."
+    scene bg qspecial with quickfade
+    y "I definitely wasn't expecting something like this to be in this place."
+    menu:
+        "Take a closer look.":
+            jump q5_1
+        "Go back to the living-room.":
+            jump q5_2
+        "Turn around and run back to the truck.":
+            jump q5_3
+
+label q5_3:
+    scene bg qsalotto with quickfade
+    show qua normal
+    Q "Hey im back, soo about the food... there is a possibility that is charred beyond saving..."
+
+    y "Oh, don't worry I wasn't that hungry. (And looking at the room... im not even sure if anything coming from this house could be edible.)"
+
+    Q "Im so sorry, im failure and I've ruined your appetite..."
+
+    y "No don't be so hard on yourself, you tried at least."
+
+    y "I'm sorry but i have to go now or my colleague will kill me."
+    hide qua normal
+    show qua sad
+    Q "Oh don't worry, I hope to see you soon."
+
+    hide qua sad 
+    show qua normal
+    y "Have a nice day Quasar"
+
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+    Q "Ugh, why I can't even turn on a stove, im so dumb..."
+
+    y "What a strange individual.."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very strange individual I have to say."
+
+    $ quasar +=1
+    hide normal bingus
+    jump addresses2 
+
+label q5_1:
+    y "The image in the middle seems familiar but I don't remember why..."
+
+    y "Maybe if I get closer I can see better."
+    show qua normal 
+    Q "Hey what are you doing? Snooping around?"
+
+    y "Oh no, nothing of sorts I was just looking for something to clean myself."
+
+    Q "Oh sorry, I always forgot this place is a mess, here take this pieces of cloth."
+
+    Q "Don't worry it's clean (or at least I think it is)."
+
+    y "Thanks Quasar."
+    hide qua normal
+    show qua sad
+    Q "So you found it... my secret shrine."
+
+    Q "I know it's very weird and creepy but I can explain!"
+    hide qua sad
+    show qua normal
+    Q "I deeply admire the ones of your kind, su much in fact I got my hands on all this human magazine in order to know more."
+
+    y "Well, let's say its not only spice and drama we know back there but it's pretty close hehe."
+
+    Q "Humans are such an interesting species, full of wonder and despite your flaws you always came out on top of every challenge life gives you."
+    hide qua normal
+    show qua sad
+    Q "My people don't have that kind of reputation."
+
+    Q "We for most of the galaxy are just a bunch of parasites that fucks up everything in our way."
+
+    Q "Sometimes I feel like a worthless Amoeboid like the one from some old  video-games from centuries ago."
+    hide qua sad
+    show qua normal
+    Q "I've worked so hard on my home planet in order to save up enough to finally leave and be on my own while exploring the vastness of the great cosmos."
+    hide qua normal
+    show qua sad
+    Q "I miss home, I miss Sblumbo..."
+
+    Q "This house, it's just like me... a big pile of trash."
+
+    y "No don't say it, you have to be strong if not for those back on Sblumbo do it for you."
+
+    y "Listen I too was broke as heck a week ago but I took the risk working for this company and it tuned out to be one of the best decision I made in the last 2 month."
+
+    y "What I am trying to say is, life is hard you have to be harder got it?"
+    hide qua sad
+    show qua embara
+    with Pause(2)
+    hide qua embara
+    show qua normal
+
+    Q "Nobody before told me something like that. You human, I mean [povname] are really something else."
+    "'Phone starts ringing'"
+
+    y "Sorry it's my colleague."
+
+    B "Hey [povname], where are you it's 10 min im waiting!"
+
+    y "Yeah sorry, I was talking with the customer and I lost track of time."
+
+    B "Well move then! The boss can see our movements and sure know when we are not in track got it?"
+
+    y "Crystal clear Jr."
+    "'Closes the call'" 
+
+    y "Sorry Quasar I think I have to go now."
+    hide qua normal
+    show qua sad
+    Q "It's ok if you leave I won't take more of your time... it was fun knowing you."
+    hide qua sad
+    menu:
+        "Stay for a few more minutes.":
+            jump q5_4
+        "Leave.":
+            jump q8
+
+label q5_4:
+    show qua sad
+    Q "I think now it's time to, I've wasted enough of your time already."
+
+    y "I'ts not a big deal I enjoy you company Quasar."
+
+    Q "Even tho I can't even boil some water without starting a fire?"
+
+    y "You're all right Quasar, remember it ok? "
+    hide qua sad 
+    show qua happy
+    Q "........."
+    hide qua happy
+    menu:
+        "Exchange phone numbers.":
+            jump q9 
+        "Give Quasar a handshake.":
+            jump q10
+
+label seneco:
+    scene bg space 
+    show normal bingus
+
+    y "Hey Bingus, sorry if I ask but... does your brother hate me?"
+
+    B "Nah, of course not. He is just silly in other ways hehe."
+
+    y "Well, how do you explain his criminally offensive side eye he gives me every time we see each other?"
+    hide normal bingus
+    show confused bingus
+    B "He's just keeping an eye on you let's say."
+
+    y "Ok, but why?"
+    hide confused bingus 
+    show sad bingus
+    B "He doesn't like you."
+    y "Why is the fact that I like the gas station tea?"
+    hide sad bingus 
+    show angry bingus
+    B "You what?!"
+
+    y "Ehm its just a joke, I wasn't serious. (That was close)"
+    hide angry bingus
+    show sad bingus
+    B "So the reason why he doesn't like you is due to the fact we spent too much time together."
+
+    B "Since our parents pass away when I was little he always tried his best to give me a good life."
+
+    B "Even now that we are both adults, in his eyes im still his little brother."
+
+    y "Aww that's very sweet Jr."
+
+    y "It also explains a lot about him, maybe one of this days we can go out together so we can know each others better what do you think?"
+    hide sad bingus
+    show happy bingus 
+
+    B "I think its a wonderful idea [povname], but first before planning let's finish todays shift!"
+    scene bg senecaplanet with dissolve
+    with Pause(2)
+    scene bg sviale with dissolve
+    with Pause(1)
+
+    y "I can still feel the spiritual pressure of this house owner waiting."
+    show normal bingus
+
+    B "Yup, me too. Now deliver the package if you don't mind."
+
+    hide normal bingus
+    scene bg sporta with dissolve
+    with Pause(1)
+    "Knocks on the door."
+    scene bg sportaopen
+    "Door opens."
+    show sene 1
+    s "Oh, my package has finally traveled all the way through the shape of the phenomenons of the external senses."
+
+    y "The shape of what now? Sir I just need a signature on the parcel..."
+
+    s "My dead human, im talking about the subjective condition that allows us to use our intuition, of corse this intuition is external thus the knowledge of those so called 'External senses'."
+
+    s "Tell me, isn't this beautiful?"
+    hide sene 1
+    show sene 2
+    y "I think so... is this all from the works of your mind?"
+
+    s "Immanuel Kant actually, this his from your peoples work."
+    hide sene 2
+    show sene 5
+    s "Are you implying as a human like you doesn't know this great philosopher?!?!"
+
+    y "No, you got it all twisted, of course I know Kant hehe.."
+    hide sene 5
+    show sene 1
+
+    s "Well if you say so, I guess my reaction was inappropriate."
+
+    s "My name is Seneca, this is the nominative I would like to be called."
+
+    S "My real name is composed by words only individuals from my planet can pronounce."
+
+    y "Nice to meet you Seneca, my name is [povname] and philosophy is not really my thing but I respect those who study it tho."
+    hide sene 1 
+    show sene 2
+    S "Such nice words to hear from one of your kind."
+
+    S "Unfortunately your race is no longer filled with elevated minds like the ones who came before you centuries ago."
+
+    y "Thanks, I guess..."
+    hide sene 2
+    show sene 4
+    S "If you don't mind [povname], I would like to invite you inside, so we can continue our discussion."
+    hide sene 4
+    menu:
+        "Sure why not.":
+            jump s1 
+        "Sorry I have to go now.":
+            jump s2
+
+label s2:
+    show sene 4
+    S "Don't worry, It was my mistake interfering with your work."
+
+    S "I hope you have a good day."
+    hide sene 4
+    show sene 2
+    y "Have a nice day sir."
+
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+
+    y "I feel more conscious about myself now, very weird. "
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very interesting individual I have to say."
+
+    $ seneca +=1
+    hide normal bingus
+    jump addresses2    
+
+label s1:
+    show sene 1
+    S "Please be my guest [povname]"
+    hide sene 1
+    scene bg ssalotto
+    with Pause(1)
+    show sene 3
+    y "Woah, I like your interior design. I see you have many manuscripts impressive."
+
+    S "Thanks for the compliment, I collect them in my free time so I can expand my knowledge."
+    
+    y "I imagine its very rewarding having this many books and the fact you probably read all of them at least once I guess."
+    hide sene 3
+    show sene 4
+    S "My dream is to build in the future a new LIbrary of Alexandria so knowledge will be accessible to all who seek enlightenment."
+
+    S "My mission is similar to those who recite Hippocrates oath."
+
+    S "I can't turn my back to those who looks for knowledge without the resources."
+
+    y "That's very honorable Seneca."
+    hide sene 4
+    show sene 2
+    S "If you don't mind I have to take care of some business inside the library, I'll be back soon."
+
+    S "You can wait for me in the living-room."
+    hide sene 2
+
+    y "This house is filled to the brim with cool stuff, maybe he wouldn't mind if i take a peek in his absence."
+    menu:
+        "Stay where you are.":
+            jump s3 
+        "Take a look around the house":
+            jump s4 
+
+label s3:
+    y "No I have to be strong, Seneca told me to stay here so I will."
+
+    y "I can wait while reading one of the books laying around here."
+
+    y "This guy sure love also lifting, I bet all the other rooms are filled with books and weights."
+
+    y "Knowledge must be a heavy burden to carry around hehe."
+    show sene 1
+    S "[povname] im back, forgive me what I had to to took more time than planned."
+
+    S "If you don't mind I would like to show you something, since you proved yourself to be a thoughtful individual."
+    hide sene 1
+    show sene 4
+    y "I'll be glad to Seneca, please show me the way."
+    "'Phone starts ringing'"
+
+    y "Sorry it's my colleague."
+
+    B "Hey [povname], everything is alright?"
+
+    B "You are taking longer than usual delivering the package, do you need some help?"
+
+    y "Yeah sorry, I was talking with the customer and I lost track of time."
+
+    B "Well move then! We don't have all day to complete the all deliveries ok?"
+
+    y "Crystal clear Jr."
+    "'Closes the call'" 
+
+    y "Seneca I think I have to go now."
+    hide sene 4
+    show sene 1
+    S "It's ok if you leave I won't take more of your time, it was delightful getting to know you."
+    menu:
+        "Stay for a few more minutes.":
+            jump s5 
+        "Leave.":
+            jump s6 
+
+label s6:
+    hide sene 1
+    show sene 2
+    S "I hope to see you soon, maybe we can continue our conversation while training our bodies."
+
+    S "Its 'Mens sana in corpore sano' after all."
+
+    hide sene 2
+    show sene 1
+    y "Have a nice day Seneca"
+
+    scene bg sporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+
+    y "I should come back, I really like his company."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, a very mindful individual I have to say."
+
+    $ seneca +=1
+    hide normal bingus
+    jump addresses2 
+
+label s5:
+    y "Don't worry Jr I'll be back soon."
+    "'Winks at Seneca and closes the call.'"
+    hide sene 1
+    show sene 1
+
+    S "Despite I do not condone lying I'll make and exception this time, please follow me."
+    scene sdoio with quickfade 
+    show sene 1
+    S "Here, behind this door I can show you the product of my work."
+    hide sene 1
+    scene sspecial with quickfade
+    with Pause(1)
+    show sene 1 
+    S "Here I present you Project Hermes, the biggest library the universe has ever seen."
+
+    S "Despite time is internal and not external, I still have a long way before I can call it complete."
+
+    y "Let me guess, it's Kant again right?"
+    hide sene 1
+    show sene 2
+    S "For Kant time and space are parallel in concept despite one being exterior to the mind and the other interior."
+
+    S "It's fascinating at the beginning it can seem troublesome, as Kant put it you can say what you want on pietism but the education and the intellectual discipline gain from that type of information was impeccable."
+
+    y "Well, isn't it obvious due to his philosophical discoveries?"
+
+    y "You know, sometimes I feel like despite the low knowledge I have that philosophy predated science."
+    hide sene 2
+    show sene 4
+    S "Of course it did, after all science is philosophy and philosophy is also math. Can you see the link?"
+
+    y "Uhm.. I think so, yes."
+
+    S "Philosophy is a logical language, you cannot come to illogical or surreal conclusion if used correctly."
+    hide sene 4
+    show sene 3
+
+    S "The same happens with math, since its based on axioms and logic."
+
+    S "Think about Democritus and his atom. He lived during ancient greece, on your small planet and despite this he theorized the atom way before John Dalton in the nineteenth century."
+
+    y "Now it kinda sounds like magic if you put it this way."
+
+    S "Haha my child, you can call philosophy magic if you want but its just a simple and logic use of culture which contains every knowledge."
+
+    y "Still, talking about the library its massive!"
+    hide sene 3
+    show sene 1 
+    S "Be free to consult whichever book you find interesting. It's my personal library but it's open for everyone looking for knowledge."
+
+    S "Im against entry fees, I only accept donations in order to expand this project."
+
+    y "Project Hermes you said right? Can you tell me more about it?"
+    hide sene 1
+    show sene 5
+
+    S "I called it after Hermes Trismegistus, for me it's like point in common between opposites."
+
+    S "Usually on your planet, the more culture flourishes the more conflict arise and fights broke out between opposite ideologies even tho those should be the one to be in peace like it happened on my home planet."
+
+    S "As within so without, like the smallest so is the biggest."
+
+    y "Im starting to understand it now. You know we human are very emotional creatures, we lose our temper when we are under pressure and often we confuse our work with our identity."
+
+    S "From where I came our people transcended emotion this is why I express myself using my body so that you can understand me better."
+
+    y "(Ah, so that was the reason why he wouldn't stop flexing in front of me)"
+    hide sene 5
+    show sene 4
+    y "Despite this, many humans live like they are on a different and lower plane of consciousness."
+
+    S "That's because each one of you has freedom to do and think what they please, your specie don't 'force' a progressive way of thinking in fact it does the exact opposite in order to secure your survival."
+
+    S "It's very peculiar how in modern times you still prefer to run away from knowledge and dialogue labeling those as a danger to your survival."
+    hide sene 4 
+    show sene 1
+    y "Now I am very curious, since you are such an open minded individual can I ask what you bought?"
+
+    S "I got some new weights for my home gym of course!"
+    hide sene 1
+    show sene 3
+    with Pause(1)
+    hide sene 3
+
+    show sene 1
+    y "Weights? I thought you were build like that by nature! So you are also a gym rat other than an erudite."
+
+    S "Of course my friend!"
+    hide sene 1
+    show sene 3
+    with Pause(1)
+    hide sene 3
+
+    S "'Mens sana in corpore sano' am I right?"
+
+    y "Your philosophy doesn't bat an eyelid."
+
+    S "Training your body is a mental exercise as much as studying, despite not looking like it."
+
+    S "Have you ever experienced while studying a flow state the same does the body during the workout."
+
+    y "So consistency is the key."
+
+    S "Exactly my disciples."
+    hide sene 1
+    show sene 3
+    with Pause(1)
+    hide sene 3
+
+    show sene 1
+    y "You are a really talented and intelligent individual, I would be honored to learn more with your guide."
+
+    "'Seneca blushes softly'"
+
+    S "Thanks for the kind words [povname], it's a pleasure for me helping the ones in need. I too have to thank you [povname]."
+
+    y "For what?"
+
+    S "It was fun talking to you, your identity and your intuitions. You are a really precious individual for me, never forget this."
+
+    y "Thank you Seneca."
+    hide sene 1
+    show sene 3
+    S "Remember to come back soon ok?"
+    "'Winks playfully'"
+
+    y "Hey why don't we exchange phone numbers so we can keep in touch if its ok for you."
+    hide sene 3
+    show sene 2
+    S "Sure let's keep in touch."
+
+    "'You exchanges numbers'"
+    y "I guess it's time for me to go now before my colleague kills me hehe."
+
+    S "Goodbye then [povname]."
+
+    hide sene 2
+    scene bg sporta with slowdissolve
+    with Pause(2)
+    "'Door closes'"
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, my mind feel more enlightened now hehe."
+
+    $ seneca +=2
+    hide normal bingus
+    jump addresses2
+
+label s4:
+    y "Let's take a look."
+    scene sdoio with quickfade
+
+    y "This house looks like a museum both outside and inside."
+
+    y "I wonder what inside this room."
+    scene sspecial with quickfade
+    with Pause(1)
+
+    y "Woah, this place is massive."
+
+    y "I wonder what this books can contain."
+    "'The book you chose was heavier than expected an slip from your hands with a loud thud'"
+    show sene 1
+    S "STOP RIGHT THERE YOU CRIMINAL SCUM!"
+
+    y "Oh gosh, im sorry I was curious I didn't mean it."
+
+    S "HUMAN, HOW DARE YOU DESECRATE THE CRADLE OF KNOWLEDGE AND RESTORED WISDOM?"
+    
+    S "THE LEGITIMATE HEIR OF THE LIBRARY OF ALEXANDRIA?? HOW DARE YOU DEPRIVE OTHER FORMS OF LIFE OF MERCIFUL CULTURE?"
+
+    S "FILTHY BEING, TRAITOR OF MY OWN TRUST "
+
+    S "GET OUT!!"
+    hide sene 1
+    "'You silently exit the house without saying a word.'"
+
+    scene sportaopen with quickfade
+    scene sporta with quickfade 
+    with Pause(1)
+
+    "'Door slams shut.'"
+
+    "'Goes back silently to the truck.'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+    hide normal bingus
+
+    show confused bingus
+    y "Let's not talk about it ok? Im not in the mood."
+
+    $ seneca +=1
+    hide confused bingus 
+    jump addresses2
