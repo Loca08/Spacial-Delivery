@@ -287,13 +287,13 @@ label Scelta_16:
 
     "Answers radio call"
     hide normal bingus
-    show normal boss at right
-    show feared bingus at left
+    show normal boss 
     d "Supervisor Bingus, im calling for an update on the interview with the new recruit.........., over."
-
-    b "Glad to hear you boss, always a pleasure. The recruit interview is going quite well, over."
     hide normal boss
-    show angry boss at right
+    show normal bingus
+    b "Glad to hear you boss, always a pleasure. The recruit interview is going quite well, over."
+    hide normal bingus
+    show angry boss
     
     d "I hope for you its not well as the last one who crashed 2 of our trucks inside the cafeteria, over."
     
@@ -331,30 +331,31 @@ label Scelta_17:
     jump Scelta_19
 
 label Scelta_19:
-    hide angry boss
-    show normal boss at right
-    show feared bingus at left
+    show normal boss
     d "Supervisor Bingus do you hear me? Over."
-
-    b "yes boss, the candidate has a drivers license, over."
     hide normal boss
-    show happy boss at right
+    show normal bingus
+    b "yes boss, the candidate has a drivers license, over."
+    hide normal bingus
+    show happy boss
 
     d "Perfect,I just finished signing the new recruit documents. The human is officially part of the 'Spedisco Nu Paccheeto' family. over."
-    hide feared bingus
-    show seccato bingus at left
+    hide happy boss
+    show seccato bingus
     b "Hurray... im soo happy to hear that."
     
     d "Good, if you please can you direct the human to the Launching pad, so it can sTart the shift, over."
 
     b "Sure thing boss, it'll be a pleasure for me. Over and out."
+    hide seccato bingus
+    show happy boss
+
+    b "You heard the boss, go to the Launching pad, follow the corridor and take the second door to the right."
     hide happy boss
+    show seccato bingus
+    b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
     hide seccato bingus
     show normal bingus
-    b "You heard the boss, go to the Launching pad, follow the corridor and take the second door to the right."
-
-    b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
-
     b "Oh, I almost forgot your truck its gonna be the first one on the left, my colleague will be waiting for you in the vehicle."
     hide normal bingus
     show seccato bingus
@@ -1931,3 +1932,297 @@ label s4:
     $ seneca +=1
     hide confused bingus 
     jump addresses2
+
+label adina:
+    scene bg space
+    show normal bingus
+    B "Hey, I remember this address. Isn't it the one where the rich guy lives that lent you the big tip the last time?"
+
+    y "You are right Bingus, this is the guy with the grass on Mars!"
+
+    y "How do I look? I wanna do a good impression so he's gonna tip me again."
+    hide normal Bingus
+    show confused bingus
+
+    B "You look like someone who can't drink a cup of coffee without spilling it on his shirt."
+    hide confused bingus 
+    show normal bingus
+    B "The rest is fine I guess."
+
+    y "Crap, I didn't saw it, hope he's not gonna notice it."
+
+    y "While I try to remove it can you take the wheel for a second please?"
+    "'Leaves the steering wheel to grab a napkin'"
+
+    hide normal bingus
+    show feared bingus
+    B "Wait im not ready."
+
+    "'Grabs the steering wheel in a panic'"
+    hide feared bingus
+    show angry bingus
+    B "Don't you ever try doing something stupid like that!"
+
+    y "Chill little dude, I know what I was doing."
+
+    y "Im gonna offer you some tea from the cafeteria to forgive me ok Jr?"
+    hide angry bingus
+    show normal bingus
+    B "With the gold fish biscuits?"
+
+    y "Yes with the biscuits."
+    hide normal bingus
+    show happy bingus
+    B "Ok we are even now."
+    hide happy bingus
+    show angry bingus
+    B "Try doing something like that again and im gonna launch out of the windshield the next time ok?"
+
+    y "Got it."
+    hide angry bingus
+    show happy bingus 
+    B "Good, I think we arrive at our destination look!"
+
+    hide happy bingus
+    scene bg adinolfoplanet with dissolve
+    with Pause(2)
+    scene bg aviale with dissolve
+    with Pause(1)
+    show normal bingus
+    B "Remember calm and professional"
+
+    y "Ok I will."
+
+    B "Good luck!"
+    hide normal bingus
+    scene bg aporta with dissolve
+    with Pause(1)
+
+    "Knocks on the door."
+    scene bg aportaopen
+    "Door opens."
+    show bonk cat
+    a "Well, hello there! Looks like someone's came back.~"
+
+    y "Yes sir, if you can sign my parcel it's all yours."
+
+    a "Sure thing sweetie"
+    "'Signs the parcel'"
+
+    y "You have a really nice house I must say. Seeing grass on Mars is really something I never thought I would see in my lifetime."
+
+    a "It's nothing just my vacation house, I have like five other in this Solar system."
+
+    y "(Six vacation houses, man this guys its astronomically rich!)"
+
+    a "Yeah, I know its not much I would have liked to have one for each planet of this solar system."
+    hide bonk cat
+    show sad cat
+    a "Unfortunately, there are not many houses to by on Neptune and Venus for sale."
+    hide sad cat
+    show silly cat
+
+    a "So im trying to buy both planet hehe.~"
+    "'You stares in shock'"
+
+    a "Since you seem to have a taste for nice things, how about you come inside and take a look?~"
+    hide silly cat
+    menu:
+        "Accept the invite.":
+            jump a1 
+        "Refuse in a polite way.":
+            jump a2
+
+label a2:
+    show sad cat
+    a "Don't worry, maybe another time."
+    hide sad cat 
+    show silly cat
+    a "I hope you have a good day sweetie.~"
+    
+    y "Have a nice day sir."
+    hide silly cat 
+    scene bg qporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+
+    y "Oh, he didn't leave a tip this time."
+
+    y "Well, better go back to work then."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Meh, no tip maybe another time Jr."
+
+    $ adinolfo +=1
+    hide normal bingus
+    jump addresses2 
+
+label a1:
+    show happy cat
+    a "Oh my gosh, im so happy right now please follow me hehe"
+
+    hide happy cat
+    scene bg asalotto
+    with Pause(1)
+    
+    show normal cat
+    a "So this is my martian vacation house, its my favorite of the six I have."
+    hide normal cat
+    show sad cat
+    a "But first, im a terrible host I haven't introduced myself."
+    hide sad cat
+    show silly cat
+
+    A "Nice to meet you my name is Adinolfo, what's yours?~"
+
+    y "My names is [povname]."
+
+    A "[povname]... I had a pet dodo named [povname] he was so cute with his big yellow nose."
+    hide silly cat
+    show sad cat
+    A "It's a shame birds cannot stand intergalactic travel at hyperspeed..."
+
+    y "Wait how did you had a pet dodo, weren't those extinct?"
+
+    hide sad cat
+    show normal cat
+    A "Father got me one for my birthday, he is the best!"
+
+    y "Can you remind me who your father is Adinolfo?"
+    hide normal cat
+    show silly cat
+    A "Oh his name is Elon Adinolfo Senior Musk."
+
+    y "(Elon!?!?! Elon Musk!?! Gosh I thought he was joking when he told me he's looking to buy Neptune and Venus but he is not kidding!)"
+
+    y "That is soo cool, I would have never guessed."
+
+    A "Yeah I get this a lot."
+    hide silly cat
+    show normal cat
+    
+    A "So now that we introduced each others, tell me do you like my place?"
+
+    y "Yeah, it's very cozy."
+
+    A "I know right! I really like the interior design of human houses ,so I asked my dad to hire a famous human designer to set up the place."
+
+    y "And what was his name?"
+
+    A "I think he was called Philippe Starck."
+
+    y "(The more he talks, the more I can feel my poverty)"
+
+    y "(My bank account is still red from last Xmas)" 
+
+    y "That's very nice I love it."
+
+    A "You haven't seen anything, I see you have a good eye why don't we talk more in front of a cup of cherry blossom and mango tea?"
+    "'Adinolfo's phone starts ringing'"
+    hide normal cat
+    show silly cat
+    A "Sorry is my dad calling, maybe he has some news on the planet transaction thingy hehe."
+
+    A "Wait for me, I'll be back soon sweetie.~"
+    hide silly cat
+    "'Walks away'"
+
+    y "Man this dude is really a money printing machine."
+
+    y "He is really humble tho I have to say."
+    menu: 
+        "Take a look around the house":
+            jump a3
+        "Stay where you are":
+            jump a4
+
+label a4:
+    y "Looking around I can see many things from the twentieth century."
+
+    y "I know this thing from my history class in highschool."
+
+    y "Look! Its a library full of burned cds!"
+
+    y "They are all neatly stored let's see."
+
+    y "There are some David Bowie, Caparezza, Queens and Pavarotti."
+
+    y "Never heard of those guys, I guess they are famous if Adinolfo has their music."
+    show silly cat
+
+    A "Heeey, im back and I have some great news!"
+
+    y "Woah tell me more."
+
+    A "So father told me he wasn't able to buy Venus but he get Neptune!"
+
+    y "(I feel threatened in some way, if his dad can buy a planet what else can he do?)"
+
+    y "Thats wonderful Adinolfo."
+
+    A "I know right! Now I can live on the same planet as my favorite streamer xX.Gorgon_Nya.Xx she is suck an icon!"
+
+    y "And what does she do exactly?"
+
+    A "She talks about old and forgotten creepypastas from the twenty-first century like Smiling dog.jpeg and Ted the caver."
+
+    y "Never heard of those but they sounds interesting."
+
+    A "Im gonna show you my creepypastas collection one of this days, I have some ancient texts from 2014 translated from Albus the white."
+    "'Phone starts ringing'"
+
+    y "Sorry it's my colleague."
+
+    B "Hey [povname], everything is alright?"
+
+    B "You are taking longer than usual again, are you stuck or something?"
+
+    y "Yeah sorry, I was talking with the customer and I lost track of time."
+    hide silly cat
+    show normal cat
+    A "Is he your colleague? He sound cute on the phone."
+
+    B "Well move then! We don't have all day to complete the all deliveries ok?"
+
+    y "Yes, I know no need to remind me."
+    "'Closes the call'" 
+    hide normal cat 
+    show sad cat
+    y "Sorry Adinolfo I have to go now."
+    hide sene 4
+    show sene 1
+    A "It's ok if you leave I won't take more of your time, it was delightful getting to know you."
+    hide sad cat
+    menu:
+        "Stay for a few more minutes.":
+            jump a5 
+        "Leave.":
+            jump a6 
+    
+label a6:
+    show normal cat
+    A "Oh don't worry, I hope to see you soon."
+
+    y "Have a nice day Adinolfo"
+    hide normal cat 
+    show silly cat
+    A "Come back visiting soo sweetie."
+
+    scene bg aporta with dissolve
+    with Pause(1)
+    "'Door closes'"
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, big reality check but he's a nice guy."
+
+    $ adinolfo +=1
+    hide normal bingus
+    jump addresses2  
