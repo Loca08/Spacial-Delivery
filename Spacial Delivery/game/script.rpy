@@ -821,17 +821,60 @@ label wanda_1:
     scene bg wportaopen with dissolve
     with Pause(1)
     show cami secc 
-    w "Hi"
+    w "........"
 
     y "Uhm hi."
     "'Stares respectfully'"
     w "I think what you are holding is mine."
     hide cami secc
     show cami normal
-    y "Ehm, yes just sign here on my clipboard."
+    y "Ehm, yes I’ve got a package for a “Wanda.” Address is 77 Domina Ave, Neptune."  
+    
+    y "just sign here on my clipboard."
 
-    y "Perfect have a nice day."
+    y "Perfect, hey quick question are you always this welcoming?"
     hide cami normal
+    show cami secc
+    w "Are you always this annoying?"
+    
+    menu:
+        "No, ma'am. Just wanted to confirm I'm delivering to the right person.":
+            jump wanda_3
+        " Well, your name is on the package… unless you're hiding from the law?":
+            jump wanda_4
+        "Stay silent":
+            jump wanda_5
+
+label wanda_3:
+    hide cami secc
+    show cami normal
+    w "If you say so."
+    hide cami normal
+    jump wanda_6
+
+label wanda_4:
+    hide cami secc
+    show cami normal
+    w "And if I were? Would you rat me out?"
+
+    y "Depends on how well you tip."
+    hide cami normal 
+    show cami secc
+    w "You are so annoying."
+    hide cami secc
+    jump wanda_6
+
+label wanda_5:
+    w "Just as I thought."
+    hide cami secc
+    jump wanda_6
+
+label wanda_6:
+    show cami secc
+    w "If you are waiting for a tip it's not happening."
+
+    w "Now get lost ok?"
+    hide cami secc
     "'Closes door'"
     scene bg wporta with dissolve
     with Pause(1)
@@ -2193,9 +2236,8 @@ label a4:
     hide normal cat 
     show sad cat
     y "Sorry Adinolfo I have to go now."
-    hide sene 4
-    show sene 1
-    A "It's ok if you leave I won't take more of your time, it was delightful getting to know you."
+
+    A "It's ok if you leave I won't take more of your time, it was nice getting to know you."
     hide sad cat
     menu:
         "Stay for a few more minutes.":
@@ -2226,3 +2268,160 @@ label a6:
     $ adinolfo +=1
     hide normal bingus
     jump addresses2  
+
+label a5:
+    show normal cat
+    y "Don't worry Jr I'll be back soon."
+    "'Winks at Adinolfo and closes the call.'"
+    hide normal cat
+    show happy cat
+
+    y "So you told me before you had to show me some things right?"
+
+    A "Follow me!"
+    hide happy cat
+    show normal cat
+    A "I know I promised you the creepypastas but I have something better to show you."
+
+    scene bg adoio with quickfade
+    hide normal cat
+    show silly cat
+    A "Ok prepare yourself, ready? Ok take a look."
+
+    hide silly cat
+    scene bg aspecial with quickfade
+    with Pause(2)
+    show happy cat
+    A "So, what do you think?"  
+    
+    y "Very unique, I have no words to describe it."
+
+    A "It's my little oasis on Mars."
+
+    y "You really have some good taste, I love the statue."
+    hide happy cat 
+    show silly cat
+    
+    A "Thanks, it was a gift I got after my last big charity event."
+
+    y "I didn't know you are also a philanthropist."
+    hide silly cat
+    show normal cat
+
+    A "I try doing my part, I was lucky to be born in a life of luxury so I try to share this gift with the ones in need."
+
+    y "That's very deep, sorry to ask but what did you donate?"
+
+    A "Well once I gifted three hundred thousand colorful thigh high socks to an orphanage."
+
+    A "Oh and another time I gift four hundred thousand Fiji water bottles to a poor village in Kenya."
+    hide normal cat
+    show silly cat
+    A "But my favorite one was building an internet cafe for the homeless in Downtown Boston."
+
+    y "I have to admit you are kinda crazy, but I really love your spirit and ideas."
+
+    y "Your dedication it's truly something I admire."
+
+    A "Aww you are making me blush."
+    hide silly cat 
+    show sad cat
+
+    A "You know, im not usually this talkative."
+    hide sad cat 
+    show happy cat
+    A "But with you I feel safe in a way."
+
+    A "You know I would really appreciate if you come visit me again."
+    hide happy cat
+    menu:
+        "I will be glad to":
+            jump a7
+        "Sorry but I think you are going too fast":
+            jump a8
+
+label a8:
+    show sad cat
+
+    A "Oh, sorry I may have skipped some steps."
+
+    A "Can we be friends?"
+
+    y "Sure I'll be glad to Adinolfo"
+    hide sad cat 
+    show happy cat
+
+    y "I have to go now or my colleague will kill me."
+    hide happy cat
+    show normal cat
+
+    A "It was fun knowing you."
+
+    y "I enjoyed you company. Have a great day Adinolfo."
+
+    y "Remember here at 'Spedisco Nu Paccheeto' we always give our best for the costumer."
+
+    A "You are so silly sweetie goodbye."
+
+    y "Goodbye."
+    hide normal cat
+    scene bg aporta with slowdissolve
+    with Pause(2)
+    "'Door closes'"
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, it was an experience I have to say."
+
+    $ adinolfo +=1
+    hide normal bingus
+    jump addresses2
+
+label a7:
+    show happy cat 
+
+    A ".......'Blushes'"
+
+    A "Oh, sorry I may have skipped some steps."
+
+    A "So I guess we are firnds now?"
+
+    y "Sure I'll be glad to be Adinolfo"
+
+    y "I have to go now or my colleague will kill me."
+    hide happy cat
+    show normal cat
+
+    A "It was fun knowing you."
+
+    y "I enjoyed you company. Have a great day Adinolfo."
+
+    y "Remember here at 'Spedisco Nu Paccheeto' we always give our best for the costumer."
+
+    A "You are so silly sweetie goodbye."
+
+    y "Goodbye."
+    hide normal cat
+    scene bg aporta with slowdissolve
+    with Pause(2)
+    "'Door closes'"
+
+    A "I got a friend!!!"
+
+    A "And I didn't had to pay, this must be serious business yippee"
+
+    y "Hehe , I like this guy."
+
+    "'Goes back to the truck'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+
+    y "Good, it was an experience I have to say."
+
+    $ adinolfo +=2
+    hide normal bingus
+    jump addresses2
