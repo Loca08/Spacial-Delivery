@@ -34,6 +34,7 @@ default seneca = 0
 default quasar = 0
 default adinolfo = 0
 
+image neutral = Movie(play="neutral.webm", size=(1920,1080), loop=False)
 
 # Il gioco comincia qui.R
 # Inzia la scena post cutscene con bingus che ti fa il colloqui.
@@ -898,20 +899,22 @@ label ACT2:
     B "Boss is calling."
     "Answers radio"
     hide normal bingus
-    show normal bingus at left
-    show normal boss at right 
+    show normal boss 
     d "Bingus Jr do you hear me? Over."
-
+    hide normal boss 
+    show normal bingus
     B "Yes Boss, over."
-
-    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
     hide normal bingus
-    show happy bingus at left 
+    show normal boss 
+    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    hide normal boss
+    show happy bingus
     B "Really? Over."
-
+    hide happy bingus 
+    show happy boss
     d "Yes, someone didn't load all the packages on your truck and since you are too far away it's better to end your shift early but just this time ok? Don't get comfy, over."
-    hide happy bingus
-    show normal bingus at left
+    hide happy boss
+    show normal bingus 
     B "Thanks sir, see ya tomorrow, over and out."
     
     hide normal boss
@@ -2387,7 +2390,7 @@ label a7:
 
     A "Oh, sorry I may have skipped some steps."
 
-    A "So I guess we are firnds now?"
+    A "So I guess we are friends now?"
 
     y "Sure I'll be glad to be Adinolfo"
 
@@ -2425,3 +2428,120 @@ label a7:
     $ adinolfo +=2
     hide normal bingus
     jump addresses2
+
+label ACT3:
+    scene bg space
+    show normal bingus
+    "Static noises coming from the radio"
+    B "Boss is calling."
+    "Answers radio"
+    hide normal bingus
+    show normal boss
+    d "Bingus Jr do you hear me? Over."
+    hide normal boss
+    show happy bingus
+    B "Yes Boss, over."
+    hide happy bingus
+    show normal blossom
+    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    hide normal boss
+    show normal bingus
+    B "Got it. Over."
+    hide normal bingus 
+    show happy boss
+    d "Oh and remember tonight we are gonna have our company pizza party."
+
+    d "Since we increased our profits by 400% this time everyone its gonna receive a twentieth of a pizza slice and 3 milliliters of soda! Over."
+    hide happy boss 
+    show happy bingus
+
+    B "That sounds wonderful, me and [povname] are thrilled to be there, see you soon boss! Over and out."
+    "'Closes call'"
+    hide happy bingus
+    show normal bingus
+    
+    B "Another very productive day, isn't it wonderful [povname]?"
+
+    y "Yeah im happy to work with you Jr."
+
+    y "Come one now, let's go back to the base let's se how lit this company party can be."
+
+    y "One whole twentieth of a pizza! Man working hard sure is rewarded."
+    scene black with slowdissolve
+    with Pause(1)
+
+    show text "Bingus Jr and [povname] spent another great evening together" with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "The party was fun, even Bingus brother was there." with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "Bingus brother now tolerates [povname] a little more." with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+
+    show text "One week later" with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    $ wanda -= 1
+    $ seneca -= 1
+    $ quasar -= 1
+    $ adinolfo -= 1
+    scene bg camion
+    show happy bingus
+    B "Good morning [povname]"
+    
+    y "Morning Jr, how we doing today?"
+
+    B "Very good, I tried some green tea you told me about and it was pretty decent I have to say."
+
+    y "I know you would have like it, were are we going today partner?"
+    hide happy bingus
+    show normal bingus
+    B "Let's see..."
+    hide normal bingus
+    show happy Bingus
+    B "Oh you have some new messages better check those out."
+    
+    menu:
+        "Wanda invite." if wanda ==2:
+            jump wande
+        "Seneca invite" if seneca ==2:
+            jump senece
+        "Quasar invite" if quasar ==2:
+            jump quasare
+        "Adinolfo invite" if adinolfo ==2:
+            jump adine
+        "Ignore and let Bingus choose your next destination.":
+            jump neutral_final
+
+label neutral_final:
+    hide happy bingus
+    show normal bingus
+    y "You know Jr how about you choose the destination this time."
+    hide normal bingus 
+    show happy bignus
+    
+    B "Really!?!?!"
+
+    y "Of course bud, you deserve to have fun too."
+
+    B "Yippee im so happy!!"
+
+    y "So what are you waiting captain its time to go!"
+
+    B "Aye aye [povname]!"
+
+    $ renpy.movie_cutscene(neutral.webm, delay=2, loops=0, stop_music=True)
