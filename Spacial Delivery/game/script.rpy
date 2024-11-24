@@ -34,6 +34,12 @@ default seneca = 0
 default quasar = 0
 default adinolfo = 0
 
+image movie1 = Movie(channel="movie_dp", play = "images/movies/movie1.webm")
+image wanda = Movie(channel="movie_dp", play = "images/movies/wanda.webm")
+image seneca = Movie(channel="movie_dp", play = "images/movies/seneca.webm")
+image quasar = Movie(channel="movie_dp", play = "images/movies/quasar.webm")
+image adinolfo = Movie(channel="movie_dp", play = "images/movies/adinolfo.webm")
+image neutral = Movie(channel="movie_dp", play = "images/movies/neutral.webm")
 
 # Il gioco comincia qui.R
 # Inzia la scena post cutscene con bingus che ti fa il colloqui.
@@ -56,7 +62,11 @@ label splashscreen:
     with Pause(1)
     return
 
-label start:
+label start:        
+    show movie1 with dissolve
+    with Pause(27)
+    hide movie1
+    
     scene bg ufficio with slowdissolve
     show normal bingus
     b "Hello there, my name is Bingus im going to be your new supervisor. May ask your name human?"
@@ -792,7 +802,7 @@ label wanda:
 
     y "I was so wrong..."
 
-    y "Never i'll eat freeze-dried sushi again."
+    y "Never I'll eat freeze-dried sushi again."
 
     y "The location is definitely not helping."
     scene bg wporta with dissolve
@@ -848,32 +858,32 @@ label wanda_1:
 label wanda_3:
     hide cami secc
     show cami normal
-    w "If you say so."
+    W "If you say so."
     hide cami normal
     jump wanda_6
 
 label wanda_4:
     hide cami secc
     show cami normal
-    w "And if I were? Would you rat me out?"
+    W "And if I were? Would you rat me out?"
 
     y "Depends on how well you tip."
     hide cami normal 
     show cami secc
-    w "You are so annoying."
+    W "You are so annoying."
     hide cami secc
     jump wanda_6
 
 label wanda_5:
-    w "Just as I thought."
+    W "Just as I thought."
     hide cami secc
     jump wanda_6
 
 label wanda_6:
     show cami secc
-    w "If you are waiting for a tip it's not happening."
+    W "If you are waiting for a tip it's not happening."
 
-    w "Now get lost ok?"
+    W "Now get lost ok?"
     hide cami secc
     "'Closes door'"
     scene bg wporta with dissolve
@@ -898,20 +908,22 @@ label ACT2:
     B "Boss is calling."
     "Answers radio"
     hide normal bingus
-    show normal bingus at left
-    show normal boss at right 
+    show normal boss 
     d "Bingus Jr do you hear me? Over."
-
+    hide normal boss 
+    show normal bingus
     B "Yes Boss, over."
-
-    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
     hide normal bingus
-    show happy bingus at left 
+    show normal boss 
+    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    hide normal boss
+    show happy bingus
     B "Really? Over."
-
+    hide happy bingus 
+    show happy boss
     d "Yes, someone didn't load all the packages on your truck and since you are too far away it's better to end your shift early but just this time ok? Don't get comfy, over."
-    hide happy bingus
-    show normal bingus at left
+    hide happy boss
+    show normal bingus 
     B "Thanks sir, see ya tomorrow, over and out."
     
     hide normal boss
@@ -2387,7 +2399,7 @@ label a7:
 
     A "Oh, sorry I may have skipped some steps."
 
-    A "So I guess we are firnds now?"
+    A "So I guess we are friends now?"
 
     y "Sure I'll be glad to be Adinolfo"
 
@@ -2425,3 +2437,537 @@ label a7:
     $ adinolfo +=2
     hide normal bingus
     jump addresses2
+
+label wando:
+    show normal bingus
+    y "Hey Jr, I got some blue cheese and maize porridge for lunch wanna try?"
+    hide normal bingus 
+    show feared bingus
+    B "Is that even a question?"
+
+    y "You know im always open making new experience."
+
+    B "Like the freeze dried sushi from last time?"
+
+    y "That was on me I admit, I'll never try something like that again."
+
+    B "Im gonna get a paper bag from the utility box in the bag, just in case."
+
+    y "Nah, im gonna be fine trust me."
+
+    y "This is some real Italian expertly crafted made delicacy."
+    hide feared bingus
+    show seccato bingus
+    B "And where did you got this delicacy?"
+
+    y "From the gas station."
+
+    B "Im gonna get a bigger paper bag." 
+
+    scene bg wandaplanet with dissolve
+    with Pause(2)
+    scene bg wviale with dissolve
+    with Pause(1)
+
+    y "I was so wrong...again!"
+    scene bg wporta with dissolve
+    with Pause(1)
+
+    "'Knocks on the door'"
+
+    "'Doors open'"
+    scene bg wportaopen with dissolve
+    with Pause(1)
+
+    show cami normal
+    W "Oh, it's you again. Are you perhaps the only delivery guy on duty or are you coming here on purpose?"
+
+    y "Just doing my job ma'am, I've got another package for you."
+
+    y "Just sign here on the clipboard and I'll be on my way back ok?"
+
+    W "Sure as long as you leave me alone."
+
+    "'Signs parcel'"
+
+    W "Now if you don't mind, would you min bring that heavy package inside."
+
+    y "No problem ma'am"
+    
+    y "(Gosh this lady manners are tougher to stand than the food I had before)" 
+    hide cami normal 
+    show cami secc
+    W "Good, don't make me regret asking for help."
+    menu: 
+        "Follow her inside.":
+            jump w1 
+        "Drop the package past the entrance.":
+            jump w2 
+
+label w2:
+    W "You're not as helpful as I thought."
+
+    y "Thanks, I guess..."
+
+    W "Next time don't just drop my stuff and call it a day."
+
+    y "Alright, I'll go then."
+    hide cami secc
+
+    "'Goes back to the truck'"
+    scene bg wporta with dissolve
+    with Pause(1)
+    scene bg camion with dissolve
+    show normal bingus
+    B "Good you are back, so partner what's gonna be our next stop?"
+
+    $ wanda +=1
+    hide normal bingus
+    jump addresses
+
+label w1:
+    hide cami secc
+    scene wsalotto
+    show cami normal
+    W "You can put it on the table there in the corner."
+
+    y "No problem, I've got this."
+
+    W "Thanks, I don't usually let people inside but, since you are not totally worthless, I'll make an exception."
+
+    y "I can see from the decor that you are not lying."
+
+    W "What did you say?"
+
+    y "Ehm nothing, I said the decor its very unique hehe..."
+
+    W "Unique you say, uh?"
+
+    y "(Unique in the Addamns family way...)"
+
+    W "I like dark and gloomy things, it reminds me of home."
+
+    y "You know, I too have a similar style in my apartment."
+
+    W "For real?"
+
+    y "Yeah its probably because I haven't paid my eclectic bills in a while."
+    hide cami normal 
+    show cami secc
+
+    W "........"
+
+    y "My bad, what I wanted to say is I too know the feeling of needing a place you can call you own."
+    hide cami secc
+    show cami normal
+
+    W "I came here for my job, I moved a lot since I became a famous streamer."
+
+    W "Intergalactic doxing is getting really out of hand in the last years."
+
+    y "Oh you are a streamer? I would have never guessed."
+
+    W "Not to brag but im a internet celebrity with over three million followers, online I am known as xX.Gorgon_Nya.Xx."
+    hide cami normal
+    show cami happy
+    y "Oh now I remember! I know you seemed familiar."
+    hide cami happy 
+    show cami normal
+    W "Well since you seem to be a fan and you helped me with the package I guess you deserve an autograph."
+
+    W "Wait for me here, I'll be back soon."
+    hide cami normal 
+    show cami secc
+
+    W "Don't overstate your welcome ok?"
+
+    y "Don't worry I'll stay put like a statue."
+    menu:
+        "Stay where you are.":
+            jump w3 
+        "Take a look around the house.":
+            jump w4 
+
+label w3:
+    hide cami secc
+    y "Alright, I'll stay right here. No touching. No snooping. Just... a delivery guy standing awkwardly inside a house that could be a circus attraction."
+
+    y "At least the furniture isn't growling at me... yet."
+
+    y "I hope she is not like one of those Hello Kitty girls I heard about."
+
+    y "My buddy Pierre once date one, he needed a year of physical and mental therapy to move over after what she did to him."
+    show cami normal
+    W "Im back, wow you actually stayed put."
+
+    W "You'll make a decent gargoyle not gonna lie."
+
+    y "I'll take that as a compliment."
+    hide cami normal
+    show cami secc
+    W "As you should."
+    hide cami secc
+    show cami normal
+    W "Anyway, thanks for not wrecking anything while I was gone you're not as hopeless as I thought after all."
+
+    W "But you'll need to shoot higher than to impress me."
+    "'Phone starts ringing'"
+
+    y "Sorry it's my colleague."
+
+    B "Hey [povname], where are im waiting!"
+
+    y "Yeah sorry, I was talking with the customer and I lost track of time."
+
+    B "Well move then! The boss can see our movements remember."
+
+    y "Crystal clear Jr."
+    "'Closes the call'" 
+
+    y "I think i have to go now."
+
+    Q "It's ok if you leave I won't take more of your time... it was fun knowing you."
+    menu:
+        "Stay for a few more minutes.":
+            jump w5
+        "Leave.":
+            jump w6
+label w5:
+    y "You know what? Work can wait. I'll stay a little longer."
+    hide cami normal
+    show cami happy
+    W "Seriously?"
+    hide cami happy
+    show cami normal
+    W "Well, don't think I'm impressed or anything. You probably just don't want to deal with your boss, right?"
+
+    y "What can I say? I like your company and your place is very unique"
+    
+    y "Like you."
+    hide cami normal
+    show cami secc
+    W "That was nauseatingly sweet, but thanks."
+    hide cami secc
+    show cami normal 
+
+    W "But thanks..."
+
+    W "Fine. What do you want to know?"
+
+    y "Let's start with the obvious. Why all the plushies? I mean, they're cool but why so much of them?"
+
+    W "I like them, okay? They're... comforting. They remind me of when things were simpler."
+
+    y "That makes sense. You've got good taste, too. Especially Kuromi over there."
+
+    W "You know who Kuromi is?"
+
+    y "Of course I know who she is."
+
+    W "Huh. Maybe you're not so bad after all."
+
+    W "But don't get any ideas. You're still just a delivery guy."
+
+    y "A delivery guy who is bold enough to talk to you though."
+
+    W "...Yeah. I noticed."
+
+    W "My job is very hard, I usually don't have enough time during the day to socialize or go outside."
+
+    W "I have to stream, making video post on social media and keep up with my fanbase."
+
+    W "Make more content every day in order to satisfy the masses."
+
+    W "Sometimes it gets really overwhelming..."
+    hide cami normal 
+    show cami disgust
+    W "The sheer amount of freaks I have to see on a daily basis should be illegal."
+    hide cami disgust
+    show cami normal
+    W "But hey, if it wasn't for this I would have never being able to afford a house this big and spend money on my interests."
+
+    y "I too struggle with my job sometimes and for a long time I didn't had one"
+
+    y "But now things are finally starting to get better."
+
+    y "I hope things will turn out better for you too."
+
+    y "I have to go now or my colleague will kill me if im late again."
+
+    hide cami normal
+    show cami happy
+
+    W "Thanks for the kind words."
+
+    y "No problem im just doing my job."
+
+    y "Hey wanna share numbers so we can keep in touch?"
+    hide cami happy 
+    show cami normal
+
+    W "No need to, if I'll need you I'll find a way."
+
+    y "Ok... soo have a nice day."
+
+    scene wportaopen with quickfade
+    scene wporta with quickfade 
+    with Pause(1)
+
+    "'Door closes'"
+
+    "'Goes back silently to the truck.'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+    hide normal bingus
+
+    show confused bingus
+    y "It was an experience let's say."
+
+    $ wanda +=1
+    hide confused bingus 
+    jump addresses2
+
+label w6:
+    y "Hey, Wanda, I've got to go. Work's calling and im late on the schedule."
+    hide cami normal
+    show cami secc
+
+    W "Tsk, as I could care less."
+
+    W "Thanks again fro the help, here is your autograph now don't waste more of my precious time."
+
+    y " Got it, see you around ok?"
+
+    W "Good. Now go before I change my mind and lock you here."
+
+    y "What did you say?"
+
+    W "Nothing, now go."
+    scene wportaopen with quickfade
+    scene wporta with quickfade 
+    with Pause(1)
+
+    "'Door closes'"
+
+    "'Goes back silently to the truck.'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+    hide normal bingus
+
+    show confused bingus
+    y "I have dodged a bullet, let's say."
+
+    $ wanda +=1
+    hide confused bingus 
+    jump addresses2
+
+label w4:
+    y "Well technically she didn't said I couldn't take a look while being respectful."
+
+    y "Let's see what she's hiding."
+
+    scene bg wdoio with dissolve
+    y "This house is getting creepier the more time passes."
+
+    y "......."
+
+    y "I feel a cold breeze coming from the end of this corridor, wonder what it could possibly be."
+
+    y "I should take a closer look."
+    scene wspecial with dissolve
+
+    y "Well, I should have expect that."
+
+    y "This lady has a whole dungeon under her house, I am not taking a step down those crooked stairs."
+    
+    y "Never, NEVER date or approach a goth girl that is also a Sanrio fan."
+
+    y "I bet down there she has all kind of torture device Hello Kitty themed."
+
+    show cami disgust
+    W "Are you out of your mind?"
+
+    y "(Oh no, my time has come...)"
+
+    y "Uhm... my pen ran out of ink and I was looking around to found one so I can sign the parcel too ehehe..."
+
+    W "So you thought you'd just wander into my private rooms like you own the place?"
+
+    W "I thought I made it clear, stay where you are and don't move!"
+
+    W "Are you perhaps a messy puppy that cannot even understand a simple command?"
+
+    y "I didn't mean to intrude, im sorry..."
+
+    W "Now, get our of my house before I make you regret ever taking a step in it!"
+    
+    "'You silently exit the house without saying a word.'"
+
+    scene wportaopen with quickfade
+    scene wporta with quickfade 
+    with Pause(1)
+
+    "'Door slams shut.'"
+
+    "'Goes back silently to the truck.'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+    hide normal bingus
+
+    show confused bingus
+    y "I have dodged a bullet, let's say."
+
+    $ wanda +=1
+    hide confused bingus 
+    jump addresses2
+    
+label ACT3:
+    scene bg space
+    show normal bingus
+    "Static noises coming from the radio"
+    B "Boss is calling."
+    "Answers radio"
+    hide normal bingus
+    show normal boss
+    d "Bingus Jr do you hear me? Over."
+    hide normal boss
+    show happy bingus
+    B "Yes Boss, over."
+    hide happy bingus
+    show normal boss
+    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    hide normal boss
+    show normal bingus
+    B "Got it. Over."
+    hide normal bingus 
+    show happy boss
+    d "Oh and remember tonight we are gonna have our company pizza party."
+
+    d "Since we increased our profits by 400 times everyone its gonna receive a twentieth of a pizza slice and 3 milliliters of soda! Over."
+    hide happy boss 
+    show happy bingus
+
+    B "That sounds wonderful, me and [povname] are thrilled to be there, see you soon boss! Over and out."
+    "'Closes call'"
+    hide happy bingus
+    show normal bingus
+    
+    B "Another very productive day, isn't it wonderful [povname]?"
+
+    y "Yeah im happy to work with you Jr."
+
+    y "Come one now, let's go back to the base let's se how lit this company party can be."
+
+    y "One whole twentieth of a pizza! Man working hard sure is rewarded."
+
+    scene black with slowdissolve
+    with Pause(1)
+
+    show text "Bingus Jr and [povname] spent another great evening together" with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "The party was fun, even Bingus brother was there." with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "Bingus brother now tolerates [povname] a little more." with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+
+
+    show text "One week later" with dissolve
+    with Pause(3) 
+
+    hide text with dissolve
+    with Pause(1)
+    
+    scene bg camion
+    show happy bingus
+    B "Good morning [povname]"
+    
+    y "Morning Jr, how we doing today?"
+
+    B "Very good, I tried some green tea you told me about and it was pretty decent I have to say."
+
+    y "I know you would have like it, were are we going today partner?"
+    hide happy bingus
+    show normal bingus
+    B "Let's see..."
+    hide normal bingus
+    show happy bingus
+    B "Oh you have some new messages better check those out."
+    
+    menu:
+        "Wanda invite." if wanda ==2:
+            jump wande
+        "Seneca invite" if seneca ==2:
+            jump senece
+        "Quasar invite" if quasar ==2:
+            jump quasare
+        "Adinolfo invite" if adinolfo ==2:
+            jump adine
+        "Ignore and let Bingus choose your next destination.":
+            jump neutral_final
+
+label senece:
+    y "This one is from Seneca"
+    hide happy bingus
+    show confused bingus
+    B "What does he needs? Did the package arrived defective?"
+
+    y "No nothing like that... if you don't mind can we go and check on him?"
+    hide confused bingus
+    show normal bingus
+    B "Sure, I'll make a deviation."
+
+    B "But you must be quick, don't take too much time last time ok?"
+
+
+label neutral_final:
+    hide happy bingus
+    show normal bingus
+    y "You know Jr how about you choose the destination this time."
+    hide normal bingus 
+    show happy bingus
+    
+    B "Really!?!?!"
+
+    y "Of course bud, you deserve to have fun too."
+
+    B "Yippee im so happy!!"
+
+    y "So what are you waiting captain its time to go!"
+
+    B "Aye aye [povname]!"
+
+    show neutral with dissolve
+    with Pause(27)
+    hide neutral
+    
+    scene black with dissolve
+    with Pause(1)
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    play sound "ping.mp3"
+
+    show splash with dissolve
+    with Pause(2) 
+
+    scene black with dissolve
+    with Pause(1)
+    return    
