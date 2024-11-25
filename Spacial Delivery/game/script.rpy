@@ -67,7 +67,7 @@ label start:
     with Pause(27)
     hide movie1
     
-    scene bg ufficio with slowdissolve
+    scene bg ufficio with quickfade
     show normal bingus
     b "Hello there, my name is Bingus im going to be your new supervisor. May ask your name human?"
 
@@ -110,7 +110,6 @@ label Scelta_1:
     b "Very good."
 
     b "First question, how good of a team player are you?"
-    hide happy bingus
     menu:
         "The best of the best":
             jump Scelta_3
@@ -120,6 +119,7 @@ label Scelta_1:
             jump Scelta_5
 
 label Scelta_5:
+    hide happy bingus
     show normal bingus
     b "Listen, im here to help you making the right decision ok?"
     hide normal bingus
@@ -132,6 +132,7 @@ label Scelta_5:
     jump Scelta_0
 
 label Scelta_4:
+    hide happy bingus
     show confused bingus
     b "Ok... love the spirit, really..."
 
@@ -141,6 +142,7 @@ label Scelta_4:
     jump Scelta_0 
 
 label Scelta_3:
+    hide happy bingus
     show happy bingus
     b "Wonderful! We are having so much fun, I cant wait to finish this very ''entertaining'' task before my lunch break!"
     jump Scelta_0
@@ -381,7 +383,7 @@ label Scelta_19:
     jump Scelta_20
 
 label Scelta_20:
-    scene bg camion with dissolve
+    scene bg camion with quickfade
     y "I think this one is the right truk, I wonder where is this colleague bingus told me about."
 
     "'Door opens and slam shut'"
@@ -452,7 +454,7 @@ label addresses:
             jump ACT2
 
 label adino:
-    scene bg space with dissolve
+    scene bg space with quickfade
     show normal bingus
     y "Woah the space is so beautiful."
     hide normal bingus
