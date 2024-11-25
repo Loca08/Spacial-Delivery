@@ -2906,7 +2906,45 @@ label ACT3:
     hide normal bingus
     show happy bingus
     B "Oh you have some new messages better check those out."
+    if wanda ==2 and seneca ==2 and quasar ==2 and adinolfo ==2:
+        jump secret
+    else:
+        jump messages
+
+label secret:
+    y "Nah it's nothing important, let's go Jr or else we will be late on the schedule."
+
+    B "Aye aye captain!"
+    scene black
+    with Pause(1)
+
+    show text "[povname] and Jr went on with the shift like usual." with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "After the shift [povname] went back home...." with dissolve
+    with Pause(2) 
+
+    scene black with dissolve
+    with Pause(1)
+
+    show secret with dissolve
+    with Pause(27)
+    hide secret
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
     
+    scene black with dissolve
+    with Pause(1)
+    return    
+
+label messages:    
     menu:
         "Wanda invite." if wanda ==2:
             jump wande
@@ -2919,19 +2957,345 @@ label ACT3:
         "Ignore and let Bingus choose your next destination.":
             jump neutral_final
 
-label senece:
-    y "This one is from Seneca"
+label wande:
+    y "This one is from Wanda"
     hide happy bingus
     show confused bingus
-    B "What does he needs? Did the package arrived defective?"
+    B "What does she needs? Did the package arrived damaged?"
 
     y "No nothing like that... if you don't mind can we go and check on him?"
     hide confused bingus
     show normal bingus
     B "Sure, I'll make a deviation."
 
-    B "But you must be quick, don't take too much time last time ok?"
+    B "But you have to be quick, don't take too much time last time ok?"
 
+    y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
+
+    B "If you say so..."
+    hide normal bingus
+    scene bg wandaplanet with quickfade
+    with Pause(1)
+    scene bg wviale with quickfade
+
+    y "I wonder what he needs my help for."
+
+    scene bg wporta with quickfade
+    "'Knocks on the door'"
+    scene bg wportaopen with quickfade
+    show cami normal
+    W "I told you I would find a way"
+    
+    W "I have to tell you something. "
+
+    W "Follow me inside, I don't want anyone to see us together."
+
+    y "Sure Wanda, whatever makes you more comfortable."
+    hide cami normal
+    scene bg wsalotto with quickfade
+    scene bg wdoio with quickfade
+
+    scene wletto with quickfade
+    show cami normal
+    A "This is my private room, here we should be alone away from prying eyes."
+
+    y "Now tell me, what was on your mind that required my help?"
+    hide cami normal
+    show cami happy 
+    A "I have some feelings for you dork."
+    hide cami happy
+    show cami secc
+    A "Of all the people in this universe, you alone have impressed me "
+    hide cami secc
+    show cami normal
+    A "When we talked last week you reminded me of how I was before fame and for the first time in a while i felt something..."
+
+    y "Oh Wanda..."
+    hide happy cat
+    show normal cat
+    A "Tell me do you feel the same?"
+
+    y "I do...."
+    hide normal cat
+    show bonk cat
+    A "Then we should make this serious and start dating."
+
+    A "Maybe those losers who thirst so much will stop harassing me."
+
+    y "How about I meet your parents first?"
+
+    A "We can also do that too."
+
+    play sound "music.mp3"
+    show wanda with dissolve
+    with Pause(27)
+    hide wanda
+    
+    scene black with dissolve
+    with Pause(1)
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+    
+    scene black with dissolve
+    with Pause(1)
+    return     
+
+label adine:
+    y "This one is from Adinolfo"
+    hide happy bingus
+    show confused bingus
+    B "What does he needs? Did the package arrived damaged?"
+
+    y "No nothing like that... if you don't mind can we go and check on him?"
+    hide confused bingus
+    show normal bingus
+    B "Sure, I'll make a deviation."
+
+    B "But you have to be quick, don't take too much time last time ok?"
+
+    y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
+
+    B "If you say so..."
+    hide normal bingus
+    scene bg adinolfoplanet with quickfade
+    with Pause(1)
+    scene bg aviale with quickfade
+
+    y "I wonder what he needs my help for."
+
+    scene bg aporta with quickfade
+    "'Knocks on the door'"
+    scene bg aportaopen with quickfade
+    show happy cat
+    A "[povname] you saw my message!"
+    hide happy cat
+    show silly cat
+    A "Sorry for sudden request, I know your job is very busy but I really need to tell you something. "
+    hide silly cat
+    show normal cat
+    A "Please follow me inside, I don't want my father seeing us from the satellites"
+
+    y "Sure Adinolfo, whatever makes you more comfortable."
+    hide normal cat
+    scene bg asalotto with quickfade
+    scene bg adoio with quickfade
+
+    scene aletto with quickfade
+    show silly cat
+    A "This is my private room, here we should be alone away from hidden cameras"
+
+    y "Now tell me, what was on your mind that required my help?"
+    hide silly cat
+    show bonk cat
+    A "I have some feelings for you..."
+
+    A "I thought I would never experience such silly things."
+    hide bonk cat 
+    show happy cat
+    A "But when im with you [povname] I feel like I am more than the son of a intergalactic multi gazillionaire."
+
+    y "Oh Adinolfo..."
+    hide happy cat
+    show normal cat
+    A "Tell me [povname] do you feel the same?"
+
+    y "I do Adinolfo."
+    hide normal cat
+    show bonk cat
+    A "Then I think we should start dating if it's ok for you [povname]."
+
+    A "Maybe we can have a romantic story like the ones I see in Brooklyn shows and travel across the galaxy on my private spaceship and and..."
+
+    y "How about I meet your parents first?"
+
+    A "We can also do that hehe.."
+
+    play sound "music.mp3"
+    show adinolfo with dissolve
+    with Pause(27)
+    hide adinolfo
+    
+    scene black with dissolve
+    with Pause(1)
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+    
+    scene black with dissolve
+    with Pause(1)
+    return
+
+label quasare:
+    y "This one is from Quasar"
+    hide happy bingus
+    show confused bingus
+    B "What do they needs? Did the package arrived damaged?"
+
+    y "No nothing like that... if you don't mind can we go and check on him?"
+    hide confused bingus
+    show normal bingus
+    B "Sure, I'll make a deviation."
+
+    B "But you have to be quick, don't take too much time last time ok?"
+
+    y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
+
+    B "If you say so..."
+    hide normal bingus
+    scene bg quasarplanet with quickfade
+    with Pause(1)
+    scene bg qviale with quickfade
+
+    y "I wonder what he needs my help for."
+
+    scene bg qporta with quickfade
+    "'Knocks on the door'"
+    scene bg qportaopen with quickfade
+    show qua happy
+    Q "[povname] you came!"
+    hide qua happy
+    show qua embara
+    Q "Sorry for the abrupt message, I know you are a very busy person but I really need to tell you something. "
+    hide qua embara
+    show qua normal
+    Q "Please follow me inside, Im not comfortable talking outside of such things."
+
+    y "Sure Quasar, whatever makes you more comfortable."
+    hide qua normal
+    scene bg qsalotto with quickfade
+    scene bg qdoio with quickfade
+
+    scene qletto with quickfade
+    show qua normal
+    Q "This is my private room, here we should be alone."
+
+    y "Now tell me, what was on your mind that required my help?"
+    hide qua normal
+    show qua embara
+    Q "I have some feelings for you..."
+
+    Q "Im not used to express my feelings."
+    hide qua embara 
+    show qua happy
+    Q "But when im with you [povname] I feel like I can do anything!"
+
+    y "Oh Quasar..."
+    hide qua happy
+    show qua embara
+    Q "Tell me [povname] do you feel the same?"
+
+    y "I do Quasar"
+    hide qua embara
+    show qua horny
+    Q "Then I think we should start dating if it's ok for you [povname]."
+
+    Q "Maybe we can have a romantic story like the one I had read in those magazine."
+
+    y "I'll be glad to..."
+
+    play sound "music.mp3"
+    show quasar with dissolve
+    with Pause(27)
+    hide quasar
+    
+    scene black with dissolve
+    with Pause(1)
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+    
+    scene black with dissolve
+    with Pause(1)
+    return   
+
+label senece:
+    y "This one is from Seneca"
+    hide happy bingus
+    show confused bingus
+    B "What does he needs? Did the package arrived damaged?"
+
+    y "No nothing like that... if you don't mind can we go and check on him?"
+    hide confused bingus
+    show normal bingus
+    B "Sure, I'll make a deviation."
+
+    B "But you have to be quick, don't take too much time last time ok?"
+
+    y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
+
+    B "If you say so..."
+    hide normal bingus
+    scene bg senecaplanet with quickfade
+    with Pause(1)
+    scene bg sviale with quickfade
+
+    y "I wonder what he needs my help for."
+
+    scene bg sporta with quickfade
+    "'Knocks on the door'"
+    scene bg sportaopen with quickfade
+    show sene 1
+    S "Welcome back [povname]."
+
+    S "Sorry for the abrupt message, but I have to tell you something that was on my mind since our last encounter."
+
+    S "Please follow me inside, I prefer to talk of such topics in a more private location."
+
+    y "Sure Seneca, whatever makes you more comfortable."
+    hide sene 1
+    scene bg ssalotto with quickfade
+    scene bg sdoio with quickfade
+
+    scene sletto with quickfade
+    show sene 1
+    S "This is my private room, here we should be alone."
+
+    y "Now tell me, what was on your mind that required my help?"
+    hide sene 1 
+    show sene 2
+    S "I have some feelings for you..."
+
+    S "I know that emotions are something completely irrational opposite to rational thinking."
+    hide sene 2 
+    show sene 3
+    S "But with you [povname] I feel something that not even words can describe."
+
+    y "Oh Seneca..."
+    hide sene 3
+    show sene 1
+    S "Tell me [povname] do you feel the same?"
+
+    y "I do Seneca"
+
+    S "Then I think we should start dating, this way we can really see if what we feel could be more than something irrational."
+
+    play sound "music.mp3"
+    show seneca with dissolve
+    with Pause(27)
+    hide seneca
+    
+    scene black with dissolve
+    with Pause(1)
+
+    show text "Thank you for playing" with dissolve
+    with Pause(2) 
+
+    hide text with dissolve
+    with Pause(1)
+    
+    scene black with dissolve
+    with Pause(1)
+    return    
 
 label neutral_final:
     hide happy bingus
@@ -2950,6 +3314,7 @@ label neutral_final:
 
     B "Aye aye [povname]!"
 
+    play sound "music.mp3"
     show neutral with dissolve
     with Pause(27)
     hide neutral
@@ -2962,11 +3327,6 @@ label neutral_final:
 
     hide text with dissolve
     with Pause(1)
-
-    play sound "ping.mp3"
-
-    show splash with dissolve
-    with Pause(2) 
 
     scene black with dissolve
     with Pause(1)
