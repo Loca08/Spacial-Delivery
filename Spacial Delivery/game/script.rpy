@@ -2194,6 +2194,75 @@ label a1:
             jump a3
         "Stay where you are":
             jump a4
+        
+label a3:
+    y "I wonder what other things this guy has."
+
+    y "He probably wouldn't mine if i take a quick sneak peek."
+
+    scene adoio with quickfade
+    y "Oh whats that at the end of the corridor?"
+
+    scene aspecial with quickfade
+    y "Strange decor but I must say it's very demure."
+    show happy cat
+    A "Im baaack!! Daddy finally bought me the planet I longed for sooo many years! I'm soooo happy!!"
+    
+    y "Wow! Glad to hear that! (this guy is DEFINITELY richer than the Rothschild family)"
+    
+    A "Now, where were w- AAAA"
+    hide happy cat
+    "'Trips'"
+
+    y "Oh! Hey! A-are you ok??"
+    show normal cat
+    A "Ouch, don't worry, I just fell off, these carpets are the best to fall o-ooOOOOO NOOOOOOOO!!!!!"
+    hide normal cat 
+    show sad cat
+    y "WHAT??? WHAT HAPPENED??"
+
+    A "MY, MY, MY… MY NAAAAAAAAIIIIIL WAAAHHH"
+
+    y "(oh my god how do you console someone who… simply broke a nail?)"
+
+    y "Uhm… No Adinolfo, don't worry, it's just a nail!"
+
+    A "JUST A NAIL??? JUST A NAIL YOU SAY?? DO YOU KNOW HOW MUCH WORK AND MONEY ARE BEHIND *MY* NAILS?????"
+
+    y "(Oh shit)"
+
+    A "HOW DARE YOU MINIMIZE THE IMPORTANCE OF MY NAILS YOU DUMB HUMAN!!!!"
+
+    y "No really I didn't want to.."
+
+    A "(sob sob) You're so mean, why are you saying such things… sniff sniff"
+
+    y " No Adinolfo, I'm sorry, you're beautiful even if your nail is broken!"
+    
+    A "SHUT UP!! GO OUT!!! OR I WILL CALL MY FATHER OKKK???? WAAAAHH"
+
+    y "(woah I think it's best for me to go out without saying anything"  
+    hide sad cat
+    "'You silently exit the house without saying a word.'"
+
+    scene aportaopen with quickfade
+    scene aporta with quickfade 
+    with Pause(1)
+
+    "'Door slams shut.'"
+
+    "'Goes back silently to the truck.'"
+    scene bg camion
+    show normal bingus
+    B "So how it went?"
+    hide normal bingus
+
+    show confused bingus
+    y "Let's not talk about it ok? Im not in the mood."
+
+    $ adinolfo +=1
+    hide confused bingus 
+    jump addresses2
 
 label a4:
     y "Looking around I can see many things from the twentieth century."
@@ -2632,6 +2701,7 @@ label w3:
             jump w5
         "Leave.":
             jump w6
+
 label w5:
     y "You know what? Work can wait. I'll stay a little longer."
     hide cami normal
