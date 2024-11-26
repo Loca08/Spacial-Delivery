@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 314: expected statement.
-    s
-     ^
+File "game/script.rpy", line 3423: invalid syntax
+    credits_speed =
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 13 13:25:17 2024
+Tue Nov 26 15:58:50 2024

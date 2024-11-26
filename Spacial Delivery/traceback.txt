@@ -1,24 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 445, in script
-    Y "Really? I only thought we were just some delivery guys for a massive coporation."
-Exception: Sayer 'Y' is not defined.
+  File "renpy/common/00start.rpy", line 279, in script
+    python:
+ScriptError: could not find label 'start'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 445, in script
-    Y "Really? I only thought we were just some delivery guys for a massive coporation."
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'Y' is not defined.
+  File "D:\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\renpy-8.3.2-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 279, in script
+    python:
+  File "D:\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'start'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.2.24090902
 Spacial Delivery 1.0
-Wed Nov 13 22:03:58 2024
+Tue Nov 26 12:35:33 2024

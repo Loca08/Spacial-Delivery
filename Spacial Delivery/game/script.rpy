@@ -34,6 +34,14 @@ default seneca = 0
 default quasar = 0
 default adinolfo = 0
 
+default wandas = 0
+default senecas = 0
+default quasars = 0
+default adinolfos = 0
+
+default monicas = 0
+default monica = 0
+
 image movie1 = Movie(channel="movie_dp", play = "images/movies/movie1.webm")
 image wanda = Movie(channel="movie_dp", play = "images/movies/wanda.webm")
 image seneca = Movie(channel="movie_dp", play = "images/movies/seneca.webm")
@@ -73,7 +81,7 @@ label start:
 
     $ povname = renpy.input("So... Whats your name?", length =32)
 
-    y "My mane is [povname]."
+    y "My name is [povname]."
 
     b "So glad to have you here [povname], here at 'Spedisco Nu Paccheeto' we are always happy to have new recruits in our big happy family!"
 
@@ -292,12 +300,12 @@ label Scelta_13:
     jump Scelta_16
 
 label Scelta_16:
-    "Static sounds coming from Bingus radio"
+    "'Static sounds coming from Bingus radio'"
 
     show normal bingus
     b "Do me a favor and stay quiet for a second I think the boss is trying to contact me."
 
-    "Answers radio call"
+    "'Answers radio call'"
     hide normal bingus
     show normal boss 
     d "Supervisor Bingus, im calling for an update on the interview with the new recruit.........., over."
@@ -312,7 +320,7 @@ label Scelta_16:
     show feared bingus
     b "Yes sir, I din't forgot about the drivers license, over."
 
-    "Bingus looks at you with a glacial stare"
+    "'Bingus looks at you with a glacial stare'"
     
     b "You do have a driving license am I right human?"
     menu:
@@ -443,15 +451,15 @@ label Scelta_20:
 
 label addresses:
     menu:
-        "77 Domina Ave Neptune Np 44756" if wanda ==0:
+        "77 Domina Ave Neptune Np 44756" if wandas ==0:
             jump wanda
-        "03 Sapience Rd SW Saturn St 5689" if seneca ==0:
+        "03 Sapience Rd SW Saturn St 5689" if senecas ==0:
             jump seneca
-        "404 Remsemen Street Jupiter Jp 3912" if quasar ==0:
+        "404 Remsemen Street Jupiter Jp 3912" if quasars ==0:
             jump quasar
-        "420 Hooters 6th Avenue Mars Mr 6996 " if adinolfo ==0:
+        "420 Hooters 6th Avenue Mars Mr 6996 " if adinolfos ==0:
             jump adino
-        "Go back to base." if wanda ==1 and seneca ==1 and quasar ==1 and adinolfo ==1:
+        "Go back to base." if monicas ==4:
             jump ACT2
 
 label adino:
@@ -517,7 +525,8 @@ label adino_2:
     scene bg space with dissolve  
     show happy bingus
     B "So were are we going now captain?"
-    $ adinolfo +=1
+    $ adinolfos +=1
+    $ monicas +=1
     hide happy bingus
     jump addresses
 
@@ -556,7 +565,8 @@ label adino_1:
 
     B "So were are we going now captain?"
 
-    $ adinolfo +=1
+    $ adinolfos +=1
+    $ monicas +=1
     hide happy bingus
     jump addresses
 
@@ -629,7 +639,7 @@ label seneca_2:
     y "I feel the pressure of someone waiting."
 
     y "I really don't wanna face a possibly angry costumer."
-    "'Places the package next to the door.'"
+    "'Places the package next to the door'"
 
     y "Good, now I make sure to place it with the label facing the top."
 
@@ -638,7 +648,8 @@ label seneca_2:
     scene bg space with dissolve
     show happy bingus with dissolve
     B "So were are we going now captain?"
-    $ seneca +=1
+    $ senecas +=1
+    $ monicas +=1
     hide happy bingus with dissolve
     jump addresses
 
@@ -680,7 +691,8 @@ label seneca_1:
 
     B "So were are we going now captain?"
 
-    $ seneca +=1
+    $ senecas +=1
+    $ monicas +=1
     hide happy bingus with dissolve
     jump addresses 
 
@@ -741,7 +753,8 @@ label quasar_2:
     show happy bingus with dissolve
     B "So were are we going now captain?"
 
-    $ quasar +=1
+    $ quasars +=1
+    $ monicas +=1
     hide happy bingus with dissolve
     jump addresses
 
@@ -787,7 +800,8 @@ label quasar_1:
 
     y "Im gonna tell you after we leave, I can't stand the smell of this place."
 
-    $ quasar +=1
+    $ quasars +=1
+    $ monicas +=1
     hide normal bingus with dissolve
     jump addresses
 
@@ -825,12 +839,13 @@ label wanda:
 label wanda_2:
     y "Label facing up and im out of here."
 
-    "'Runs back to the truck.'"
+    "'Runs back to the truck'"
     scene bg space with dissolve
     show happy bingus with dissolve
     B "So were are we going now captain?"
 
-    $ wanda +=1
+    $ wandas +=1
+    $ monicas +=1
     hide happy bingus with dissolve 
     jump addresses
 
@@ -906,7 +921,8 @@ label wanda_6:
 
     y "Kinda, lets go."
 
-    $ wanda +=1
+    $ wandas +=1
+    $ monicas +=1
     hide normal bingus with dissolve
     jump addresses
 
@@ -915,7 +931,7 @@ label ACT2:
     show normal bingus with dissolve
     "'Static noises coming from the radio'"
     B "Boss is calling."
-    "Answers radio"
+    "'Answers radio'"
     hide normal bingus
     show normal boss 
     d "Bingus Jr do you hear me? Over."
@@ -977,10 +993,6 @@ label ACT2:
     hide text with dissolve
     with Pause(1)
 
-    $ wanda -= 1
-    $ seneca -= 1
-    $ quasar -= 1
-    $ adinolfo -= 1
     scene bg camion with quickfade
     y "I think im starting to get used to this routine."
     show happy bingus with dissolve 
@@ -1009,7 +1021,7 @@ label addresses2:
             jump quasaro
         "420 Hooters 6th Avenue Mars Mr 6996 " if adinolfo ==0:
             jump adina
-        "Go back to base." if wanda >=1 and seneca >=1 and quasar >=1 and adinolfo >=1:
+        "Go back to base." if monica ==4 :
             jump ACT3
 
 label quasaro:
@@ -1071,6 +1083,7 @@ label q2:
     y "I think I said something wrong, better not think about it much."
 
     $ quasar +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -1143,6 +1156,7 @@ label q4:
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=1
+    $ monica +=1
     hide normal bingus with dissolve 
     jump addresses2
 
@@ -1206,7 +1220,7 @@ label q5_2:
 
 label q6:
     y "Nah its better if I stay in the living-room, don't wanna risk stepping on something worse..."
-    "'Your eyes lands on one of the many screen in the room'"
+    "'Your eyes gaze on one of the many screen in the room'"
 
     y "This one is showing a strange planet, lets see... it's called Sblumbo."
 
@@ -1291,6 +1305,7 @@ label q8:
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=1
+    $ monica +=1
     hide normal bingus
     jump addresses2  
 
@@ -1385,6 +1400,7 @@ label q10:
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -1419,6 +1435,7 @@ label q9:
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=2
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -1474,6 +1491,7 @@ label q5_3:
     y "Good, a very strange individual I have to say."
 
     $ quasar +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2 
 
@@ -1696,6 +1714,7 @@ label s2:
     y "Good, a very interesting individual I have to say."
 
     $ seneca +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2    
 
@@ -1799,6 +1818,7 @@ label s6:
     y "Good, a very mindful individual I have to say."
 
     $ seneca +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2 
 
@@ -1953,6 +1973,7 @@ label s5:
     y "Good, my mind feel more enlightened now hehe."
 
     $ seneca +=2
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -2001,6 +2022,7 @@ label s4:
     y "Let's not talk about it ok? Im not in the mood."
 
     $ seneca +=1
+    $ monica +=1
     hide confused bingus 
     jump addresses2
 
@@ -2069,9 +2091,9 @@ label adina:
     scene bg aporta with dissolve
     with Pause(1)
 
-    "Knocks on the door."
+    "'Knocks on the door'"
     scene bg aportaopen with dissolve 
-    "Door opens."
+    "'Door opens"
     show bonk cat with dissolve
     a "Well, hello there! Looks like someone's came back.~"
 
@@ -2130,6 +2152,7 @@ label a2:
     y "Meh, no tip maybe another time Jr."
 
     $ adinolfo +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2 
 
@@ -2279,6 +2302,7 @@ label a3:
     y "Let's not talk about it ok? Im not in the mood."
 
     $ adinolfo +=1
+    $ monica +=1
     hide confused bingus with dissolve
     jump addresses2
 
@@ -2368,6 +2392,7 @@ label a6:
     y "Good, big reality check but he's a nice guy."
 
     $ adinolfo +=1
+    $ monica +=1
     hide normal bingus with dissolve 
     jump addresses2  
 
@@ -2482,6 +2507,7 @@ label a8:
     y "Good, it was an experience I have to say."
 
     $ adinolfo +=1
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -2530,6 +2556,7 @@ label a7:
     y "Good, it was an experience I have to say."
 
     $ adinolfo +=2
+    $ monica +=1
     hide normal bingus with dissolve
     jump addresses2
 
@@ -2618,8 +2645,9 @@ label w2:
     B "Good you are back, so partner what's gonna be our next stop?"
 
     $ wanda +=1
+    $ monica +=1
     hide normal bingus with dissolve
-    jump addresses
+    jump addresses2
 
 label w1:
     hide cami secc
@@ -2822,6 +2850,7 @@ label w5:
     y "It was an experience let's say."
 
     $ wanda +=1
+    $ monica +=1
     hide confused bingus with dissolve
     jump addresses2
 
@@ -2857,6 +2886,7 @@ label w6:
     y "I have dodged a bullet, let's say."
 
     $ wanda +=1
+    $ monica +=1
     hide confused bingus with dissolve
     jump addresses2
 
@@ -2918,6 +2948,7 @@ label w4:
     y "I have dodged a bullet, let's say."
 
     $ wanda +=1
+    $ monica +=1
     hide confused bingus 
     jump addresses2
     
@@ -3030,15 +3061,7 @@ label secret:
     show secret with dissolve
     with Pause(27)
     hide secret
-
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
-
-    hide text with dissolve
-    with Pause(1)
-    
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return    
 
 label messages:    
@@ -3127,18 +3150,7 @@ label wande:
     show wanda with dissolve
     with Pause(27)
     hide wanda
-    
-    scene black with dissolve
-    with Pause(1)
-
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
-
-    hide text with dissolve
-    with Pause(1)
-    
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return     
 
 label adine:
@@ -3215,18 +3227,7 @@ label adine:
     show adinolfo with dissolve
     with Pause(27)
     hide adinolfo
-    
-    scene black with dissolve
-    with Pause(1)
-
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
-
-    hide text with dissolve
-    with Pause(1)
-    
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return
 
 label quasare:
@@ -3301,18 +3302,7 @@ label quasare:
     show quasar with dissolve
     with Pause(27)
     hide quasar
-    
-    scene black with dissolve
-    with Pause(1)
-
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
-
-    hide text with dissolve
-    with Pause(1)
-    
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return   
 
 label senece:
@@ -3353,7 +3343,7 @@ label senece:
     scene bg ssalotto with dissolve
     scene bg sdoio with dissolve
 
-    scene sletto with dissolve
+    scene bg sletto with dissolve
     show sene 1 with dissolve
     S "This is my private room, here we should be alone."
 
@@ -3380,18 +3370,7 @@ label senece:
     show seneca with dissolve
     with Pause(27)
     hide seneca
-    
-    scene black with dissolve
-    with Pause(1)
-
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
-
-    hide text with dissolve
-    with Pause(1)
-    
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return    
 
 label neutral_final:
@@ -3414,7 +3393,6 @@ label neutral_final:
     play sound "music.mp3"
     show neutral with dissolve
     with Pause(27)
-
 
     call credits
     return    
@@ -3443,6 +3421,8 @@ label credits:
     with dissolve
     with Pause(3)
     hide thanks
+    show bg end with quickfade
+    pause 
     return
 
 init python:
@@ -3461,4 +3441,4 @@ init:
     image cred = Text(credits_s, text_align=0.5)
     image theend = Text("{size=80}The end", text_align=0.5)
     image group = Text("{size=80} Made by D(Elivery) Group", text_align=0.5)
-    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
+    image thanks = Text("{size=80}Thank you for Playing!", text_align=0.5)
