@@ -77,7 +77,7 @@ label start:
     
     scene bg ufficio with quickfade
     show normal bingus
-    b "Hello there, my name is Bingus im going to be your new supervisor. May ask your name human?"
+    b "Hello there, my name is Bingus, i'm going to be your new supervisor. May I ask your name human?"
 
     $ povname = renpy.input("So... Whats your name?", length =32)
 
@@ -85,11 +85,11 @@ label start:
 
     b "So glad to have you here [povname], here at 'Spedisco Nu Paccheeto' we are always happy to have new recruits in our big happy family!"
 
-    y "Uh... ok I guess. So... how's the pay here ehm Pintus? "
+    y "Uh... ok I guess. So... how's the pay here ehm, Pintus? "
     hide normal bingus
     show angry bingus
 
-    b "The names is Bingus, I would like my name not to be confused ok?"
+    b "The name's Bingus, I would like my name not to be confused ok?"
     hide angry bingus
     show normal bingus
     b "Before that I have to ask you a couple of question for an optional survey so we can improve the service and how we approach new future recruits."
@@ -152,7 +152,7 @@ label Scelta_4:
 label Scelta_3:
     hide happy bingus
     show happy bingus
-    b "Wonderful! We are having so much fun, I cant wait to finish this very ''entertaining'' task before my lunch break!"
+    b "Wonderful! We are having so much fun, I can't wait to finish this very ''entertaining'' task before my lunch break!"
     jump Scelta_0
 
 label Scelta_0:
@@ -190,7 +190,7 @@ label Scelta_6:
     b "I was going to select none regardless."
     hide normal bingus
     show happy bingus
-    b "♪ Aren't you having fun? Here at 'Spedisco Nu Paccheeto' every day is fun as your last! ♪"
+    b "♪ Aren't you having fun? Here at 'Spedisco Nu Paccheeto' every day is as fun as your last! ♪"
     hide happy bingus
     show seccato bingus
     b "Ugh.. this stupid jingle is still stuck in my mind, but you will get over it eventually."
@@ -207,7 +207,7 @@ label Scelta_6:
 
 label Scelta_11:
     show angry bingus
-    b "Well if you can see the importance of this question im not gonna elaborate further."
+    b "Well if you can't see the importance of this question im not gonna elaborate further."
 
     y "If you say so... everybody knows hot tea from the vending machine in the gas station is the best."
     hide angry bingus
@@ -236,14 +236,14 @@ label Scelta_10:
     jump Scelta_12
 
 label Scelta_9:
-    b "Im my opinion green tea is the best, but if you still have the taste of a infant I guess we could make it work."
+    b "Im my opinion green tea is the best, but if you still have the taste of an infant I guess we could make it work."
 
     y "I wonder whats the purpose of this survey."
     
     show seccato bingus
     b "Don't ask me, im just doing my job."
     
-    b "'Whispering to himself' Just 23 years to retirement I can do it, oh my Zulone this headache is killing me."
+    b "'Whispering to himself' Just 23 years to retirement, I can do this, oh my Zulone this headache is killing me."
     hide seccato bingus
     show normal bingus
     jump Scelta_12
@@ -265,7 +265,7 @@ label Scelta_15:
 
     b "You don't have many friends am I right?"
 
-    y "Sorry I was just trying to lights up the conversation."
+    y "Sorry I was just trying to light up the conversation."
     hide seccato bingus
     show normal bingus 
     b "I think you could do a better job simply by closing your mouth, ok?"
@@ -289,9 +289,9 @@ label Scelta_13:
     show seccato bingus
     b "Which one?"
 
-    b "Regardless listen if you wanted so bad to be a comedian you should have just put a red nose on your face."
+    b "Regardless, listen, if you wanted so bad to be a comedian you should have just put a red nose on your face."
 
-    b "The clown looks its already on point."
+    b "The clown look is already on point."
 
     y "....... that kinda hurts."
     hide seccato bingus
@@ -303,7 +303,7 @@ label Scelta_16:
     "'Static sounds coming from Bingus radio'"
 
     show normal bingus
-    b "Do me a favor and stay quiet for a second I think the boss is trying to contact me."
+    b "Do me a favor and stay quiet for a second, I think the boss is trying to contact me."
 
     "'Answers radio call'"
     hide normal bingus
@@ -318,7 +318,7 @@ label Scelta_16:
     d "I hope for you its not well as the last one who crashed 2 of our trucks inside the cafeteria, over."
     hide angry boss
     show feared bingus
-    b "Yes sir, I din't forgot about the drivers license, over."
+    b "Yes sir, I didn't forget about the drivers license, over."
 
     "'Bingus looks at you with a glacial stare'"
     
@@ -366,7 +366,7 @@ label Scelta_19:
     b "Hurray... im soo happy to hear that."
     hide seccato bingus
     show happy boss
-    d "Good, if you please can you direct the human to the Launching pad, so it can sTart the shift, over."
+    d "Good, if you please can you direct the human to the Launching pad, so they can start the shift, over."
     hide happy boss
     show seccato bingus
     b "Sure thing boss, it'll be a pleasure for me. Over and out."
@@ -377,7 +377,7 @@ label Scelta_19:
     b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
     hide angry bingus
     show normal bingus
-    b "Oh, I almost forgot your truck its gonna be the first one on the left, my colleague will be waiting for you in the vehicle."
+    b "Oh, I almost forgot your truck is gonna be the first one on the left, my colleague will be waiting for you in the vehicle."
     hide normal bingus
     show seccato bingus
     b "Please don't screw up."
@@ -393,9 +393,9 @@ label Scelta_19:
 
 label Scelta_20:
     scene bg camion with quickfade
-    y "I think this one is the right truk, I wonder where is this colleague bingus told me about."
+    y "I think this one is the right truck, I wonder where is this colleague bingus told me about."
 
-    "'Door opens and slam shut'"
+    "'Door opens and slams shutting'"
     show happy bingus with dissolve
     y "Bingus what are you doing here?"
 
@@ -409,10 +409,10 @@ label Scelta_20:
     "'Tablets turns on'"
     P "Very good friend, now you can hear me right?"
 
-    y "Yes but you were talking to me fine like 5 minutes ago, whats the use of this strange machine."
+    y "Yes but you were talking to me fine like 5 minutes ago, what's the use of this strange machine."
     hide happy bingus
     show normal bingus
-    P "Well its an itergalatic translator with over 5 gazillion language known in the universe."
+    P "Well it's an intergalactic translator with over 5 gazillion language known in the universe."
 
     P "I still don't know how to speak properly the human dialect so Boss gave it to me just in case."
 
@@ -425,18 +425,18 @@ label Scelta_20:
     y "Sure, ehm where is the keyhole?"
     hide normal bingus 
     show confused bingus
-    B "Inside the steering wheel, have you ever drove one of this truk before?"
+    B "Inside the steering wheel, have you ever drove one of this trucks before?"
 
-    y "Yes, of course I have many hours driving trucks, even bigger than this one."
+    y "Yes, of course, I spent many hours driving trucks, even bigger than this one."
 
-    y "This must be a new model I didn't had the chance to try before ahah."
+    y "This must be a new model I didn't have the chance to try before ahah."
     hide confused bingus
     show normal bingus
 
     "'Turns on the truck'"
     y "Ok now what?"
 
-    B "Well now you have to choose where to go first I have a couple of address to go trough so choose."
+    B "Well now you have to choose where to go first, I have a couple of addresses to go through so choose."
  
     y "I get to choose?"
     hide normal bingus
@@ -480,14 +480,14 @@ label adino:
     B "Once I had to follow a comet in order to arrive to a very far far away planet in a different district just outside of the Milky Way."
     hide normal bingus
     show happy bingus
-    B "Best experience of my life, and you did you had similar experience ehm... can you remind me your name?"
+    B "Best experience of my life, and you said you had a similar experience ehm... can you remind me your name?"
 
     y "Don't worry, my name is [povname] and no I never had something like that in my life."
 
-    y "The closest thing I had saw related to space is the bill board for the pizza place i used to work at with a space ship on it." 
+    y "The closest thing I had seen related to space is the bill board for the pizza place I used to work at with a space ship on it." 
     hide happy bingus
     show confused bingus
-    B "Well its better than nothing I guess...oh I think we are close to our destination look on your left!"
+    B "Well it's better than nothing I guess...oh I think we are close to our destination, look on your left!"
     hide confused bingus with dissolve
 
     scene bg adinolfoplanet with dissolve
@@ -497,7 +497,7 @@ label adino:
 
     y "This dude must have tons of money, like look how rich and well kept is this patch of garden."
 
-    y "Heck he got grass on Mars thats more impressive than every thing else!"
+    y "Heck he got grass on Mars, that's more impressive than everything else!"
     show normal bingus with dissolve
     B "You are right but remember to be professional."
 
@@ -514,9 +514,9 @@ label adino:
             jump adino_2
 
 label adino_2:
-    y "Well, on a second thought I think its better if I leave the package here."
+    y "Well, on a second thought I think it's better if I leave the package here."
 
-    y "Just wanna take all precautions, the package is very heavy so I guess its also fragile."
+    y "Just wanna take all the precautions, the package is very heavy so I guess it's also fragile."
     show normal bingus with dissolve
     B "Good, make sure to place it with the label facing the top."
 
@@ -540,7 +540,7 @@ label adino_1:
     a "If it's too heavy I could give you a hand. ~"
     "'Winks playfully'"
 
-    y "Yeah... sure, so if you can sign here on my clipboard its all yours."
+    y "Yeah... sure, so if you can sign here on my clipboard it's all yours."
     hide bonk cat
     show normal cat
     a "Here you go.~"
@@ -555,13 +555,13 @@ label adino_1:
 
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So, how did it go?"
 
     y "Good, he gave me a big tip also."
 
     hide normal bingus
     show happy bingus
-    B "Thats very nice."
+    B "That's very nice."
 
     B "So were are we going now captain?"
 
@@ -575,12 +575,12 @@ label dayend:
     y "Back to the base Jr, that was our last delivery for the day."
     hide normal bingus
     show happy bingus
-    B "Cool we were faster than the programmed schedule, wanna grab something to eat in the cafeteria when we arrive im starving."
+    B "Cool we were faster than the programmed schedule, wanna grab something to eat in the cafeteria when we arrive? I'm starving."
 
-    y "I don't think its a good idea since they told me I was prohibited to go in for some reason."
+    y "I don't think it's a good idea since they told me I was prohibited to go in for some reason."
     hide happy bingus 
     show normal bingus
-    B "Nah its just my brother, he says this to all new recruits. You are gonna be fine trust me."
+    B "Nah it's just my brother, he says this to all the new recruits. You are gonna be fine trust me."
 
     y "Well if you say so."
     hide happy bingus
@@ -602,7 +602,7 @@ label seneca:
     y "You know, rude and very sassy to say the least."
     hide confused bingus
     show happy bingus
-    B "Oh, its normal. He is just very serious about this job that's all hehe."
+    B "Oh, it's normal. He is just very serious about this job, that's it hehe."
 
     y "You sure?"
 
@@ -625,7 +625,7 @@ label seneca:
 
     y "This dude's house sure look like a museum."
 
-    B "I know, I know now deliver the package if you don't mind."
+    B "I know, I know, now deliver the package if you don't mind."
     hide normal bingus with dissolve
     scene bg sporta with dissolve
     with Pause(1)
@@ -641,9 +641,9 @@ label seneca_2:
     y "I really don't wanna face a possibly angry costumer."
     "'Places the package next to the door'"
 
-    y "Good, now I make sure to place it with the label facing the top."
+    y "Good, now I gotta make sure to place it with the label facing the top."
 
-    y "Ok everything set correctly, let's go Jr!"
+    y "Ok everything is set correctly, let's go Jr!"
     
     scene bg space with dissolve
     show happy bingus with dissolve
@@ -665,14 +665,14 @@ label seneca_1:
     y "Well I am more of a 'Live like there is no tomorrow guy' hehe."
     hide sene 1 
     show sene 3
-    s "Strange philosophy from a guys who is delivering a package late."
+    s "Strange philosophy from a guy who is delivering a package late."
 
-    s "After all 'Errare Humanum est' im I wrong ?"
+    s "After all 'Errare Humanum est'... am I wrong ?"
     hide sene 3
     show sene 1
     y "Sorry for that sir, so if you can sign here on the clipboard i'll go."
 
-    s "Be careful out there, the universe it's not a place for those with a weak mind."
+    s "Be careful out there, the universe is not a place for those with a weak mind."
 
     y "Good day sir."
     
@@ -681,7 +681,7 @@ label seneca_1:
 
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So how did it go?"
 
     y "Good I think."
 
@@ -706,9 +706,9 @@ label quasar:
     hide happy bingus
     show normal bingus
 
-    B "Gnarpies are very sociable creatures, singing it's one of the many way our species interacts with each others."
+    B "Gnarpies are very sociable creatures, singing is one of the many way our species interacts with each others."
 
-    y "That's explain why you brother was so upset about the jingle."
+    y "That explains why your brother was so upset about the jingle."
     hide normal bingus
     show feared bingus
     B "Yeah we don't talk about that."
@@ -733,7 +733,7 @@ label quasar:
     scene bg qviale with dissolve
     with Pause(1)
 
-    y "Damn, this place smells horrible or is the package im holding?"
+    y "Damn, this place smells horrible, or is the package i'm holding?"
 
     y "Either way better be quick."
 
@@ -746,7 +746,7 @@ label quasar:
             jump quasar_2
 
 label quasar_2:
-    y "Label facing up and im out of here."
+    y "Label facing up and i'm out of here."
 
     "'Jumps back into the truck'"
     scene bg space with dissolve
@@ -764,9 +764,9 @@ label quasar_1:
     scene bg qporta with dissolve
     with Pause(1)
 
-    q "One second, im coming."
+    q "One second, i'm coming."
 
-    y "Hi, here is you package and here is were you need to sign so I can leave."
+    y "Hi, here is you package and here is where you need to sign so I can leave."
     scene bg qportaopen with dissolve
     with Pause(1)
     "'A sticky gelatinous hand reaches out of the door leaving a drop on the place to sign.'"
@@ -781,7 +781,7 @@ label quasar_1:
 
     q "(a real human being, knocked on my door!)"
 
-    q "(to delivering me a package!?!?!?)"
+    q "(for... delivering me a package!?!?!?)"
 
     q "(ok quiet now take the parcel, thank you and say goodbye quietly)"
 
@@ -796,9 +796,9 @@ label quasar_1:
 
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So how did it go?"
 
-    y "Im gonna tell you after we leave, I can't stand the smell of this place."
+    y "I'm gonna tell you after we leave, I can't stand the smell of this place."
 
     $ quasars +=1
     $ monicas +=1
@@ -807,7 +807,7 @@ label quasar_1:
 
 label wanda:
     show normal bingus with dissolve 
-    y "Hey Jr, I found some freeze-dried sushi in the back do you think it tastes better in space?"
+    y "Hey Jr, I found some freeze-dried sushi in the back, do you think it tastes better in space?"
     hide normal bingus 
     show feared bingus
     B "Is that even a question?"
@@ -825,7 +825,7 @@ label wanda:
 
     y "I was so wrong..."
 
-    y "Never I'll eat freeze-dried sushi again."
+    y "I'll never eat freeze-dried sushi again."
 
     y "The location is definitely not helping."
     scene bg wporta with dissolve
@@ -837,7 +837,7 @@ label wanda:
             jump wanda_2
 
 label wanda_2:
-    y "Label facing up and im out of here."
+    y "Label facing up and i'm out of here."
 
     "'Runs back to the truck'"
     scene bg space with dissolve
@@ -919,7 +919,7 @@ label wanda_6:
     show normal bingus with dissolve 
     B "So you feel good now?"
 
-    y "Kinda, lets go."
+    y "Kinda, let's go."
 
     $ wandas +=1
     $ monicas +=1
@@ -940,13 +940,13 @@ label ACT2:
     B "Yes Boss, over."
     hide normal bingus
     show normal boss 
-    d "Perfect, im calling to inform you and the new recruit that your shift is over, over."
+    d "Perfect, i'm calling to inform you and the new recruit that your shift is over, over."
     hide normal boss
     show happy bingus
     B "Really? Over."
     hide happy bingus 
     show happy boss
-    d "Yes, someone didn't load all the packages on your truck and since you are too far away it's better to end your shift early but just this time ok? Don't get comfy, over."
+    d "Yes, someone didn't load all the packages on your truck and since you are too far away it's better to end your shift early, but just this time ok? Don't get comfy, over."
     hide happy boss
     show normal bingus 
     B "Thanks sir, see ya tomorrow, over and out."
@@ -956,9 +956,9 @@ label ACT2:
     y "Let's a go! First day and we get to end early."
     hide normal bingus
     show happy bingus
-    B "Nice, wanna go get a drink on the way back? I know a place near the moon thats it's the end of the world."
+    B "Nice, wanna go get a drink on the way back? I know a place near the moon that is the end of the world."
 
-    y "Sure, im kinda low on money tho..."   
+    y "Sure, i'm kinda low on money tho..."   
     hide happy bingus
     show normal bingus
     B "Oh don't worry it's on me this time, next one is on you."
@@ -994,7 +994,7 @@ label ACT2:
     with Pause(1)
 
     scene bg camion with quickfade
-    y "I think im starting to get used to this routine."
+    y "I think i'm starting to get used to this routine."
     show happy bingus with dissolve 
     B "Good morning [povname]"
     
