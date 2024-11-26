@@ -3410,21 +3410,55 @@ label neutral_final:
     y "So what are you waiting captain? Its time to go!"
 
     B "Aye aye [povname]!"
-
+    hide happy bingus with dissolve
     play sound "music.mp3"
     show neutral with dissolve
     with Pause(27)
-    hide neutral
-    
-    scene black with dissolve
-    with Pause(1)
 
-    show text "Thank you for playing" with dissolve
-    with Pause(2) 
 
-    hide text with dissolve
-    with Pause(1)
-
-    scene black with dissolve
-    with Pause(1)
+    call credits
     return    
+
+label credits:
+    $ credits_speed = 25 #scrolling speed in seconds
+    scene black #replace this with a fancy background
+    with dissolve
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide theend
+    show group:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide group
+    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    with Pause(credits_speed)
+    show thanks:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide thanks
+    return
+
+init python:
+    credits = ('Design', 'Locatelli Alessandro'), ('Design', 'Battaglia Niccolò'), ('Design', 'Consiglieri Leonardo'), ('Design', 'Melfa Altea'), ('Concept', 'Avanzi Nicole'), ('Concept', 'Betta Eleonora'), ('Concept', 'Bonfadini Noemi'), ('Concept', 'Pavan Sara'), ('Concept', 'Peralti Sara'), ('Concept', 'Rigolli Riccardo'), ('Concept', 'Tartaglia Giulia'), ('Concept', 'Zheng Xin'), ('Programmer', 'Locatelli Alessandro')
+    credits_s = "{size=80}Credits\n\n"
+    c1 = ''
+    for c in credits:
+        if not c1==c[0]:
+            credits_s += "\n{size=40}" + c[0] + "\n"
+        credits_s += "{size=60}" + c[1] + "\n"
+        c1=c[0]
+    credits_s += "\n{size=40}Engine\n{size=60}Ren'py\n6.15.7.374" #Don't forget to set this to your Ren'py version
+    
+init:
+#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
+    image cred = Text(credits_s, text_align=0.5)
+    image theend = Text("{size=80}The end", text_align=0.5)
+    image group = Text("{size=80} Made by D(Elivery) Group", text_align=0.5)
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
