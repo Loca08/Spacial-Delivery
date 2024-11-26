@@ -308,7 +308,8 @@ label Scelta_16:
     show angry boss
     
     d "I hope for you its not well as the last one who crashed 2 of our trucks inside the cafeteria, over."
-    
+    hide angry boss
+    show feared bingus
     b "Yes sir, I din't forgot about the drivers license, over."
 
     "Bingus looks at you with a glacial stare"
@@ -355,24 +356,24 @@ label Scelta_19:
     hide happy boss
     show seccato bingus
     b "Hurray... im soo happy to hear that."
-    
-    d "Good, if you please can you direct the human to the Launching pad, so it can sTart the shift, over."
-
-    b "Sure thing boss, it'll be a pleasure for me. Over and out."
     hide seccato bingus
     show happy boss
-
-    b "You heard the boss, go to the Launching pad, follow the corridor and take the second door to the right."
+    d "Good, if you please can you direct the human to the Launching pad, so it can sTart the shift, over."
     hide happy boss
     show seccato bingus
-    b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
+    b "Sure thing boss, it'll be a pleasure for me. Over and out."
+
+    b "You heard the boss, go to the Launching pad, follow the corridor and take the second door to the right."
     hide seccato bingus
+    show angry bingus
+    b "And remember do NOT enter or follow me into the cafeteria, now if you excuse me I have a tuna sandwich to eat."
+    hide angry bingus
     show normal bingus
     b "Oh, I almost forgot your truck its gonna be the first one on the left, my colleague will be waiting for you in the vehicle."
     hide normal bingus
     show seccato bingus
     b "Please don't screw up."
-    hide seccato bingus
+    hide seccato bingus with dissolve
     "'Walks away'"
 
     y "Finally, the stupid survey its over, I hope I don't get fired on day one as my last job."
@@ -387,7 +388,7 @@ label Scelta_20:
     y "I think this one is the right truk, I wonder where is this colleague bingus told me about."
 
     "'Door opens and slam shut'"
-    show happy bingus
+    show happy bingus with dissolve
     y "Bingus what are you doing here?"
 
     P "Gleep gloop"
@@ -437,7 +438,7 @@ label Scelta_20:
     y "I'd rather not, what are the addresses Jr?"
 
     B " Sure thing lets see..."
-    hide happy bingus
+    hide happy bingus with dissolve
     jump addresses
 
 label addresses:
@@ -455,7 +456,7 @@ label addresses:
 
 label adino:
     scene bg space with quickfade
-    show normal bingus
+    show normal bingus with dissolve
     y "Woah the space is so beautiful."
     hide normal bingus
     show happy bingus
@@ -479,7 +480,7 @@ label adino:
     hide happy bingus
     show confused bingus
     B "Well its better than nothing I guess...oh I think we are close to our destination look on your left!"
-    hide confused bingus
+    hide confused bingus with dissolve
 
     scene bg adinolfoplanet with dissolve
     with Pause(2)
@@ -489,13 +490,13 @@ label adino:
     y "This dude must have tons of money, like look how rich and well kept is this patch of garden."
 
     y "Heck he got grass on Mars thats more impressive than every thing else!"
-    show normal bingus
+    show normal bingus with dissolve
     B "You are right but remember to be professional."
 
     y "Ok I will."
 
     B "Good luck!"
-    hide normal bingus
+    hide normal bingus with dissolve
     scene bg aporta with dissolve
     with Pause(1)
     menu:
@@ -507,12 +508,13 @@ label adino:
 label adino_2:
     y "Well, on a second thought I think its better if I leave the package here."
 
-    y "Just wanna take all precautions since the package is very heavy I guess its also fragile."
-    show normal bingus
+    y "Just wanna take all precautions, the package is very heavy so I guess its also fragile."
+    show normal bingus with dissolve
     B "Good, make sure to place it with the label facing the top."
 
     y "Ok everything set correctly, let's go Jr!"
-    hide normal bingus 
+    hide normal bingus with dissolve
+    scene bg space with dissolve  
     show happy bingus
     B "So were are we going now captain?"
     $ adinolfo +=1
@@ -520,10 +522,10 @@ label adino_2:
     jump addresses
 
 label adino_1:
-    "Knocks on the door."
-    scene bg aportaopen
-    "Door opens."
-    show bonk cat
+    "'Knocks on the door'"
+    scene bg aportaopen with dissolve
+    "'Door opens'"
+    show bonk cat with dissolve
     a "Well, hello there! Looks like someone's got a big packawge for me. ~"
 
     a "If it's too heavy I could give you a hand. ~"
@@ -532,15 +534,18 @@ label adino_1:
     y "Yeah... sure, so if you can sign here on my clipboard its all yours."
     hide bonk cat
     show normal cat
+    a "Here you go.~"
+
     a "Hope to see ya soon sweetie. ~"
+
     "'Hands over a big tip'"
     y "Thanks, have a good one sir."
-    hide normal cat
+    hide normal cat with dissolve
     scene bg aporta with dissolve
     with Pause(1)
 
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, he gave me a big tip also."
@@ -572,8 +577,8 @@ label dayend:
     jump week2
 
 label seneca:
-    scene bg space with dissolve
-    show normal bingus
+    scene bg space
+    show normal bingus with dissolve
 
     y "Hey Jr, can I ask you something?"
 
@@ -605,13 +610,13 @@ label seneca:
     with Pause(1)
 
     y "Are you sure we are at the correct house?"
-    show normal bingus
+    show normal bingus with dissolve
     B "Yup"
 
     y "This dude's house sure look like a museum."
 
     B "I know, I know now deliver the package if you don't mind."
-    hide normal bingus
+    hide normal bingus with dissolve
     scene bg sporta with dissolve
     with Pause(1)
     menu:
@@ -621,7 +626,7 @@ label seneca:
             jump seneca_2
 
 label seneca_2:
-    y "I fell the pressure of someone waiting, he feels very annoyed."
+    y "I feel the pressure of someone waiting."
 
     y "I really don't wanna face a possibly angry costumer."
     "'Places the package next to the door.'"
@@ -630,18 +635,19 @@ label seneca_2:
 
     y "Ok everything set correctly, let's go Jr!"
     
-    show happy bingus
+    scene bg space with dissolve
+    show happy bingus with dissolve
     B "So were are we going now captain?"
     $ seneca +=1
-    hide happy bingus
+    hide happy bingus with dissolve
     jump addresses
 
 label seneca_1:
-    "Knocks on the door."
-    scene bg sportaopen
-    "Door opens."
-    show sene 1
-    s "'Cogito ergo sum' aka it doesn't matter how hard you doubt everything, the existence of the thinking ego will remain a truth."
+    "'Knocks on the door'"
+    scene bg sportaopen with dissolve
+    "'Door opens'"
+    show sene 1 with dissolve
+    s "'Cogito ergo sum', it doesn't matter how hard you doubt everything, the existence of the thinking ego will remain a truth."
 
     s "One of my favorite passages."
 
@@ -662,8 +668,8 @@ label seneca_1:
     scene bg sporta with dissolve
     with Pause(1)
 
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good I think."
@@ -675,16 +681,16 @@ label seneca_1:
     B "So were are we going now captain?"
 
     $ seneca +=1
-    hide happy bingus
+    hide happy bingus with dissolve
     jump addresses 
 
 label quasar:
     scene bg space with dissolve
-    show happy bingus
+    show happy bingus with dissolve
     
     B "♪ We are going on a trip on this big mail ship. Flying trough the sky! Jr and [povname] ♪"
 
-    y "Hey little bud I didn't know you can sing too."
+    y "Hey little bud I didn't know you can sing."
     hide happy bingus
     show normal bingus
 
@@ -730,13 +736,13 @@ label quasar:
 label quasar_2:
     y "Label facing up and im out of here."
 
-    'Jumps back to the truck.'
-
-    show happy bingus
+    "'Jumps back into the truck'"
+    scene bg space with dissolve
+    show happy bingus with dissolve
     B "So were are we going now captain?"
 
     $ quasar +=1
-    hide happy bingus
+    hide happy bingus with dissolve
     jump addresses
 
 label quasar_1:
@@ -756,7 +762,8 @@ label quasar_1:
 
     q "Thanks..."
 
-    "You hear the voice whispering behind the door."
+    "'You hear the voice whispering behind the door'"
+
     q "(wait a second is this delivery guy a human!?!?!?)"
 
     q "(a real human being, knocked on my door!)"
@@ -768,24 +775,24 @@ label quasar_1:
     q "TTTTT...TT...THANK YOU........HAVE GOOD DAY!!"
     scene bg sporta with dissolve
     with Pause(1)
-    "'Slams door'"
+    "'Door slams'"
 
     y "Have a nice day you too I guess..."
 
     "'Runs back to the truck'"
 
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Im gonna tell you after we leave, I can't stand the smell of this place."
 
     $ quasar +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses
 
 label wanda:
-    show normal bingus
+    show normal bingus with dissolve 
     y "Hey Jr, I found some freeze-dried sushi in the back do you think it tastes better in space?"
     hide normal bingus 
     show feared bingus
@@ -818,13 +825,13 @@ label wanda:
 label wanda_2:
     y "Label facing up and im out of here."
 
-    'Runs back to the truck.'
-
-    show happy bingus
+    "'Runs back to the truck.'"
+    scene bg space with dissolve
+    show happy bingus with dissolve
     B "So were are we going now captain?"
 
     $ wanda +=1
-    hide happy bingus
+    hide happy bingus with dissolve 
     jump addresses
 
 label wanda_1:
@@ -832,7 +839,7 @@ label wanda_1:
     with Pause(1)
     scene bg wportaopen with dissolve
     with Pause(1)
-    show cami secc 
+    show cami secc with dissolve 
     w "........"
 
     y "Uhm hi."
@@ -840,7 +847,7 @@ label wanda_1:
     w "I think what you are holding is mine."
     hide cami secc
     show cami normal
-    y "Ehm, yes I’ve got a package for a “Wanda.” Address is 77 Domina Ave, Neptune."  
+    y "Ehm, yes I've got a package for a “Wanda.” Address is 77 Domina Ave, Neptune."  
     
     y "just sign here on my clipboard."
 
@@ -886,27 +893,27 @@ label wanda_6:
     W "If you are waiting for a tip it's not happening."
 
     W "Now get lost ok?"
-    hide cami secc
+    hide cami secc with dissolve 
     "'Closes door'"
     scene bg wporta with dissolve
     with Pause(1)
 
     y "Well I tried."
 
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve 
+    show normal bingus with dissolve 
     B "So you feel good now?"
 
     y "Kinda, lets go."
 
     $ wanda +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses
 
 label ACT2:
     scene bg space
-    show normal bingus
-    "Static noises coming from the radio"
+    show normal bingus with dissolve
+    "'Static noises coming from the radio'"
     B "Boss is calling."
     "Answers radio"
     hide normal bingus
@@ -974,9 +981,9 @@ label ACT2:
     $ seneca -= 1
     $ quasar -= 1
     $ adinolfo -= 1
-    scene bg camion
+    scene bg camion with quickfade
     y "I think im starting to get used to this routine."
-    show happy bingus
+    show happy bingus with dissolve 
     B "Good morning [povname]"
     
     y "Morning Jr, how we doing today?"
@@ -989,7 +996,7 @@ label ACT2:
     B "Let's see..."
 
     B "Oh I think you'll recognize them."
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label addresses2:
@@ -1006,8 +1013,8 @@ label addresses2:
             jump ACT3
 
 label quasaro:
-    scene bg space
-    show happy bingus
+    scene bg space with dissolve
+    show happy bingus with dissolve
     B "♪ Cruising on down main street You're relaxed and feeling good Next thing that you know you're seeing Bingus in the neighborhood! ♪"
 
     y "♪ Surfing on a sound wave Swinging through the stars Take a left at your intestine Take your second right past Mars ♪"
@@ -1030,11 +1037,10 @@ label quasaro:
     "'Knocks on the door'"
     scene bg qportaopen with dissolve
     with Pause(1)
-    show qua embara
+    show qua embara with dissolve
     q "Oh! y..you are the same courier from last week."
 
     q "B...but surely you..forgot about me hehehe..."
-    hide qua embara
     menu:
         "Of course I remember you.":
             jump q1 
@@ -1042,13 +1048,14 @@ label quasaro:
             jump q2 
 
 label q2:
-    show qua sad 
+    hide qua embara
+    show qua sad
     q "............."
 
-    q "It's ok, maybe I overacted my fault."
+    q "It's ok, maybe I overacted.... my bad."
 
     q "Im so dumb, I'll take the parcel and leave..."
-    hide qua sad 
+    hide qua sad with dissolve
     scene bg qporta with dissolve
     with Pause(1)
     "'Slams door'"
@@ -1057,17 +1064,18 @@ label q2:
 
     y "Have a nice day I guess..."
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "I think I said something wrong, better not think about it much."
 
     $ quasar +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label q1:
+    hide qua embara
     show qua happy
     q "... whoa you remember (he remembers me im so exited right now!!!?!?)"
 
@@ -1103,7 +1111,7 @@ label q1:
     y "Nice yo meet you Quasar, my name is [povname]."
     
     Q "[povname] you say, a very peculiar name. Hey I have some takeaway inside, wanna share it with me?"
-    hide qua normal
+
     menu:
         "Sure why not.":
             jump q3 
@@ -1111,6 +1119,7 @@ label q1:
             jump q4
 
 label q4:
+    hide qua normal
     hide qua happy
     show qua sad
     Q "Oh don't worry, I hope to see you soon."
@@ -1127,25 +1136,26 @@ label q4:
     y "What a strange individual.."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=1
-    hide normal bingus
+    hide normal bingus with dissolve 
     jump addresses2
 
 label q3:
-    show qua normal
-    Q "Please enter and have a seat [povname]"
     hide qua normal
-    scene bg qsalotto
+    show qua happy
+    Q "Please enter and have a seat [povname]"
+    hide qua happy
+    scene bg qsalotto with dissolve
     with Pause(1)
     
     "'The strange odor in the air fill you lungs'"
-    show qua embara
+    show qua embara with dissolve
     Q "Yeah sorry for the mess, I moved out from my parents house in order to find a job and hadn't much time to tide up the place hehe.."
 
     Q "This is the best place I could afford with my savings while I wait for someone to respond at my countless e-mails with my CV."
@@ -1166,7 +1176,7 @@ label q3:
     hide qua normal
     show qua embara
     Q "Oh no! My noodles! I have to go, please have a seat I'll be be in a minute."
-    hide qua embara
+    hide qua embara with dissolve 
     "'Runs away in a hurry'"
 
     y "I hope the food didn't burn up, damn this place is really a mess... like I am a messy person that always forget to to the laundry and stuff but this is on a next level."
@@ -1190,7 +1200,7 @@ label q3:
             jump q6 
 
 label q5_2:
-    scene bg qsalotto with quickfade
+    scene bg qsalotto with dissolve
     y "Maybe that was the real bath-room, should I go back and take a deeper look?"
     jump q6
 
@@ -1297,12 +1307,12 @@ label q7:
     hide qua happy
     show qua normal
     Q "First follow me, I need to show you something."
-    scene bg qdoio with quickfade
+    scene bg qdoio with dissolve
     hide qua normal 
     show qua happy
     Q "Ok prepare yourself, ready? Ok take a look."
     hide qua happy
-    scene bg qspecial with quickfade
+    scene bg qspecial with dissolve
     with Pause(2)
     show qua happy
     Q "So, what do you think?"
@@ -1347,18 +1357,20 @@ label q7:
             jump q10
 
 label q10:
+    hide qua happy
     show qua normal
     Q "It was fun knowing you."
 
     y "It was a pleasure to meet you. Have a great day Quasar and  see you soon."
 
     y "Remember here at 'Spedisco Nu Paccheeto' we always give our best for the costumer."
-
+    hide qua normal 
+    show qua happy
     Q "You are so silly, see you soon and don't forget about me ok?"
 
     y "I will not, goodbye."
-    hide qua normal
-    scene bg qporta with slowdissolve
+    hide qua happy
+    scene bg qporta with dissolve
     with Pause(2)
     "'Door closes'"
     Q "I made a friend, yippee!!"
@@ -1366,17 +1378,18 @@ label q10:
     y "What a strange individual.."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label q9:
+    hide qua happy
     show qua embara
     Q "Oh..(The human enjoys my company I am soo happy I could explode right now!)."
 
@@ -1390,8 +1403,8 @@ label q9:
     y "I will not, now i have to go back work or Jr will kill me if you don't mind hehe."
 
     Q "Goodbye."
-    hide qua happy
-    scene bg qporta with slowdissolve
+    hide qua happy with dissolve
+    scene bg qporta with dissolve
     with Pause(2)
     "'Door closes'"
     Q "I made a friend, yippee!!"
@@ -1399,24 +1412,24 @@ label q9:
     y "What a strange individual.."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, a very interesting individual I have to say."
 
     $ quasar +=2
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label q5:
-    scene bg qdoio with quickfade
+    scene bg qdoio with dissolve
     y "Everywhere I go I see piles and piles of trash."
 
     y "I can't even walk straight!"
 
     y "Maybe behind this door there is a bathroom where I can clean myself."
-    scene bg qspecial with quickfade
+    scene bg qspecial with dissolve
     y "I definitely wasn't expecting something like this to be in this place."
     menu:
         "Take a closer look.":
@@ -1427,7 +1440,7 @@ label q5:
             jump q5_3
 
 label q5_3:
-    scene bg qsalotto with quickfade
+    scene bg qsalotto with dissolve
     show qua normal
     Q "Hey im back, soo about the food... there is a possibility that is charred beyond saving..."
 
@@ -1454,21 +1467,21 @@ label q5_3:
     y "What a strange individual.."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve 
     B "So how it went?"
 
     y "Good, a very strange individual I have to say."
 
     $ quasar +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2 
 
 label q5_1:
     y "The image in the middle seems familiar but I don't remember why..."
 
     y "Maybe if I get closer I can see better."
-    show qua normal 
+    show qua normal with dissolve
     Q "Hey what are you doing? Snooping around?"
 
     y "Oh no, nothing of sorts I was just looking for something to clean myself."
@@ -1535,26 +1548,26 @@ label q5_1:
     hide qua normal
     show qua sad
     Q "It's ok if you leave I won't take more of your time... it was fun knowing you."
-    hide qua sad
+
     menu:
         "Stay for a few more minutes.":
-            jump q5_4
-        "Leave.":
             jump q8
+        "Leave.":
+            jump q5_4
 
 label q5_4:
+    hide qua sad
     show qua sad
     Q "I think now it's time to, I've wasted enough of your time already."
 
     y "I'ts not a big deal I enjoy you company Quasar."
-
+    hide qua sad 
+    show qua happy
     Q "Even tho I can't even boil some water without starting a fire?"
 
     y "You're all right Quasar, remember it ok? "
-    hide qua sad 
-    show qua happy
+
     Q "........."
-    hide qua happy
     menu:
         "Exchange phone numbers.":
             jump q9 
@@ -1563,9 +1576,9 @@ label q5_4:
 
 label seneco:
     scene bg space 
-    show normal bingus
+    show normal bingus with dissolve
 
-    y "Hey Bingus, sorry if I ask but... does your brother hate me?"
+    y "Hey Bingus, sorry if I ask but... does your brother hates me?"
 
     B "Nah, of course not. He is just silly in other ways hehe."
 
@@ -1609,13 +1622,13 @@ label seneco:
 
     B "Yup, me too. Now deliver the package if you don't mind."
 
-    hide normal bingus
+    hide normal bingus with dissolve
     scene bg sporta with dissolve
     with Pause(1)
-    "Knocks on the door."
+    "'Knocks on the door'"
     scene bg sportaopen
-    "Door opens."
-    show sene 1
+    "'Door opens'"
+    show sene 1 with dissolve 
     s "Oh, my package has finally traveled all the way through the shape of the phenomenons of the external senses."
 
     y "The shape of what now? Sir I just need a signature on the parcel..."
@@ -1653,7 +1666,7 @@ label seneco:
     hide sene 2
     show sene 4
     S "If you don't mind [povname], I would like to invite you inside, so we can continue our discussion."
-    hide sene 4
+
     menu:
         "Sure why not.":
             jump s1 
@@ -1676,14 +1689,14 @@ label s2:
     y "I feel more conscious about myself now, very weird. "
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, a very interesting individual I have to say."
 
     $ seneca +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2    
 
 label s1:
@@ -1712,7 +1725,7 @@ label s1:
     S "If you don't mind I have to take care of some business inside the library, I'll be back soon."
 
     S "You can wait for me in the living-room."
-    hide sene 2
+    hide sene 2 with dissolve
 
     y "This house is filled to the brim with cool stuff, maybe he wouldn't mind if i take a peek in his absence."
     menu:
@@ -1729,7 +1742,7 @@ label s3:
     y "This guy sure love also lifting, I bet all the other rooms are filled with books and weights."
 
     y "Knowledge must be a heavy burden to carry around hehe."
-    show sene 1
+    show sene 1 with dissolve
     S "[povname] im back, forgive me what I had to to took more time than planned."
 
     S "If you don't mind I would like to show you something, since you proved yourself to be a thoughtful individual."
@@ -1771,7 +1784,7 @@ label s6:
     hide sene 2
     show sene 1
     y "Have a nice day Seneca"
-
+    scene bg sportaopen with dissolve
     scene bg sporta with dissolve
     with Pause(1)
     "'Door closes'"
@@ -1779,14 +1792,14 @@ label s6:
     y "I should come back, I really like his company."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, a very mindful individual I have to say."
 
     $ seneca +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2 
 
 label s5:
@@ -1796,11 +1809,11 @@ label s5:
     show sene 1
 
     S "Despite I do not condone lying I'll make and exception this time, please follow me."
-    scene sdoio with quickfade 
+    scene bg sdoio with dissolve 
     show sene 1
     S "Here, behind this door I can show you the product of my work."
     hide sene 1
-    scene sspecial with quickfade
+    scene bg sspecial with dissolve
     with Pause(1)
     show sene 1 
     S "Here I present you Project Hermes, the biggest library the universe has ever seen."
@@ -1882,7 +1895,7 @@ label s5:
     show sene 3
     with Pause(1)
     hide sene 3
-
+    show sene 1
     S "'Mens sana in corpore sano' am I right?"
 
     y "Your philosophy doesn't bat an eyelid."
@@ -1927,29 +1940,30 @@ label s5:
     S "Goodbye then [povname]."
 
     hide sene 2
+    scene bg sportaopen with dissolve
     scene bg sporta with slowdissolve
     with Pause(2)
     "'Door closes'"
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, my mind feel more enlightened now hehe."
 
     $ seneca +=2
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label s4:
     y "Let's take a look."
-    scene sdoio with quickfade
+    scene bg sdoio with dissolve
 
     y "This house looks like a museum both outside and inside."
 
     y "I wonder what inside this room."
-    scene sspecial with quickfade
+    scene bg sspecial with dissolve
     with Pause(1)
 
     y "Woah, this place is massive."
@@ -1971,8 +1985,8 @@ label s4:
     hide sene 1
     "'You silently exit the house without saying a word.'"
 
-    scene sportaopen with quickfade
-    scene sporta with quickfade 
+    scene sportaopen with dissolve
+    scene sporta with dissolve
     with Pause(1)
 
     "'Door slams shut.'"
@@ -1992,7 +2006,7 @@ label s4:
 
 label adina:
     scene bg space
-    show normal bingus
+    show normal bingus with dissolve
     B "Hey, I remember this address. Isn't it the one where the rich guy lives that lent you the big tip the last time?"
 
     y "You are right Bingus, this is the guy with the grass on Mars!"
@@ -2045,20 +2059,20 @@ label adina:
     with Pause(2)
     scene bg aviale with dissolve
     with Pause(1)
-    show normal bingus
+    show normal bingus with dissolve 
     B "Remember calm and professional"
 
     y "Ok I will."
 
     B "Good luck!"
-    hide normal bingus
+    hide normal bingus with dissolve
     scene bg aporta with dissolve
     with Pause(1)
 
     "Knocks on the door."
-    scene bg aportaopen
+    scene bg aportaopen with dissolve 
     "Door opens."
-    show bonk cat
+    show bonk cat with dissolve
     a "Well, hello there! Looks like someone's came back.~"
 
     y "Yes sir, if you can sign my parcel it's all yours."
@@ -2083,7 +2097,7 @@ label adina:
     "'You stares in shock'"
 
     a "Since you seem to have a taste for nice things, how about you come inside and take a look?~"
-    hide silly cat
+
     menu:
         "Accept the invite.":
             jump a1 
@@ -2091,6 +2105,7 @@ label adina:
             jump a2
 
 label a2:
+    hide silly cat
     show sad cat
     a "Don't worry, maybe another time."
     hide sad cat 
@@ -2098,7 +2113,7 @@ label a2:
     a "I hope you have a good day sweetie.~"
     
     y "Have a nice day sir."
-    hide silly cat 
+    hide silly cat with dissolve
     scene bg qporta with dissolve
     with Pause(1)
     "'Door closes'"
@@ -2108,25 +2123,26 @@ label a2:
     y "Well, better go back to work then."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Meh, no tip maybe another time Jr."
 
     $ adinolfo +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2 
 
 label a1:
+    hide silly cat
     show happy cat
     a "Oh my gosh, im so happy right now please follow me hehe"
 
-    hide happy cat
-    scene bg asalotto
+    hide happy cat with dissolve
+    scene bg asalotto with dissolve
     with Pause(1)
     
-    show normal cat
+    show normal cat with dissolve
     a "So this is my martian vacation house, its my favorite of the six I have."
     hide normal cat
     show sad cat
@@ -2185,7 +2201,7 @@ label a1:
     A "Sorry is my dad calling, maybe he has some news on the planet transaction thingy hehe."
 
     A "Wait for me, I'll be back soon sweetie.~"
-    hide silly cat
+    hide silly cat with dissolve
     "'Walks away'"
 
     y "Man this dude is really a money printing machine."
@@ -2202,22 +2218,22 @@ label a3:
 
     y "He probably wouldn't mine if i take a quick sneak peek."
 
-    scene adoio with quickfade
+    scene bg adoio with dissolve
     y "Oh whats that at the end of the corridor?"
 
-    scene aspecial with quickfade
+    scene bg aspecial with dissolve
     y "Strange decor but I must say it's very demure."
-    show happy cat
+    show happy cat with dissolve
     A "Im baaack!! Daddy finally bought me the planet I longed for sooo many years! I'm soooo happy!!"
     
     y "Wow! Glad to hear that! (this guy is DEFINITELY richer than the Rothschild family)"
     
     A "Now, where were w- AAAA"
-    hide happy cat
+    hide happy cat with dissolve
     "'Trips'"
 
     y "Oh! Hey! A-are you ok??"
-    show normal cat
+    show normal cat with dissolve
     A "Ouch, don't worry, I just fell off, these carpets are the best to fall o-ooOOOOO NOOOOOOOO!!!!!"
     hide normal cat 
     show sad cat
@@ -2243,19 +2259,19 @@ label a3:
     
     A "SHUT UP!! GO OUT!!! OR I WILL CALL MY FATHER OKKK???? WAAAAHH"
 
-    y "(woah I think it's best for me to go out without saying anything"  
-    hide sad cat
+    y "(woah I think it's best for me to go out without saying anything)"  
+    hide sad cat with dissolve
     "'You silently exit the house without saying a word.'"
 
-    scene aportaopen with quickfade
-    scene aporta with quickfade 
+    scene aportaopen with dissolve
+    scene aporta with dissolve
     with Pause(1)
 
     "'Door slams shut.'"
 
     "'Goes back silently to the truck.'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
     hide normal bingus
 
@@ -2263,7 +2279,7 @@ label a3:
     y "Let's not talk about it ok? Im not in the mood."
 
     $ adinolfo +=1
-    hide confused bingus 
+    hide confused bingus with dissolve
     jump addresses2
 
 label a4:
@@ -2278,12 +2294,13 @@ label a4:
     y "There are some David Bowie, Caparezza, Queens and Pavarotti."
 
     y "Never heard of those guys, I guess they are famous if Adinolfo has their music."
-    show silly cat
+    show silly cat with dissolve
 
     A "Heeey, im back and I have some great news!"
 
     y "Woah tell me more."
-
+    hide silly cat
+    show normal cat
     A "So father told me he wasn't able to buy Venus but he get Neptune!"
 
     y "(I feel threatened in some way, if his dad can buy a planet what else can he do?)"
@@ -2297,7 +2314,8 @@ label a4:
     A "She talks about old and forgotten creepypastas from the twenty-first century like Smiling dog.jpeg and Ted the caver."
 
     y "Never heard of those but they sounds interesting."
-
+    hide normal cat
+    show silly cat
     A "Im gonna show you my creepypastas collection one of this days, I have some ancient texts from 2014 translated from Albus the white."
     "'Phone starts ringing'"
 
@@ -2321,7 +2339,7 @@ label a4:
     y "Sorry Adinolfo I have to go now."
 
     A "It's ok if you leave I won't take more of your time, it was nice getting to know you."
-    hide sad cat
+
     menu:
         "Stay for a few more minutes.":
             jump a5 
@@ -2329,6 +2347,7 @@ label a4:
             jump a6 
     
 label a6:
+    hide sad cat
     show normal cat
     A "Oh don't worry, I hope to see you soon."
 
@@ -2336,23 +2355,24 @@ label a6:
     hide normal cat 
     show silly cat
     A "Come back visiting soo sweetie."
-
+    scene bg aportaopen with dissolve 
     scene bg aporta with dissolve
     with Pause(1)
     "'Door closes'"
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, big reality check but he's a nice guy."
 
     $ adinolfo +=1
-    hide normal bingus
+    hide normal bingus with dissolve 
     jump addresses2  
 
 label a5:
+    hide sad cat
     show normal cat
     y "Don't worry Jr I'll be back soon."
     "'Winks at Adinolfo and closes the call.'"
@@ -2366,15 +2386,15 @@ label a5:
     show normal cat
     A "I know I promised you the creepypastas but I have something better to show you."
 
-    scene bg adoio with quickfade
+    scene bg adoio with dissolve
     hide normal cat
-    show silly cat
+    show silly cat with dissolve 
     A "Ok prepare yourself, ready? Ok take a look."
 
     hide silly cat
-    scene bg aspecial with quickfade
+    scene bg aspecial with dissolve
     with Pause(2)
-    show happy cat
+    show happy cat with dissolve
     A "So, what do you think?"  
     
     y "Very unique, I have no words to describe it."
@@ -2416,7 +2436,7 @@ label a5:
     A "But with you I feel safe in a way."
 
     A "You know I would really appreciate if you come visit me again."
-    hide happy cat
+
     menu:
         "I will be glad to":
             jump a7
@@ -2424,6 +2444,7 @@ label a5:
             jump a8
 
 label a8:
+    hide happy cat
     show sad cat
 
     A "Oh, sorry I may have skipped some steps."
@@ -2448,36 +2469,38 @@ label a8:
 
     y "Goodbye."
     hide normal cat
-    scene bg aporta with slowdissolve
+    scene bg aportaopen with dissolve
+    scene bg aporta with dissolve
     with Pause(2)
     "'Door closes'"
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, it was an experience I have to say."
 
     $ adinolfo +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label a7:
+    hide happy cat
     show happy cat 
 
     A ".......'Blushes'"
 
     A "Oh, sorry I may have skipped some steps."
-
+    hide happy cat
+    show normal cat
     A "So I guess we are friends now?"
 
     y "Sure I'll be glad to be Adinolfo"
 
     y "I have to go now or my colleague will kill me."
-    hide happy cat
-    show normal cat
-
+    hide normal cat
+    show happy cat
     A "It was fun knowing you."
 
     y "I enjoyed you company. Have a great day Adinolfo."
@@ -2488,7 +2511,8 @@ label a7:
 
     y "Goodbye."
     hide normal cat
-    scene bg aporta with slowdissolve
+    scene bg aportaopen with dissolve
+    scene bg aporta with dissolve
     with Pause(2)
     "'Door closes'"
 
@@ -2499,18 +2523,18 @@ label a7:
     y "Hehe , I like this guy."
 
     "'Goes back to the truck'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "So how it went?"
 
     y "Good, it was an experience I have to say."
 
     $ adinolfo +=2
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses2
 
 label wando:
-    show normal bingus
+    show normal bingus with dissolve 
     y "Hey Jr, I got some blue cheese and maize porridge for lunch wanna try?"
     hide normal bingus 
     show feared bingus
@@ -2550,7 +2574,7 @@ label wando:
     scene bg wportaopen with dissolve
     with Pause(1)
 
-    show cami normal
+    show cami normal with dissolve
     W "Oh, it's you again. Are you perhaps the only delivery guy on duty or are you coming here on purpose?"
 
     y "Just doing my job ma'am, I've got another package for you."
@@ -2583,23 +2607,24 @@ label w2:
     W "Next time don't just drop my stuff and call it a day."
 
     y "Alright, I'll go then."
-    hide cami secc
-
-    "'Goes back to the truck'"
+    hide cami secc with dissolve 
+    scene bg wportaopen with dissolve
     scene bg wporta with dissolve
+    "'Goes back to the truck'"
+    
     with Pause(1)
-    scene bg camion with dissolve
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve
     B "Good you are back, so partner what's gonna be our next stop?"
 
     $ wanda +=1
-    hide normal bingus
+    hide normal bingus with dissolve
     jump addresses
 
 label w1:
     hide cami secc
-    scene wsalotto
-    show cami normal
+    scene bg wsalotto with dissolve
+    show cami normal with dissolve
     W "You can put it on the table there in the corner."
 
     y "No problem, I've got this."
@@ -2653,6 +2678,7 @@ label w1:
     W "Don't overstate your welcome ok?"
 
     y "Don't worry I'll stay put like a statue."
+    hide cami secc with dissolve
     menu:
         "Stay where you are.":
             jump w3 
@@ -2660,7 +2686,6 @@ label w1:
             jump w4 
 
 label w3:
-    hide cami secc
     y "Alright, I'll stay right here. No touching. No snooping. Just... a delivery guy standing awkwardly inside a house that could be a circus attraction."
 
     y "At least the furniture isn't growling at me... yet."
@@ -2668,7 +2693,7 @@ label w3:
     y "I hope she is not like one of those Hello Kitty girls I heard about."
 
     y "My buddy Pierre once date one, he needed a year of physical and mental therapy to move over after what she did to him."
-    show cami normal
+    show cami normal with dissolve
     W "Im back, wow you actually stayed put."
 
     W "You'll make a decent gargoyle not gonna lie."
@@ -2781,15 +2806,15 @@ label w5:
 
     y "Ok... soo have a nice day."
 
-    scene wportaopen with quickfade
-    scene wporta with quickfade 
+    scene bg wportaopen with dissolve
+    scene bg wporta with dissolve
     with Pause(1)
 
     "'Door closes'"
 
-    "'Goes back silently to the truck.'"
-    scene bg camion
-    show normal bingus
+    "'You silently go back to the truck.'"
+    scene bg space with dissolve 
+    show normal bingus with dissolve
     B "So how it went?"
     hide normal bingus
 
@@ -2797,7 +2822,7 @@ label w5:
     y "It was an experience let's say."
 
     $ wanda +=1
-    hide confused bingus 
+    hide confused bingus with dissolve
     jump addresses2
 
 label w6:
@@ -2816,15 +2841,15 @@ label w6:
     y "What did you say?"
 
     W "Nothing, now go."
-    scene wportaopen with quickfade
-    scene wporta with quickfade 
+    scene bg wportaopen with dissolve
+    scene bg wporta with dissolve 
     with Pause(1)
 
     "'Door closes'"
 
     "'Goes back silently to the truck.'"
-    scene bg camion
-    show normal bingus
+    scene bg space with dissolve
+    show normal bingus with dissolve 
     B "So how it went?"
     hide normal bingus
 
@@ -2832,7 +2857,7 @@ label w6:
     y "I have dodged a bullet, let's say."
 
     $ wanda +=1
-    hide confused bingus 
+    hide confused bingus with dissolve
     jump addresses2
 
 label w4:
@@ -2877,8 +2902,8 @@ label w4:
     
     "'You silently exit the house without saying a word.'"
 
-    scene wportaopen with quickfade
-    scene wporta with quickfade 
+    scene wportaopen with dissolve
+    scene wporta with dissolve
     with Pause(1)
 
     "'Door slams shut.'"
@@ -2898,10 +2923,10 @@ label w4:
     
 label ACT3:
     scene bg space
-    show normal bingus
+    show normal bingus with dissolve
     "Static noises coming from the radio"
     B "Boss is calling."
-    "Answers radio"
+    "'Answers radio'"
     hide normal bingus
     show normal boss
     d "Bingus Jr do you hear me? Over."
@@ -2944,7 +2969,7 @@ label ACT3:
     hide text with dissolve
     with Pause(1)
 
-    show text "The party was fun, even Bingus brother was there." with dissolve
+    show text "The party was fun, even Bingus's brother was there." with dissolve
     with Pause(2) 
 
     hide text with dissolve
@@ -2963,8 +2988,8 @@ label ACT3:
     hide text with dissolve
     with Pause(1)
     
-    scene bg camion
-    show happy bingus
+    scene bg camion with quickfade
+    show happy bingus with dissolve
     B "Good morning [povname]"
     
     y "Morning Jr, how we doing today?"
@@ -2987,7 +3012,7 @@ label secret:
     y "Nah it's nothing important, let's go Jr or else we will be late on the schedule."
 
     B "Aye aye captain!"
-    scene black
+    scene black with quickfade
     with Pause(1)
 
     show text "[povname] and Jr went on with the shift like usual." with dissolve
@@ -3045,17 +3070,17 @@ label wande:
     y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
 
     B "If you say so..."
-    hide normal bingus
-    scene bg wandaplanet with quickfade
+    hide normal bingus with dissolve
+    scene bg wandaplanet with dissolve
     with Pause(1)
-    scene bg wviale with quickfade
+    scene bg wviale with dissolve
 
     y "I wonder what he needs my help for."
 
-    scene bg wporta with quickfade
+    scene bg wporta with dissolve
     "'Knocks on the door'"
-    scene bg wportaopen with quickfade
-    show cami normal
+    scene bg wportaopen with dissolve
+    show cami normal with dissolve
     W "I told you I would find a way"
     
     W "I have to tell you something. "
@@ -3063,12 +3088,12 @@ label wande:
     W "Follow me inside, I don't want anyone to see us together."
 
     y "Sure Wanda, whatever makes you more comfortable."
-    hide cami normal
-    scene bg wsalotto with quickfade
-    scene bg wdoio with quickfade
+    hide cami normal with dissolve
+    scene bg wsalotto with dissolve
+    scene bg wdoio with dissolve
 
-    scene wletto with quickfade
-    show cami normal
+    scene wletto with dissolve
+    show cami normal with dissolve
     A "This is my private room, here we should be alone away from prying eyes."
 
     y "Now tell me, what was on your mind that required my help?"
@@ -3083,13 +3108,13 @@ label wande:
     A "When we talked last week you reminded me of how I was before fame and for the first time in a while i felt something..."
 
     y "Oh Wanda..."
-    hide happy cat
-    show normal cat
+    hide cami normal
+    show cami happy
     A "Tell me do you feel the same?"
 
     y "I do...."
-    hide normal cat
-    show bonk cat
+    hide cami happy
+    show cami bonk
     A "Then we should make this serious and start dating."
 
     A "Maybe those losers who thirst so much will stop harassing me."
@@ -3132,17 +3157,17 @@ label adine:
     y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
 
     B "If you say so..."
-    hide normal bingus
-    scene bg adinolfoplanet with quickfade
+    hide normal bingus with dissolve
+    scene bg adinolfoplanet with dissolve
     with Pause(1)
-    scene bg aviale with quickfade
+    scene bg aviale with dissolve
 
     y "I wonder what he needs my help for."
 
-    scene bg aporta with quickfade
+    scene bg aporta with dissolve
     "'Knocks on the door'"
-    scene bg aportaopen with quickfade
-    show happy cat
+    scene bg aportaopen with dissolve
+    show happy cat with dissolve
     A "[povname] you saw my message!"
     hide happy cat
     show silly cat
@@ -3152,12 +3177,12 @@ label adine:
     A "Please follow me inside, I don't want my father seeing us from the satellites"
 
     y "Sure Adinolfo, whatever makes you more comfortable."
-    hide normal cat
-    scene bg asalotto with quickfade
-    scene bg adoio with quickfade
+    hide normal cat with dissolve 
+    scene bg asalotto with dissolve
+    scene bg adoio with dissolve
 
-    scene aletto with quickfade
-    show silly cat
+    scene aletto with dissolve
+    show silly cat with dissolve
     A "This is my private room, here we should be alone away from hidden cameras"
 
     y "Now tell me, what was on your mind that required my help?"
@@ -3220,17 +3245,17 @@ label quasare:
     y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
 
     B "If you say so..."
-    hide normal bingus
-    scene bg quasarplanet with quickfade
+    hide normal bingus with dissolve
+    scene bg quasarplanet with dissolve
     with Pause(1)
-    scene bg qviale with quickfade
+    scene bg qviale with dissolve
 
     y "I wonder what he needs my help for."
 
-    scene bg qporta with quickfade
+    scene bg qporta with dissolve
     "'Knocks on the door'"
-    scene bg qportaopen with quickfade
-    show qua happy
+    scene bg qportaopen with dissolve
+    show qua happy with dissolve
     Q "[povname] you came!"
     hide qua happy
     show qua embara
@@ -3241,11 +3266,11 @@ label quasare:
 
     y "Sure Quasar, whatever makes you more comfortable."
     hide qua normal
-    scene bg qsalotto with quickfade
-    scene bg qdoio with quickfade
+    scene bg qsalotto with dissolve
+    scene bg qdoio with dissolve
 
-    scene qletto with quickfade
-    show qua normal
+    scene qletto with dissolve
+    show qua normal with dissolve
     Q "This is my private room, here we should be alone."
 
     y "Now tell me, what was on your mind that required my help?"
@@ -3306,17 +3331,17 @@ label senece:
     y "Don't worry I'll be back before you can Say 'Spedisco Nu Paccheeto'."
 
     B "If you say so..."
-    hide normal bingus
-    scene bg senecaplanet with quickfade
+    hide normal bingus with dissolve
+    scene bg senecaplanet with dissolve
     with Pause(1)
-    scene bg sviale with quickfade
+    scene bg sviale with dissolve
 
     y "I wonder what he needs my help for."
 
-    scene bg sporta with quickfade
+    scene bg sporta with dissolve
     "'Knocks on the door'"
-    scene bg sportaopen with quickfade
-    show sene 1
+    scene bg sportaopen with dissolve
+    show sene 1 with dissolve
     S "Welcome back [povname]."
 
     S "Sorry for the abrupt message, but I have to tell you something that was on my mind since our last encounter."
@@ -3325,11 +3350,11 @@ label senece:
 
     y "Sure Seneca, whatever makes you more comfortable."
     hide sene 1
-    scene bg ssalotto with quickfade
-    scene bg sdoio with quickfade
+    scene bg ssalotto with dissolve
+    scene bg sdoio with dissolve
 
-    scene sletto with quickfade
-    show sene 1
+    scene sletto with dissolve
+    show sene 1 with dissolve
     S "This is my private room, here we should be alone."
 
     y "Now tell me, what was on your mind that required my help?"
@@ -3382,7 +3407,7 @@ label neutral_final:
 
     B "Yippee im so happy!!"
 
-    y "So what are you waiting captain its time to go!"
+    y "So what are you waiting captain? Its time to go!"
 
     B "Aye aye [povname]!"
 
