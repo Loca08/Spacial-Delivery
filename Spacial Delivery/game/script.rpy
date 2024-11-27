@@ -998,11 +998,11 @@ label ACT2:
     show happy bingus with dissolve 
     B "Good morning [povname]"
     
-    y "Morning Jr, how we doing today?"
+    y "Morning Jr, how we doin' today?"
 
     B "Very good, I had my big coffee this morning and im ready to go."
 
-    y "Love the spirit, were are we going today partner?"
+    y "Love the spirit, where are we going today partner?"
     hide happy bingus
     show normal bingus
     B "Let's see..."
@@ -1034,7 +1034,7 @@ label quasaro:
     show normal bingus
     B "You are getting good, one note was right this time."
 
-    y "Thanks Jr, but I decide to stay humble."
+    y "Thanks Jr, but I'll stay humble."
 
     B "Ok mr, now turn right at the next asteroid if you please."
     hide normal bingus
@@ -1064,7 +1064,7 @@ label q2:
     show qua sad
     q "............."
 
-    q "It's ok, maybe I overacted.... my bad."
+    q "It's ok, maybe I overreacted.... my bad."
 
     q "Im so dumb, I'll take the parcel and leave..."
     hide qua sad with dissolve
@@ -1072,13 +1072,13 @@ label q2:
     with Pause(1)
     "'Slams door'"
 
-    q "Stupid, why did I opened my mouth, I am so embarrassed right now!"
+    q "Stupid, why did I open my mouth, I am so embarrassed right now!"
 
     y "Have a nice day I guess..."
     "'Goes back to the truck'"
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So how did it go?"
 
     y "I think I said something wrong, better not think about it much."
 
@@ -1090,7 +1090,7 @@ label q2:
 label q1:
     hide qua embara
     show qua happy
-    q "... whoa you remember (he remembers me im so exited right now!!!?!?)"
+    q "... whoa you remember (he remembers me!! I'm so excited right now!!!?!?)"
 
     y "Yeah, is everything ok?"
 
@@ -1098,30 +1098,30 @@ label q1:
     hide qua happy
     show qua normal
 
-    q "I have a question are you really a human? Like from Earth?"
+    q "I have a question, are you really a human? Like from Earth?"
 
-    y "Yup im a real human."
+    y "Yup i'm a real human."
     
-    q "Wow, I never seen one of your species from this close."
+    q "Wow, I've never seen one of your species from this close."
 
-    q "I thought you were more hairy and did't wore clothes tho..."
+    q "I thought you were more hairy and didn't wear clothes tho..."
 
     y "I would like you to see going around naked with how cold the space is."
     hide qua normal
     show qua sad
-    q "Im sorry, I didn't mean it to sound rude I was just curious."
+    q "I'm sorry, I didn't mean it to sound rude, I was just curious."
 
-    y "Oh nono, I was just joking I wasn't angry."
+    y "Oh nono, I was just joking, I wasn't angry."
     hide qua sad
     show qua happy
-    q "Oh, thanks the stars! For a second I thought I screw up everything hehe."
+    q "Oh, thanks the stars! For a second I thought I screwed up everything hehe."
 
-    y "By the way, those that you where referring to were monkeys."
+    y "By the way, those that you were referring to were monkeys."
     hide qua happy
     show qua normal
-    q "Monkeys, never heard of them from my researches...oh! Im so rude I didn't introduced myself im Quasar "
+    q "Monkeys, never heard of them from my researches...oh! I'm so rude I didn't even introduce myself, i'm Quasar "
 
-    y "Nice yo meet you Quasar, my name is [povname]."
+    y "Nice to meet you Quasar, my name is [povname]."
     
     Q "[povname] you say, a very peculiar name. Hey I have some takeaway inside, wanna share it with me?"
 
@@ -1151,7 +1151,7 @@ label q4:
     "'Goes back to the truck'"
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So how did it go?"
 
     y "Good, a very interesting individual I have to say."
 
@@ -1168,7 +1168,7 @@ label q3:
     scene bg qsalotto with dissolve
     with Pause(1)
     
-    "'The strange odor in the air fill you lungs'"
+    "'The strange odor in the air fills your lungs'"
     show qua embara with dissolve
     Q "Yeah sorry for the mess, I moved out from my parents house in order to find a job and hadn't much time to tide up the place hehe.."
 
@@ -1181,23 +1181,23 @@ label q3:
     Q "I don't have many friends, or friends at all hehe..."
     hide qua sad 
     show qua normal
-    Q "But hey, thats enough talking about me how about you?"
+    Q "But hey, thats enough talking about me, how about you?"
 
     y "Nothing much, just a delivery man trying to get to the end of the month."
 
-    Q "Very interesting... listen I have some question to ask you and so little time..."
+    Q "Very interesting... listen I have some questions to ask you, but so little time..."
     "'Alarm plays somewhere in the house.'"
     hide qua normal
     show qua embara
-    Q "Oh no! My noodles! I have to go, please have a seat I'll be be in a minute."
+    Q "Oh no! My noodles! I have to go, please have a seat, I'll be back in a minute."
     hide qua embara with dissolve 
     "'Runs away in a hurry'"
 
-    y "I hope the food didn't burn up, damn this place is really a mess... like I am a messy person that always forget to to the laundry and stuff but this is on a next level."
+    y "I hope the food didn't burn up, damn this place is really a mess... like, I am a messy person that always forget to do the laundry and stuff, but this is on a next level."
 
-    y "It looks like some houses I'll see on 'Home and Grass Tv'"
+    y "It looks like some houses I'd see on 'Home and Grass Tv'"
 
-    y "Yuck I stepped on something moist..."
+    y "Ew I stepped on something moist..."
 
     Q "Don't worry [povname] everything is going alright here."
     "'Sounds of flames erupting in the distance'"
@@ -1206,7 +1206,7 @@ label q3:
 
     y "That wasn't very promising "
 
-    y "Ugh the moist thing is all over my show, maybe I can find some tissue around somewhere, preferable one that is not used..."
+    y "Ugh the moist thing is all over my shoe, maybe I can find some tissue around somewhere, preferable one that is not used..."
     menu :
         "Look around the house.":
             jump q5 
@@ -1219,45 +1219,45 @@ label q5_2:
     jump q6
 
 label q6:
-    y "Nah its better if I stay in the living-room, don't wanna risk stepping on something worse..."
-    "'Your eyes gaze on one of the many screen in the room'"
+    y "Nah it's better if I stay in the living-room, don't wanna risk stepping on something worse..."
+    "'Your eyes gaze on one of the many screens in the room'"
 
-    y "This one is showing a strange planet, lets see... it's called Sblumbo."
+    y "This one is showing a strange planet, let's see... it's called Sblumbo."
 
     y "I guess this is where Quasar comes from, this explain the slimy looks."
     show qua normal
-    Q "Hey im back, soo about the food... there is a possibility that is charred beyond saving..."
+    Q "Hey i'm back, soo about the food... there is a possibility that is charred beyond saving..."
 
     y "Oh, don't worry I wasn't that hungry. (And looking at the room... im not even sure if anything coming from this house could be edible.)"
 
-    Q "Im so sorry, im failure and I've ruined your appetite..."
+    Q "I'm so sorry, i'm a failure and I've ruined your appetite..."
 
     y "No don't be so hard on yourself, you tried at least."
 
-    Q "'Tried', like its three months that im trying to find a job here..."
+    Q "'Tried', like it's three months that i'm trying to find a job here..."
     "'Grabs phone with the picture of the planet'"
     hide qua normal 
     show qua sad
     Q "I've worked so hard on my home planet in order to save up enough to finally leave and be on my own while exploring the vastness of the great cosmos."
 
-    Q "Sometimes I wonder if I made a good decision coming here..."
+    Q "Sometimes I wonder if I made the right decision coming here..."
 
-    Q "I miss Sblumbo, but now its too late to go back home."
+    Q "I miss Sblumbo, but now it's too late to go back home."
 
     Q "This house, it's just like me... a big pile of trash."
 
-    y "No don't say it! You have to keep up your spirit, if not for those back on Sblumbo do it for you."
+    y "No don't say it! You have to keep up your spirit, if not for those back on Sblumbo, do it for yourself."
 
-    y "Listen I too was broke as heck a week ago but I took the risk working for this company and it tuned out to be one of the best decision I made in the last 2 month."
+    y "Listen, I was broke as heck too a week ago but I took the risk working for this company and it turned out to be one of the best decisions I've made in the last 2 month."
 
-    y "What I am trying to say is, life is hard you have to be harder got it?"
+    y "What I am trying to say is, life is hard... but you have to be harder, got it?"
     hide qua sad
     show qua embara
     with Pause(2)
     hide qua embara
     show qua normal
 
-    Q "Nobody before told me something like that. You human, I mean [povname] are really something else."
+    Q "Nobody before this moment told me something like that. You humans, I mean, [povname], you're really something else."
     "'Phone starts ringing'"
 
     y "Sorry it's my colleague."
@@ -1266,7 +1266,7 @@ label q6:
 
     y "Yeah sorry, I was talking with the customer and I lost track of time."
 
-    B "Well move then! The boss can see our movements and sure know when we are not in track got it?"
+    B "Well move then! The boss can see our movements and sure knows when we are not in track, got it?"
 
     y "Crystal clear Jr."
     "'Closes the call'" 
@@ -1300,7 +1300,7 @@ label q8:
     "'Goes back to the truck'"
     scene bg camion
     show normal bingus
-    B "So how it went?"
+    B "So how did it go?"
 
     y "Good, a very interesting individual I have to say."
 
@@ -1325,7 +1325,7 @@ label q7:
     scene bg qdoio with dissolve
     hide qua normal 
     show qua happy
-    Q "Ok prepare yourself, ready? Ok take a look."
+    Q "Ok, prepare yourself, ready? Ok take a look."
     hide qua happy
     scene bg qspecial with dissolve
     with Pause(2)
@@ -1339,22 +1339,22 @@ label q7:
     show qua normal
     Q "I once received in the mail a Journal called Dipiù and it was a game changer for me."
 
-    Q "I saw all the things you humans saw on daily basis."
+    Q "I saw all the things you humans see on a daily basis."
 
     y "(I've never seen so much gossip magazine in my life)"
 
-    y "Well, let's say its not only spice and drama we know back there but it's pretty close hehe."
+    y "Well, let's say it's not only spice and drama we know back there, but it's pretty close hehe."
 
-    Q "I kinds envy you humans, despite all your flaws you always try to came out on top of every obstacles life gives you without fear."
+    Q "I kinda envy you humans, despite all your flaws you always tried to come out on top of every obstacles life gives you without fear."
     hide qua normal
     show qua sad
     Q "My people don't have that kind of reputation."
 
-    Q "We for most of the galaxy are just a bunch of parasites that fucks up everything in our way."
+    Q "We, for most of the galaxy, are just a bunch of parasites that fucks up everything in our way."
 
     Q "Sometimes I feel like a worthless Amoeboid like the one from some old  video-games from centuries ago."
     
-    y "You are so much more than a Amoeboid trust me Quasar."
+    y "You are so much more than an Amoeboid, trust me Quasar."
     hide qua sad
     show qua embara
 
@@ -1363,7 +1363,7 @@ label q7:
     show qua happy
     Q "I think now it's time to, I've wasted enough of your time already."
 
-    y "I'ts not a big deal I enjoy you company Quasar."
+    y "I'ts not a big deal, I enjoy your company Quasar."
     hide qua happy
     menu:
         "Exchange phone numbers.":
@@ -1395,7 +1395,7 @@ label q10:
     "'Goes back to the truck'"
     scene bg space with dissolve
     show normal bingus with dissolve
-    B "So how it went?"
+    B "So how did it go?"
 
     y "Good, a very interesting individual I have to say."
 
@@ -1407,16 +1407,16 @@ label q10:
 label q9:
     hide qua happy
     show qua embara
-    Q "Oh..(The human enjoys my company I am soo happy I could explode right now!)."
+    Q "Oh..(The human enjoys my company, I am soo happy I could explode right now!)."
 
-    y "It was a pleasure to meet you. Hey why don't we exchange phone numbers so we can keep in touch if its ok for you."
+    y "It was a pleasure to meet you. Hey why don't we exchange phone numbers so we can keep in touch? if it's ok for you."
     hide qua embara
     show qua happy
     Q "YES 'clears troat' yes I would like to."
     "'You exchanges numbers'"
-    Q "You are special [povname], I hope you soon and don't forget about me ok?"
+    Q "You are special [povname], I hope to see you soon, and don't forget about me ok?"
 
-    y "I will not, now i have to go back work or Jr will kill me if you don't mind hehe."
+    y "I won't, now I have to go back to work or Jr will kill me if you don't mind hehe."
 
     Q "Goodbye."
     hide qua happy with dissolve
